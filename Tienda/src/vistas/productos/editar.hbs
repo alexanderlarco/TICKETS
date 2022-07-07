@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/productos/editarProductos.css">
+<div id="contenedor">
+    {{#each Productos}}
+    <form action="/productos/editar/{{idProductos}}" method="POST" id="f1">
+        <p>Edita Producto </p>
+        <div id="CODIGO">
+            <label id="codigos">Código:</label>
+            <input type="text" name="codigo" id="codigo" value="{{codigo}}" readonly>
+        </div>
+        <div id="PRODUCTO">
+            <label id="producto">Producto :</label>
+            <input type="text" name="NombreProducto" id="NombreProducto" value="{{NombreProducto}}" readonly>
+        </div>
+        <div id="CANTIDAD">
+            <label id="cantidad">Cantidad:</label>
+            <input type="text" name="cantidadVenta" id="Cantidad" value="{{productoCantidad}}">
+        </div>
+        <div id="PRECIO">
+            <label id="precios">Precio:</label>
+            <input type="text" name="precioVenta" id="precio" value="{{precioVenta}}">
+        </div>
+        <div id="CADUCIDAD">
+            <label id="caducidad">Fecha Caducidad:</label>
+            <input type="datetime" name="FechaCadusidad" id="FechaCadusidad" value="{{FechaCadusidad}}" readonly>
+        </div>
+        <div id="boton">
+            <button type="submit"> Guardar</button>
+        </div>
+    </form>
+    {{/each}}
+</div>
+<script src="/js/productosVentaEditar.js"></script>

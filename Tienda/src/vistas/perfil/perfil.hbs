@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/perfil/perfil.css">
+<form action="/perfil/lista/{{user.idUsuarios}}" method="post">
+    {{#each usuarios}}
+    <div id="contenido">
+        <div id="titulo">
+            <p>Perfil de {{username}}</p>
+        </div>
+        <div id="imagenUsuario">
+            <img src="/img/usuario/{{imagenUsuario}}" alt="">
+            <div id="eleccion">
+                <label>Desea Actualizar la imagen</label>
+                <input type="radio" name="si" id="si" value="si" onclick="elecciones.eleccionSiNo()"> Si
+                <input type="radio" name="no" id="no" value="no" onclick="elecciones.eleccionSiNo()"> No
+            </div>
+            <div id="imagenNueva">
+                <input type="file" name="imagenUsuario" id="imagen">
+            </div>
+        </div>
+        <div id="datos">
+            <div id="Nombres">
+                <input type="text" name="Nombres" id="nombres" value="{{Nombres}}" onclick="elecciones.aparicion()" placeholder="Nombres:" required>
+            </div>
+            <div id="Apellidos">
+                <input type="text" name="Apellidos" id="apellidos" value="{{Apellidos}}" onclick="elecciones.aparicion()" placeholder="Apellidos" required>
+            </div>
+            <div id="Username">
+                <input type="text" name="username" id="username" value="{{username}}" onclick="elecciones.aparicion()" placeholder="Nombre de Usaurio:" required>
+            </div>
+            <div id="Contraseña">
+                <input type="text" name="password" id="password" onclick="elecciones.aparicion()" placeholder="Nueva Contraseña:" required>
+            </div>
+            <div id="Email">
+                <input type="text" name="email" id="email" value="{{email}}" onclick="elecciones.aparicion()" placeholder="Correo Electronico:" required>
+            </div>
+            <div id="Edad">
+                <input type="text" name="edad" id="edad" value="{{edad}}" onclick="elecciones.aparicion()" placeholder="Edad:" required>
+            </div>
+            <div id="Celular">
+                <input type="text" name="celular" id="celular" value="{{celular}}" onclick="elecciones.aparicion()" placeholder="Celular:" required>
+            </div>
+        </div>
+        <div id="guardar">
+            <div id="boton">
+                <button type="submit">Actualizar</button>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</form>
+
+<script src="/js/logicaSiNo.js"></script>

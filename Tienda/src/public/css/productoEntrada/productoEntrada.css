@@ -1,0 +1,116 @@
+#contenido{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    max-height: 100%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 20px;
+}
+
+#contenido p{
+    position: absolute;
+    width: 100%;
+    top: 1%;
+}
+#provedoreIdProvedores{
+    display: none;
+}
+#idproducto{
+    width: 4%;
+    left: 60%;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#CODIGO{
+    position: absolute;
+    top: 8.5%;
+    width: 100%;
+}
+
+#NOMBREproducto{
+    position: absolute;
+    top: 17%;
+    width: 100%;
+}
+
+#NOMBREproveedor{
+    position: absolute;
+    top: 25.5%;
+    width: 100%;
+}
+
+#CATEGORIA{
+    position: absolute;
+    top: 34%;
+    width: 100%;
+}
+
+#consumibles{
+    position: absolute;
+    top: 42.5%;
+    width: 100%;
+}
+
+#CANTIDAD{
+    position: absolute;
+    top: 51%;
+    width: 100%;
+}
+
+#UnidadCantidad{
+    position: absolute;
+    top: 59.5%;
+    width: 100%;
+}
+
+#PrecioUnidad{
+    position: absolute;
+    top: 68%;
+    width: 100%;
+}
+
+#PrecioActual{
+    position: absolute;
+    top: 76.5%;
+    width: 100%;
+}
+
+#FECHA{
+    position: absolute;
+    top: 85%;
+    width: 100%;
+}
+
+#contenido #boton{
+    position: absolute;
+    bottom: 0%;
+    width: 80%;
+    left: 10%;
+}
+
+label{
+    position: absolute;
+    left: 10%;
+}
+
+select{
+    position: absolute;
+    width: 50%;
+    left: 37%;
+    border-color: transparent;
+    border-bottom: 1px #5468ff solid;
+    text-align: center;
+}
+
+input{
+    position: absolute;
+    width: 50%;
+    left: 37%;
+    border-color: transparent;
+    border-bottom: 1px #5468ff solid;
+}

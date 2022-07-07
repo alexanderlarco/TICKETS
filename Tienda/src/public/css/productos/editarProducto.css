@@ -1,0 +1,71 @@
+form{
+    position: absolute;
+    top: 15%;
+    left: 29%;
+    height: 100%;
+    width: 100%;
+    max-width: 550px;
+    max-height: 500px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#p{
+    color: #0a1b2e;
+}
+
+#guardar1{
+    background-color: #0d437e;
+    color: white;
+    border: 1px solid black;
+    width: 100%;
+    position: absolute;
+    top: 92%;
+}
+
+#CODIGO{
+    position: absolute;
+    top: 16%;
+}
+
+#PRODUCTO{
+    position: absolute;
+    top: 32%;
+}
+
+#CANTIDAD{
+    position: absolute;
+    top: 48%;
+}
+
+#PRECIO{
+    position: absolute;
+    top: 64%;
+}
+
+#CADUCIDAD{
+    position: absolute;
+    top: 80%;
+}
+
+label{
+    margin-left: 20px;
+}
+
+input{
+    position: absolute;
+    left: 250px;
+}
+
+@media (max-width: 1024px) {
+    form{
+        top: 3%;
+    }
+}
+
+@media (max-width: 1024px) {
+    form{
+        left: 19%;
+    }
+}

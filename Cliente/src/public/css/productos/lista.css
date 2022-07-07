@@ -1,0 +1,17 @@
+#img{
+    width: 30px;
+}
+
+#tabla{
+    position: absolute;
+    background-color: rgb(139, 126, 185);
+    top: 70px;
+    left: 70px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#eleccion{
+  background-color: aqua;
+  position: absolute;
+}

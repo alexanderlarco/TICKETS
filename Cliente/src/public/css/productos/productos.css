@@ -1,0 +1,230 @@
+a{
+    text-decoration: none;
+}
+
+#logo{
+    position: absolute;
+    top: 90px;
+    left: 5px;
+}
+
+#LogoFintech{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 130px;
+}
+
+#navegacion{
+    display: flex;
+    justify-content: space-between;
+    height: 75px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+}
+
+#NOMBRES{
+    position: absolute;
+    top: -36px;
+    left: 10px;
+}
+
+#mover{
+    position: absolute;
+    top: 500px;
+    left: 0px;
+    width:100%;
+}
+
+#cierre{
+    position: absolute;
+    left: 1100px;
+    top: 0px;
+}
+
+#navegacion div {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+}
+
+#navegacion a{
+    padding: 10px;
+}
+
+#navegacion #categorias{
+    flex: 1;
+    margin-left: 160px;
+    
+}
+
+button{
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    display: block;
+    margin: auto;
+}
+
+#img{
+    height: 36px;
+    width: auto;
+}
+
+#contenido .row{
+    padding: 10px;
+    gap: 20px;
+}
+#contenido .card{
+    border-radius: 22px;
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+}
+.card-body{
+    padding: auto;
+    margin-left: -20px;
+}
+
+#lista{
+    display: flex;
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+#tabla{
+    border-color: rgb(2, 2, 2);
+    position: absolute;
+    left: 1025px;
+    width: 20%;
+    height: auto;
+}
+#boton{
+    position: absolute;
+    left: 1300px;
+    top: 80px;
+}
+
+#nombres{
+    background-color: white;
+    word-spacing: 0.25em;
+    font-size: 20px;
+    text-align: center;
+    width: 40%;
+}
+#Producto{
+    background-color: white;
+    word-spacing: 0.25em;
+    font-size: 20px;
+    text-align: center;
+}
+#precio{
+    background-color: transparent;
+    word-spacing: 0.25em;
+    font-size: 25px;
+    text-align: center;
+    border-color: transparent;
+    width: 100px;
+    font-weight:normal;
+}
+
+#letras{
+    color: rgb(65, 59, 172);
+    font-size: 21px;
+}
+
+#ver{
+    background-color: rgb(205, 158, 209);
+    border-color: wheat;
+    border-radius: 50px;
+    width: 15%;
+    position: absolute;
+    left: 1060px;
+    top:67px;
+}
+
+#lista{
+    background-color: rgb(139, 126, 185);
+    border-radius: 20px;
+    color:rgb(2, 3, 3);
+}
+
+#tabla{
+    position: absolute;
+    background-color: rgb(139, 126, 185);
+    color:rgb(2, 3, 3);
+    border-radius: 20px;
+}
+
+#nombres{
+    background-color: rgb(139, 126, 185);
+    border-radius: 20px;
+}
+
+#nombre{
+    background-color: rgb(139, 126, 185);
+    border-radius: 20px;
+}
+
+#precio{
+    background-color: rgb(139, 126, 185);
+    border-radius: 20px;
+}
+
+#Producto{
+    background-color: rgb(139, 126, 185);
+    border-radius: 20px;
+}
+
+#cantidad{
+    margin: 3px;
+    padding: 2px;
+    width: 230px;
+    height: auto;
+    border-color: rgba(255, 255, 240, 0);
+    text-align: center;
+    background-color: rgba(255, 255, 240, 0);
+}
+#comprar{
+    display: flex;
+    display: block;
+    margin: auto;
+    margin-left: 8px;
+}
+
+#guardar{
+    max-width: 50px;
+    display: block;
+    margin: auto;
+}
+
+#GuardarLista{
+    width: 250px;
+    position: absolute;
+    left: 900px;
+}
+
+#btones{
+    width: 150px;
+    position: absolute;
+    left: 100px;
+    top: 90px;
+}
+
+#listaNombre{
+    position: absolute;
+    left: 80px;
+    width: 100%;
+}
+
+#NombreLista{
+    position: absolute;
+    top: 40px;
+}
+
+#LISTAN{
+    background-color: transparent;
+    border-color: transparent;
+    display: none;
+}

@@ -1,0 +1,31 @@
+<LINK REL=StyleSheet HREF="/css/cajas/cajalista.css" TYPE="text/css" MEDIA=screen>
+<form action="/cajas/lista/{{user.idUsuarios}}">
+    <div id="contenido">
+        <div class="row">
+            {{#each cajalista}}
+            <div id="tarjeta">
+                <div>
+                    <p id="datosPerosnales">Datos Caja {{idCaja}}</p>
+                </div>
+                <div>
+                    <div id="FECHA">
+                        <label>Fecha Caja:</label>
+                        <input type="date" id="fechaCaja" value="{{fechaCaja}}" readonly>
+                    </div>
+                    <div>
+                        <div id="TOTAL">
+                            <label>valor Total Caja:</label>
+                            <input type="number" id="valorTotalCaja" value="{{valorTotalCaja}}" readonly>
+                        </div>
+                        <div id="Editar">
+                            <a href="/cajas/editar/{{idCaja}}" id="BotonEditar">
+                                <img src="/img/iconos/edit.png"><span id="tooltip">Editar</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</form>

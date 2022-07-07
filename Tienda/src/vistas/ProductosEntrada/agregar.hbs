@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="/css/productoEntrada/productoEntrada.css">
+
+<form action="/ProductoEntrada/agregar/{{user.idUsuarios}}" method="POST">
+    <div id="contenido">
+        {{#each idProductoEntrada}}
+        <p>Nuevo Producto N°<input type="text" name="idproducto" id="idproducto" value="{{'MAX(idProductoEntradas)'}}"
+                readonly></p>
+        {{/each}}
+        <div id="CODIGO">
+            <label>Código:</label>
+            <input type="text" name="codigo" id="codigo" maxlength="13" readonly>
+        </div>
+        <div id="NOMBREproducto">
+            <label>Nombre del Producto:</label>
+            <input type="text" name="NombreProducto" id="NombreProducto" required>
+        </div>
+        <div id="NOMBREproveedor">
+            <label>Nombre del Proveedor:</label>
+            {{#each listaProveedor}}
+            <input type="text" id="NombreProvedor" value="{{NombreProveedor}}" required readonly>
+            <input type="text" id="provedoreIdProvedores" name="provedoreIdProvedores" value="{{this.idProvedores}}"
+                required readonly>
+            {{/each}}
+        </div>
+        <div id="CATEGORIA">
+            <label>Categoría:</label>
+            <select name="categoriaIdCategorias" id="categoria">
+                {{#each listaCategoria}}
+                <option value="{{this.idCategorias}}">{{this.categoria}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div id="consumibles">
+            <label>Unidad de Medida:</label>
+            <select name="unidadMedidaIdUnidadMedidas" id="unidadMedida">
+                {{#each listaUnidad}}
+                <option value="{{this.idUnidadMedidas}}">{{this.unidadMedida}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div id="CANTIDAD">
+            <label>Cantidad Requerida:</label>
+            <input type="text" name="CantidadTotal" id="Cantidad" required>
+        </div>
+        <div id="UnidadCantidad">
+            <label id="">Unidad por Cantidad:</label>
+            <input type="text" name="unidadCantidad" id="unidadCantidad" required onkeyup="eleecion.calculo()">
+            <input type="text" name="cantidadMedida" id="cantidadMedida" readonly>
+        </div>
+        <div id="PrecioUnidad">
+            <label id="">Precio por Unidad:</label>
+            <input type="text" name="precioUnidad" id="precioUnidad" required onkeyup="eleecion.calculo2()">
+        </div>
+        <div id="PrecioActual">
+            <label id="">Precio Total:</label>
+            <input type="text" name="precioTotal" id="precioActual" readonly required>
+        </div>
+        <div id="FECHA">
+            <label>Fecha Caducidad:</label>
+            <input type="date" name="FechaCadusidad" id="FechaCadusidad">
+        </div>
+        <div id="boton">
+            <button type="submit">Guardar</button>
+        </div>
+    </div>
+</form>
+
+<script src="/js/codigo.js"></script>
+<script src="/js/eleccionUnidad.js"></script>

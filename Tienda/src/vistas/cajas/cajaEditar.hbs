@@ -1,0 +1,15 @@
+<LINK REL=StyleSheet HREF="/css/cajas/cajaseditar.css" TYPE="text/css" MEDIA=screen>
+{{#each editar}}
+<div id="contenido">
+    <form action="/cajas/editar/{{idCaja}}" method="post">
+    <div id="FECHA">
+            <label>Fecha Caja:</label>
+            <input type="date" name="fechaCaja" id="fechaCaja" value="{{fechaCaja}}">
+        </div>
+        <div id="TOTAL">
+            <label>Valor total Caja:</label>
+            <input type="number" name="valorTotalCaja" id="valorTotalCaja" value="{{valorTotalCaja}}">
+        </div>
+        <button type="submit" id="guardar">Guardar</button>
+    </form>
+{{/each}}

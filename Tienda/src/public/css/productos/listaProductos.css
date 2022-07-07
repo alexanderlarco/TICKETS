@@ -1,0 +1,21 @@
+#nav1 {
+    position: absolute;
+    top: 1.5%;
+    left: 0%;
+    width: 100%;
+    max-width: 35%;
+    display: block;
+    cursor: pointer;
+}
+
+#entradas{
+    position: absolute;
+    left: 1%;
+    width: 45%;
+}
+
+#bodega{
+    position: absolute;
+    left: 55%;
+    width: 55%;
+}

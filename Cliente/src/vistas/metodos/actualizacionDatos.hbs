@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/actualizacion.css">
+<form action="/actualizacion/Datos/" method="post">
+<div id="contenedor">
+{{#each nombreCliente}}
+<div id="ID">
+    <input type="text" name="id" id="id" value="{{idClientes}}">
+</div>
+<div id="NOMBRES">
+    <label id="nombre">Nombres:</label>
+    <input type="text" name="Nombres" id="nombres" value="{{Nombres}}" readonly>
+</div>
+<div id="usuario">
+    <label id="CEDULA">Cédula:</label>
+    <input type="text" name="username" id="cedula" maxlength="10" value="{{username}}" checked>
+</div>
+{{/each}}
+<div id="contraseña">
+    <label id="CONTASEÑA">Contraseña:</label>
+    <input type="password" name="password" id="contraseñas" checked>
+</div>
+<div id="boton">
+<button type="submit" id="guardar">Guardar</button>
+</div>
+</form>
+</div>

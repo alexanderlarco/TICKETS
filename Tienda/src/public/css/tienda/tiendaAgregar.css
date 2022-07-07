@@ -1,0 +1,143 @@
+#usuario{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    max-width: 10%;
+    max-height: 25%;
+    position: absolute;
+    left: 88%;
+    top: 10%;
+    text-align: center;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+}
+
+#usuario img{
+    width: 100%;
+    height: 80%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#usuario #boton button{
+    border-radius: 0px;
+    background-image: radial-gradient(100% 100% at 100% 0, #ffffff 0, #ffffff 100%);
+    color: black;
+}
+
+#Fecha{
+    display: none;
+}
+
+#traer{
+    position: absolute;
+    width: 80%;
+    top: 40%;
+    left: 10%;
+}
+
+#numero{
+    position: absolute;
+    top: 0%;
+    width: 10%;
+    left: 67%;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#contenido {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    max-width: 70%;
+    max-height: 80%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 20px;
+}
+
+#Titulo {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 1%;
+}
+
+input {
+    position: absolute;
+    left: 48%;
+}
+
+label {
+    position: absolute;
+    left: 2%;
+}
+
+#imagenTienda {
+    position: absolute;
+    top: 13%;
+    width: 100%;
+}
+
+#Nombre {
+    position: absolute;
+    top: 26%;
+    width: 100%;
+}
+
+#RUC {
+    position: absolute;
+    top: 39%;
+    width: 100%;
+}
+
+#Direccion {
+    position: absolute;
+    top: 52%;
+    width: 100%;
+}
+
+#CELULAR {
+    position: absolute;
+    top: 65%;
+    width: 100%;
+}
+
+#Telefonos {
+    position: absolute;
+    top: 78%;
+    width: 100%;
+}
+
+#guardar #boton {
+    position: absolute;
+    bottom: -1%;
+    width: 100%;
+}
+
+@media only screen and (orientation: portrait) and (max-width: 1000px) and (min-width: 667px) {
+    #contenido{
+        max-width: 100%;
+        left: 0%;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 667px) and (min-width: 384px) {
+    #contenido{
+        max-width: 100%;
+        left: 0%;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 384px) and (min-width: 150px) {
+    #contenido{
+        max-width: 100%;
+        left: 0%;
+    }
+}

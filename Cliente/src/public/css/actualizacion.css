@@ -1,0 +1,62 @@
+#contenedor{
+    position: absolute;
+    top: 230px;
+    left: 450px;
+    background-image: url(/img/fon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;  
+    width: 500px;
+    height: 205px;
+    border: 1px solid rgb(252, 252, 252);
+    box-shadow: 0 0 10px white;
+    color:rgb(112, 136, 182);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#id{
+    background-color: transparent;
+    border-color: transparent;
+    color: black;
+    font-weight: bolder;
+}
+
+#nombres{
+    margin-left: 30px;
+}
+
+#cedula{
+    margin-left: 52px;
+}
+
+#guardar{    
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border-color: #ffff;
+    width: 100.5%;
+    border-radius: 4px;
+    position: absolute;
+    top: 195px;
+    left: -1px;
+}
+#guardar:focus{
+    outline: none;
+}
+#guardar:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #8e9bfc 100%);
+}
+
+#guardar{
+    width: 500px;
+}
+#contraseñas{
+    margin-left: 3px;
+}
+input {
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+}
+input:focus {
+    outline: none;
+}

@@ -1,0 +1,20 @@
+<LINK REL=StyleSheet HREF="/css/pedidos/editar.css" TYPE="text/css" MEDIA=screen>
+{{#each editar}}
+<div id="contenido">
+    <form action="/pedidos/editar/{{idPedidos}}" method="post">
+        <div id="NOMBRE">
+            <label>Nombre Pedido:</label>
+            <input type="text" name="nombre" id="nombre" value="{{nombre}}">
+        </div>
+        <div id="FECHA">
+            <label>Fecha Pedido:</label>
+            <input type="date" name="fechaPedido" id="fechaPedido" value="{{fechaPedido}}">
+        </div>
+        <div id="CANTIDAD">
+            <label>Cantidad Requerida:</label>
+            <input type="text" name="cantidadPedido" id="cantidadPedido" value="{{cantidadPedido}}">
+        </div>
+        <button type="submit" id="guardar">Guardar</button>
+    </form>
+</div>
+{{/each}}

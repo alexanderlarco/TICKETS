@@ -1,0 +1,57 @@
+<LINK REL=StyleSheet HREF="/css/pedidos/lista.css" TYPE="text/css" MEDIA=screen>
+<form action="/pedidos/lista/{{user.idUsuarios}}">
+    <div id="contenido">
+        <div class="row">   
+            {{#each pedidoslista}}       
+            <div id="tarjeta">
+                <div>
+                    <p id="datosPerosnales">Datos Pedido {{idPedidos}}</p>
+                </div>
+                <div>                    
+                    <div id="NOMBRE">                        
+                        <label>Nombre Pedido:</label>
+                        <input type="text" id="nombre" value="{{nombre}}" readonly>                        
+                    </div>  
+                    <div id="FECHA">
+                        <label>Fecha Pedido:</label>
+                        <input type="date" id="fechaPedido" value="{{fechaPedido}}" readonly>
+                    </div>
+                    <div id="PROVEEDOR">
+                        <label>Proveedor:</label>
+                        <input type="text" id="Proveedor" value="{{NombreProveedor}}" readonly>
+                    </div>
+                    <div id="PRODUCTO">
+                        <label>Producto:</label>
+                        <input type="text" id="Producto" value="{{NombreProducto}}" readonly>
+                    </div>
+                    <div id="CANTIDAD">
+                        <label>Cantidad Requerida:</label>
+                        <input type="text" id="cantidadPedido" value="{{cantidadPedido}}" readonly>
+                    </div>
+                </div>
+                <div id="Editar">
+                    <a href="/pedidos/editar/{{idPedidos}}" id="BotonEditar">
+                        <img src="/img/iconos/edit.png"><span id="tooltip">Editar</span>
+                    </a>
+                </div>
+                <div>
+                    <div id="botonX">
+                        <a href="/pedidos/Eliminar/{{idPedidos}}">
+                            <img src="/img/iconos/borrar.png">
+                            <span id="tooltips">Eliminar</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            <div id="bienvenida">
+                <div>
+                    <div id="masPedidos">
+                    <a href="/proveedor/lista/{{user.idUsuarios}}">¡Introducir un Pedido!</a>
+                    </div>
+                </div>
+            </div>
+            {{/each }}
+        </div>
+    </div>
+</form>

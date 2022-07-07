@@ -1,0 +1,77 @@
+#contenedor {
+    width: 100%;
+    height: 100%;
+    max-width: 40%;
+    max-height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    background-color: antiquewhite;
+}
+
+#titulo {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 2%;
+}
+
+#idUsuarios {
+    position: absolute;
+    top: 1%;
+    left: 85%;
+    width: 10%;
+    display: none;
+}
+
+input {
+    width: 100%;
+}
+
+#imagenUsuario{
+    position: absolute;
+    top: 25%;
+    width: 80%;
+    left: 10%;
+}
+
+#datos{
+    position: absolute;
+    top: 45%;
+    width: 80%;
+    left: 10%;
+}
+
+#contraseñas{
+    position: absolute;
+    top: 65%;
+    width: 80%;
+    left: 10%;
+}
+
+#guardar #boton {
+    position: absolute;
+    bottom: -1%;
+    width: 100%;
+}
+
+@media only screen and (orientation: portrait) and (max-width: 1000px) and (min-width: 667px) {
+    #contenedor {
+        max-width: 100%;
+        left: 0%;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 667px) and (min-width: 384px) {
+    #contenedor {
+        max-width: 100%;
+        left: 0%;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 384px) and (min-width: 150px) {
+    #contenedor {
+        max-width: 100%;
+        left: 0%;
+    }
+}

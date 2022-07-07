@@ -1,0 +1,44 @@
+<LINK REL=StyleSheet HREF="/css/proveedor/listaproveedor.css" TYPE="text/css" MEDIA=screen>
+<form action="/proveedor/lista/{{user.idUsuarios}}">
+    <div id="conetendor">
+        <div class="row">
+            {{#each proveedores }}
+            <div id="tarjeta">
+                <div id="Nproveedor">
+                    <p>Proveedor N°{{idProvedores}}</p>
+                </div>
+                    <div id="NOMBRES">
+                        <input type="text" value="{{NombreProveedor}}" id="NombreProveedor" readonly>
+                    </div>
+                    <div id="DIRECCION">
+                        <input type="text" value="{{Direccion}}" id="Direccion" readonly>
+                    </div>
+                    <div id="CELULAR">
+                        <input type="text" value="0{{Celular}}" id="Numero" readonly>
+                    </div>
+                    <div id="TELEFONO">
+                        <input type="text" value="{{Telefono}}" id="Numero" readonly>
+                    </div>
+                    <div id="ESTADO">
+                        <input type="text" id="estado" value="{{Estado}}" readonly>
+                    </div>
+                    <div id="Editar">
+                        <a href="/proveedor/editar/{{idProvedores}}">
+                            <img src="/img/iconos/edit.png">
+                        </a>
+                    </div>
+                    <div id="Eliminar">
+                        <a href="/proveedor/Eliminar/{{idProvedores}}">
+                            <img src="/img/iconos/borrar.png"></a>
+                    </div>
+                    <div id="pedidos">
+                        <a href="/pedidos/agregar/{{idProvedores}}"><img src="/img/iconos/carroCompra.png"></a></a>
+                    </div>
+                    <div id="Agregar">
+                        <a href="/ProductoEntrada/agregar/{{idProvedores}}"><img src="/img/iconos/flecha.png"></a></a>
+                    </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</form>

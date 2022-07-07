@@ -1,0 +1,31 @@
+<LINK REL=StyleSheet HREF="/css/proveedor/editarproveedor.css" TYPE="text/css" MEDIA=screen>
+<div id="contenido">
+    <p> Editar Proveedor</p>
+    {{#each proveedores}}
+    <form action="/proveedor/editar/{{idProvedores}}" method="POST">
+        <div id="NOMBRE">
+            <label>Nombres:</label>
+            <input type="text" name="NombreProveedor" id="NombreProveedor" value="{{NombreProveedor}}">
+        </div>
+        <div id="DIRECCION">
+            <label>Dirección:</label>
+            <input type="text" name="Direccion" id="Direccion" value="{{Direccion}}">
+        </div>
+        <div id="CELULAR">
+            <label>Celular:</label>
+            <input type="text" name="Celular" id="Celular" maxlength="10" value="{{Celular}}">
+        </div>
+        <div id="TELEFONO">
+            <label>Teléfono:</label>
+            <input type="text" name="Telefono" id="Telefono" maxlength="10" value="{{Telefono}}">
+        </div>
+        <div id="ESTADO">
+            <label>Estado:</label>
+            <input type="text" name="Estado" id="codigo" readonly value="{{Estado}}">
+        </div>
+        <div id="boton">
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+    {{/each}}
+</div>

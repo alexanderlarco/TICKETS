@@ -1,0 +1,64 @@
+<LINK REL=StyleSheet HREF="/css/tienda/tiendaAgregar.css" TYPE="text/css" MEDIA=screen>
+
+<div id="usuario">
+    <img src="/img/usuario/{{user.imagenUsuario}}"></img>
+    <div id="boton">
+        <a href="/perfil/lista/{{user.idUsuarios}}"><button type="button">{{user.username}}</button></a>
+    </div>
+</div>
+
+{{#each tienda}}
+<div id="traer">
+    <div id="boton">
+        <a href="/tienda/lista/{{idTiendas}}"><button type="button">Continuar</button></a>
+    </div>
+</div>
+{{else}}
+<form action="/tienda/agregar/" method="POST" enctype="multipart/form-data">
+    <div id="contenido">
+        <div id="Titulo">
+            <p>Datos del Negocio</p>
+            {{#each max}}
+            <input type="text" name="idTiendas" id="numero" value="{{'max(idTiendas)'}}" readonly>
+            {{/each}}
+        </div>
+
+        <div id="imagenTienda">
+            <label>Imagen:</label>
+            <input type="file" name="tiendaImagen" id="tiendaImagen" required>
+        </div>
+        <div id="Nombre">
+            <label>Nombre:</label>
+            <input type="text" name="nombreNegocio" id="nombreNegocio" required>
+        </div>
+        <div id="RUC">
+            <label>RUC:</label>
+            <input type="text" name="ruc" id="ruc" maxlength="13" required>
+        </div>
+        <div id="Direccion">
+            <label>Dirección:</label>
+            <input type="text" name="direccion" id="direccion" required>
+        </div>
+        <div id="CELULAR">
+            <label>Celular:</label>
+            <input type="text" name="celular" maxlength="10" id="celular" required>
+        </div>
+        <div id="Telefonos">
+            <label>Teléfono:</label>
+            <input type="text" name="telefono" maxlength="10" id="Telefono">
+        </div>
+        <div id="Fecha">
+            <label>Fecha:</label>
+            <input type="text" name="fechaCreacion"  id="fechas" readonly>
+        </div>
+        <div id="guardar">
+            <div id="boton">
+                <button type="submit">Guardar</button>
+            </div>
+        </div>
+    </div>
+</form>
+{{/each}}
+
+<script src="/js/numero.js"></script>
+<script src="/js/fecha.js"></script>

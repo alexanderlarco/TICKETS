@@ -1,0 +1,53 @@
+body{
+    color: black;
+    background-color: #eaeded;
+    background-image: url(/img/fondo.jpg);
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    max-width: 100%;
+    max-height: 100%;    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+
+#logo{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+
+#LogoFintech{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 130px;
+}
+
+button{
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+input{
+    text-align: center;   
+}
+
+@media(max-width: 840px){
+    #contenidos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: initial;
+        height: auto;
+    }
+}
+
+@media(max-width: 600px){
+    #contenidos{
+        grid-template-columns: repeat(1, 1fr);
+        height: auto;
+    }
+}

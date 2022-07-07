@@ -1,0 +1,241 @@
+#cerrar{
+    width: 100%;
+    max-width: 200px;
+    position: absolute;
+    left: 85%;
+    top: 1%;
+}
+#Cerrar{
+    position: absolute;
+    top: 9px;
+    color: #fff;
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;    
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+#cerrar a{
+    text-decoration: none;
+    color: #ffff;
+}
+#Cerrar:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    outline: none;
+  }
+  
+#Cerrar:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+    outline: none;
+}
+  
+#Cerrar:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+    outline: none;
+}
+#tienda{
+    width: 100%;
+    max-width: 200px;
+    position: absolute;
+    left: 74%;
+    top: 1%; 
+}
+#Tienda{
+    position: absolute;
+    top: 9px;
+    color: #fff;
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;    
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+#tienda a{
+    text-decoration: none;
+    color: #ffff;
+}
+#Tienda:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    outline: none;
+  }
+  
+#Tienda:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+    outline: none;
+}  
+#Tienda:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+    outline: none;
+}
+#cliente{
+    position: absolute;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    max-height: 500px;
+    left: 66.5%;
+    top: 15%;
+}
+
+#Foto{
+width: 100%;
+height: 100%;
+max-width: 200px;
+max-height: 150px;
+position: absolute;
+left: 32%;
+top: 5%;
+}
+
+#foto{
+    width: 100%;
+    height: 100%;
+}
+
+#datos{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 51%;
+}
+
+#Cedula{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+}
+
+#Nombres{
+    position: absolute;
+    width: 100%;
+    top: 25%;
+}
+
+#Direccion{
+    position: absolute;
+    width: 100%;
+    top: 48%;
+}
+
+#Celular{
+    position: absolute;
+    width: 100%;
+    top: 72%;
+}
+
+#Telefono{
+    position: absolute;
+    width: 100%;
+    top: 95%;
+}
+
+#datos input{
+    position: absolute;
+    left: 29%;
+}
+
+#datos label{
+    position: absolute;
+    left: 2%;
+}
+
+#Facrura{
+    position: absolute;
+    top: 1%;
+    left:33.2% ;
+    background-color: rgb(116, 144, 182);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+#notaVenta{
+    position: absolute;
+    top: 1%;
+    left:0.5% ;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 442px;
+}
+
+
+#Ntarjeta{
+    width: 100%;
+    max-width: 221px;
+    background-color: tomato;
+}
+
+#Ntarjetas{
+    width: 100%;
+    max-width: 220px;
+    background-color: tomato;
+    margin-left: 15px;
+}
+
+#id{
+    width: 100%;
+    max-width: 50px;
+}
+
+#fecha{
+    width: 100%;
+    max-width: 150px;
+}
+
+#valor{
+    width: 100%;
+    max-width: 90px;
+}
+.row{
+    row-gap: 20px;
+}

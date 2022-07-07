@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/entradasSalidas/detalleLista.css">
+<form action="/entradaSalida/entradas/Lista/detalle{{user.idUsuarios}}" method="get"></form>
+<div id="contenido">
+    <div class="row">
+        {{#each lista}}
+        <div id="tarjeta">
+            <div id="id">
+                <label id="">N°</label>
+                <input type="text" name="idDetalleRegistroEntradas" id="idDetalleRegistroEntradas" value="{{idDetalleRegistroEntradas}}" readonly>
+            </div>
+            <div id="nombre">
+                <label id="">Producto:</label>
+                <input type="text" name="NombreProducto" id="NombreProducto" value="{{NombreProducto}}" readonly>
+            </div>
+            <div id="cantidadEntrada">
+                <label id="">Cantidad de Entrada:</label>
+                <input type="text" name="entraCantidad" id="entraCantidad" value="{{entraCantidad}}" readonly>
+            </div>
+            <div id="fecha">
+                <label id="">Fecha de Entrada:</label>
+                <input type="text" name="creacionRegistroEntradas" id="fechas" value="{{creacionRegistroEntradas}}" readonly>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

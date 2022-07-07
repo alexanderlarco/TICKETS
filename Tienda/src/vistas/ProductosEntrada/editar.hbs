@@ -1,0 +1,31 @@
+<LINK REL=StyleSheet HREF="/css/productoEntrada/editarproductos.css" TYPE="text/css" MEDIA=screen>
+<div id="contenido">
+    {{#each Productos}}
+    <form action="/ProductoEntrada/editar/{{idProductoEntradas}}" method="POST">
+        <p>Editar Producto </p>
+        <div id="CODIGO">
+            <label id="codigos">Código:</label>
+            <input type="text" name="codigo" id="codigo" value="{{codigo}}" readonly>
+        </div>
+        <div id="PRODUCTO">
+            <label id="producto">Producto :</label>
+            <input type="text" name="NombreProducto" id="NombreProducto" value="{{NombreProducto}}">
+        </div>
+        <div id="CANTIDAD">
+            <label id="cantidad">Cantidad:</label>
+            <input type="number" name="CantidadTotal" id="Cantidad" value="{{CantidadTotal}}">
+        </div>
+        <div id="PRECIO">
+            <label id="precios">Precio:</label>
+            <input type="text" name="precioTotal" id="precio" value="{{precioTotal}}">
+        </div>
+        <div id="CADUCIDAD">
+            <label id="caducidad">Fecha Caducidad:</label>
+            <input type="datetime" name="FechaCadusidad" id="FechaCadusidad" value="{{FechaCadusidad}}">
+        </div>
+        <div id="boton">
+            <button type="submit">Guardar</button>
+        </div>
+        {{/each}}
+    </form>
+</div>

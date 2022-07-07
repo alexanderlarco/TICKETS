@@ -1,0 +1,77 @@
+#nav1 {
+    position: absolute;
+    top: 1.5%;
+    left: 0%;
+    width: 100%;
+    max-width: 35%;
+    display: block;
+    cursor: pointer;
+}
+
+#entradas{
+    position: absolute;
+    left: 1%;
+    width: 45%;
+}
+
+#bodega{
+    position: absolute;
+    left: 55%;
+    width: 55%;
+}
+
+#contenedor{
+    position: absolute;
+    top: 13%;
+    left: 1%;
+    width: 100%;
+    height: 100%;
+    max-width: 98%;
+    max-height: 87%;
+    background-color: aquamarine;
+}
+
+.row{
+    gap: 1%;
+    width: 100%;
+    row-gap: 20px;
+}
+
+#tarjeta{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    max-width: 23%;
+    max-height: 55%;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 1%;
+}
+
+
+#Editar img,
+#Agregar img,
+#Eliminar img,
+#pedidos img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#Eliminar{
+    width: 3%;
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 20%;
+}
+
+#Editar{
+    width: 12%;
+    margin-left: 1%;
+}
+
+input{
+    width: 100%;
+    border-color: transparent;
+}

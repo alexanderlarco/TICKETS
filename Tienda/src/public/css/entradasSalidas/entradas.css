@@ -1,0 +1,184 @@
+#fechas{
+    border: 1px solid black;
+    position: absolute;
+    left: 115px;
+}
+
+#codigoDocumento{
+    border: 1px solid black;
+    position: absolute;
+    left: 213px;
+}
+
+#Tienda{
+    border: 1px solid black;
+    position: absolute;
+    left: 90px;
+}
+
+#arriba{
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:10%;
+    top: 15%;
+    max-width: 80%;
+    max-height: 400px;
+}
+
+button{
+    background-color: #0d437e;
+    color: white;
+    border: solid black;
+}
+
+#Entradas{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #0a1b2e;
+}
+
+#fecha{
+    position: absolute;
+    top: 16%;
+    left: 11.5%;
+}
+
+#idregistro{
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: 28px;
+    color: black;
+    max-width: 50px;
+}
+
+#CODIGO{
+    position: absolute;
+    top: 32%;
+    left: 2.5%;
+}
+
+#Dtienda{
+    position: absolute;
+    top: 48%;
+    left: 150px;
+}
+
+#cliente{
+    position: absolute;
+    top: 64%;
+    left: 110px;
+}
+
+#NombreProveedor{
+    width: 273px;
+    text-align: center;
+    border: 1px solid black;
+    position: absolute;
+    left: 130px;
+}
+
+#tabla{
+    position: absolute;
+    top: 67%;
+    left: 13%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    max-width: 77%;
+}
+
+#columna{
+    background-color:midnightblue;
+    color:seashell;
+    font-size: 23px;
+}
+
+#codigo{
+    width: 170px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#Cantidad{
+    width: 70px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#UnidadMedida{
+    width: 200px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#precioActual{
+    width: 100px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#NombreProducto{
+    width: 250px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#boton{
+    position: absolute;
+    top: 70%;
+    left: 89%;
+}
+
+#x{
+    position: absolute;
+    left: 1%;
+    top: 85.5%;
+    background-color: red;
+}
+
+#numero{
+    width: 40px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+@media (max-width:1024px) {
+    #arriba{
+        left:15%;
+        top: 1%;
+        max-width: 1366px;
+        max-height: 400px;
+    }
+    #tabla{
+        top: 25%;
+        left: 15%;
+    }
+}
+
+@media (max-width:800px) {
+    #tabla{
+        top: 27%;
+        left: 15%;
+    }
+}
+
+@media (max-width:600px) {
+    #tabla{
+        top: 33%;
+        left: 15%;
+    }
+}
+
+@media (max-width:500px) {
+    #tabla{
+        top: 53%;
+        left: 15%;
+    }
+}

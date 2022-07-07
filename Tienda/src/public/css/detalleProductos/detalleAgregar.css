@@ -1,0 +1,180 @@
+#contenido{
+    position: absolute;
+    top: 17%;
+    left: 27%;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 450px;
+    background-color: white;
+    border: transparent;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 4px;
+}
+input {
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+}
+#tit{
+    color:#0d6efd;
+}
+input:focus {
+    outline: none;
+}
+
+#guardar{
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4257fa 100%);
+    border-color: transparent;
+    border-radius: 2px;
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 91%;
+}
+#guardar:focus{
+    outline: none;
+}
+#guardar:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);    
+}
+
+label{
+    margin-left: 20px;
+}
+
+#PRODUCTOS{
+    position: absolute;
+    top: 10%;
+}
+
+#Producto{
+    position: absolute;
+    left: 320px;
+}
+
+#UnidadVenta{
+    position: absolute;
+    top: 20%;
+}
+
+#unidadVeneta{
+    position: absolute;
+    left: 320px;
+}
+
+#ProductoCantidad{
+    position: absolute;
+    top: 30%;
+}
+
+#productoCantidad{
+    position: absolute;
+    left: 320px;
+}
+
+#CantidadVenta{
+    position: absolute;
+    top: 40%;
+}
+
+#cantidadVenta{
+    position: absolute;
+    left: 320px;
+}
+
+#precioUnidad{
+    position: absolute;
+    top: 50%;
+}
+
+#precio{
+    position: absolute;
+    left: 320px;
+}
+
+#PROSENTAJES{
+    position: absolute;
+    top: 60%;
+}
+
+#porsentaje{
+    position: absolute;
+    left: 318px;
+    width: 105%;
+    text-align: center;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    color: #0d6efd;
+    text-align: center;
+
+}
+#porsentaje:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+#productos{
+    width: 30px;
+    position: absolute;
+    left: 320px;
+}
+
+#Precioventa{
+    position: absolute;
+    top: 70%;
+}
+
+#precioVenta{
+    position: absolute;
+    left: 320px;
+}
+
+#PrecioTotalVenta{
+    position: absolute;
+    top: 80%;
+}
+
+#precioTotalVenta{
+    position: absolute;
+    left: 320px;
+}
+
+#numero{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    color: #0a1b2e;
+}
+
+#idproducto{
+    width: 8%;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 26px;
+    font-weight: bold;
+    color:#0d6efd;
+    position: absolute;
+    top: 0px;
+    left: 66%;
+}
+
+@media (max-width: 1024px) {
+    #contenido{
+        top: 4%;
+        left: 24%;
+    }
+}
+
+@media (max-width: 800px) {
+    #contenido{
+        top: 4%;
+        left: 20%;
+    }
+}
+
+@media (max-width: 800px) {
+    #contenido{
+        top: 4%;
+        left: 15%;
+    }
+}

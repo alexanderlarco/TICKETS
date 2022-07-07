@@ -1,0 +1,69 @@
+#contenido{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    max-height: 80%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 20px;
+}
+
+#contenido p{
+    position: absolute;
+    width: 100%;
+    top: 2%;
+}
+
+#NOMBRE{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+}
+
+#DIRECCION{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+#CELULAR{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+}
+
+#TELEFONO{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+}
+
+#ESTADO{
+    position: absolute;
+    top: 75%;
+    width: 100%;
+}
+
+#contenido #boton{
+    position: absolute;
+    bottom: 0%;
+    width: 80%;
+    left: 10%;
+}
+
+label{
+    position: absolute;
+    left: 10%;
+}
+
+input{
+    position: absolute;
+    width: 55%;
+    left: 30%;
+    border-color: transparent;
+    border-bottom: 1px ;
+    border-bottom: 1px #5468ff solid;
+}

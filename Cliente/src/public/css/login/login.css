@@ -1,0 +1,376 @@
+#imegen{
+    position: absolute;
+    left: 600px;
+    top: 150px;
+}
+
+p{
+    text-align: center;
+    font-size: 30px;
+}
+
+label{
+    margin-left: 20px;
+}
+
+#avatar{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 250px;
+}
+
+#contenedor{
+    position: absolute;
+    top: 230px;
+    left: 450px;
+    background-image: url(/img/fon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;  
+    width: 500px;
+    height: 205px;
+    border: 1px solid rgb(252, 252, 252);
+    box-shadow: 0 0 10px white;
+    color:rgb(112, 136, 182);
+    border-radius: 5px;
+
+}
+
+#usuarios{
+    position: absolute;
+    top: 50px;
+}
+
+#Nombre{
+    position: absolute;
+    left: 170px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 7px 0 rgb(192, 192, 253);
+    outline: none;
+    border-radius: 4px;
+
+}
+
+#contraseñas{
+    position: absolute;
+    top: 100px;
+}
+
+#Contraseña{
+    position: absolute;
+    left: 170px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 7px 0 rgb(192, 192, 253);
+    outline: none;
+    border-radius: 4px;
+
+}
+
+#flecha{
+    max-width: 50px;
+    display: block;
+    margin: auto;
+}
+#boton{    
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border-color: #ffff;
+    width: 100.5%;
+    border-radius: 4px;
+    position: absolute;
+    top: 147px;
+    left: -1px;
+}
+#boton:focus{
+    outline: none;
+}
+#boton:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #8e9bfc 100%);
+}
+/*
+#sesion{
+    position: absolute;
+    top: 40px;
+    left: 1150px;
+    border-radius: 20px;
+    font-size: 32px;
+    font-family: fantasy;
+    font-style: italic;
+}*/
+#sesion{
+    position: absolute;
+    top: 40px;
+    left: 1150px;
+    color: #fff;
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;    
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+#sesion a{
+    text-decoration: none;
+    color: #ffff;
+}
+#sesion:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+  
+#sesion:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+  
+#sesion:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+
+@media(max-width: 1125px){
+    #contenedor{
+        position: absolute;
+        left: 320px;
+    }
+    #imegen{
+        position: absolute;
+        left: 470px;
+    }
+    #sesion{
+        position: absolute;
+        left: 920px;
+      
+    }    
+}
+
+@media(max-width: 1075px){
+    #contenedor{
+        position: absolute;
+        left: 320px;
+    }
+    #imegen{
+        position: absolute;
+        left: 470px;
+    }
+    #sesion{
+        position: absolute;
+        left: 920px;
+      
+    }    
+}
+@media(max-width: 1050px){
+    #contenedor{
+        position: absolute;
+        left: 300px;
+    }
+    #imegen{
+        position: absolute;
+        left: 450px;
+    }
+    #sesion{
+        position: absolute;
+        left: 900px;
+      
+    }    
+}
+@media(max-width: 1025px){
+    #contenedor{
+        position: absolute;
+        left: 260px;
+    }
+    #imegen{
+        position: absolute;
+        left: 410px;
+    }
+    #sesion{
+        position: absolute;
+        left: 860px;
+      
+    }    
+}
+@media(max-width: 985px){
+    #contenedor{
+        position: absolute;
+        left: 270px;
+    }
+    #imegen{
+        position: absolute;
+        left: 410px;
+    }
+    #sesion{
+        position: absolute;
+        left: 770px;
+    }    
+}
+@media(max-width: 920px){
+    #contenedor{
+        position: absolute;
+        left: 250px;
+    }
+    #imegen{
+        position: absolute;
+        left: 420px;
+    }
+    #sesion{
+        position: absolute;
+        left: 750px;
+    }    
+}
+@media(max-width: 878px){
+    #contenedor{
+        position: absolute;
+        left: 200px;
+    }
+    #imegen{
+        position: absolute;
+        left: 350px;
+    }
+    #sesion{
+        position: absolute;
+        left: 700px;
+    }    
+}
+@media(max-width: 825px){
+    #contenedor{
+        position: absolute;
+        left: 150px;
+    }
+    #imegen{
+        position: absolute;
+        left: 250px;
+    }
+    #sesion{
+        position: absolute;
+        left: 650px;
+    }    
+}
+@media(max-width: 775px){
+    #contenedor{
+        position: absolute;
+        left: 100px;
+    }
+    #imegen{
+        position: absolute;
+        left: 200px;
+    }
+    #sesion{
+        position: absolute;
+        left: 600px;
+    }  
+}
+@media(max-width: 725px){
+    #contenedor{
+        position: absolute;
+        left: 50px;
+    }
+    #imegen{
+        position: absolute;
+        left: 150px;
+    }
+    #sesion{
+        position: absolute;
+        left: 550px;
+    }  
+}
+@media(max-width: 675px){
+    #contenedor{
+        position: absolute;
+        left: 0px;
+    }
+    #imegen{
+        position: absolute;
+        left: 100px;
+    }
+    #sesion{
+        position: absolute;
+        left: 500px;
+    }  
+}
+@media(max-width: 625px){
+    #contenedor{
+        position: absolute;
+        left: 0px;
+    }
+    #imegen{
+        position: absolute;
+        left: 50px;
+    }
+    #sesion{
+        position: absolute;
+        left: 450px;
+    }  
+}
+@media(max-width: 625px){
+    #contenedor{
+        position: absolute;
+        left: 0px;
+    }
+    #imegen{
+        position: absolute;
+        left: 160px;
+    }
+    #sesion{
+        position: absolute;
+        left: 400px;
+    }  
+}
+@media(max-width: 525px){
+    #contenedor{
+        position: absolute;
+        left: 0px;
+    }
+    #imegen{
+        position: absolute;
+        left: 160px;
+    }
+    #sesion{
+        position: absolute;
+        left: 330px;
+    }  
+}
+
+@media(max-width: 465px){
+    #contenedor{
+        position: absolute;
+        left: 0px;
+    }
+    #imegen{
+        position: absolute;
+        left: 100px;
+    }
+    #sesion{
+        position: absolute;
+        left: 290px;
+    }
+    #boton{
+        width: 300px;
+    }
+    #Nombre{
+        width: 220px;
+    }
+    #Contraseña{
+        width: 220px;
+    }
+}

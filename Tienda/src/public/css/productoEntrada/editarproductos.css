@@ -1,0 +1,68 @@
+#contenido{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    max-height: 80%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 20px;
+}
+
+#contenido p{
+    position: absolute;
+    width: 100%;
+    top: 3%;
+}
+
+#contenido #boton{
+    position: absolute;
+    bottom: 0%;
+    width: 80%;
+    left: 10%;
+}
+
+#CODIGO{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+}
+
+#PRODUCTO{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+#CANTIDAD{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+}
+
+#PRECIO{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+}
+
+#CADUCIDAD{
+    position: absolute;
+    top: 75%;
+    width: 100%;
+}
+
+label{
+    position: absolute;
+    left: 10%;
+}
+
+input{
+    position: absolute;
+    width: 50%;
+    left: 37%;
+    border-color: transparent;
+    border-bottom: 1px #5468ff solid;
+}

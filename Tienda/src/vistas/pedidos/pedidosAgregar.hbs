@@ -1,0 +1,39 @@
+<LINK REL=StyleSheet HREF="/css/pedidos/agregar.css" TYPE="text/css" MEDIA=screen>
+<div id="contenido">
+    <form action="/pedidos/agregar/{{user.idUsuarios}}" method="post">
+        {{#each idPedidos}}
+        <p id="TITULO">Nuevo pedido N°<input type="text" name="NumeroPedido" id="NumeroPedido"
+                value="{{'MAX(idPedidos)'}}" readonly></p>
+        {{/each}}
+        <div id="NOMBRE">
+            <label>Nombre Pedido:</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div id="FECHA">
+            <label>Fecha Pedido:</label>
+            <input type="date" name="fechaPedido" id="fechaPedido">
+        </div>
+        <div id="PROVEEDOR">
+            <label>Proveedor:</label>
+            {{#each listaProveedor}}
+            <input type="text" id="provedor" value="{{NombreProveedor}}" required readonly>
+            <input type="text" id="provedoreIdProvedores" name="provedoreIdProvedores" value="{{this.idProvedores}}"
+                required readonly>
+            {{/each}}
+        </div>
+        <div id="PRODUCTO">
+            <label>Producto:</label>
+            <select name="productoEntradaIdProductoEntradas" id="producto"  >
+                {{#each listaProductos}}
+                <option value="{{this.idProductoEntradas}}">{{this.NombreProducto}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div id="CANTIDAD">
+            <label>Cantidad Requerida:</label>
+            <input type="text" name="cantidadPedido" id="cantidadPedido">
+        </div>
+        <button type="submit" id="guardar">Guardar</button>
+    </form>
+</div>
+<script src="/js/eleccionId.js"></script>

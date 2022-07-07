@@ -1,0 +1,162 @@
+#arriba{
+    background-color: white;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    max-width: 1366px;
+    max-height: 400px;
+    position: absolute;
+    left: 0%;
+    top: 15%;
+}
+
+#Salidas{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #D700FF;
+}
+
+button{
+    background-color: #C7C7C7;
+    border: solid black;
+}
+
+#columna{
+    background-color:midnightblue;
+    color:seashell;
+}
+
+#fecha{
+    position: absolute;
+    top: 16%;
+    left: 11.5%;
+}
+
+#CODIGO{
+    position: absolute;
+    top: 32%;
+    left: 2.5%;
+}
+
+#Dtienda{
+    position: absolute;
+    top: 48%;
+    left: 10.7%;
+}
+
+#cliente{
+    position: absolute;
+    top: 64%;
+    left: 10.7%;
+}
+
+#tabla{
+    position: absolute;
+    top: 65%;
+    text-align: center;
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    max-width: 1389px;
+}
+
+#salidaCantidad{
+    width: 270px;
+}
+
+#codigo{
+    width: 250px;
+}
+
+#Cantidad{
+    width: 170px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#UnidadMedida{
+    width: 260px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#precioActual{
+    width: 160px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#NombreProducto{
+    width: 320px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#numero{
+    width: 70px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#idregistro{
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: 28px;
+    color: black;
+    max-width: 50px;
+}
+
+#boton{
+    position: absolute;
+    top: 70%;
+    left: 90%;
+}
+
+#numero{
+    width: 70px;
+}
+
+#Tienda{
+    width: 250px;
+}
+
+#NombreProveedor{
+    width: 250px;
+}
+
+@media (max-width:1024px) {
+    #arriba{
+        left:15%;
+        top: 1%;
+        max-width: 1366px;
+        max-height: 400px;
+    }
+    #tabla{
+        top: 25%;
+        left: 15%;
+    }
+}
+
+@media (max-width:800px) {
+    #tabla{
+        top: 27%;
+        left: 15%;
+    }
+}
+
+@media (max-width:600px) {
+    #tabla{
+        top: 33%;
+        left: 15%;
+    }
+}
+
+@media (max-width:500px) {
+    #tabla{
+        top: 53%;
+        left: 15%;
+    }
+}

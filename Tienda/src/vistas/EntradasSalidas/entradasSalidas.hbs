@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/entradasSalidas/entradaSalidasEleccion.css">
+    <nav id="nav">
+        <div>
+            <a id="entradas" href="/entradaSalida/eleccion/{{user.idUsuarios}}">Entradas y Salidas</a>
+            <a id="bodega" href="/ProductoEntrada/lista/{{user.idUsuarios}}">Bodega</a>
+        </div>
+    </nav>
+<form action="/entradaSalida/eleccion/{{user.idUsuarios}}" method="get">
+    <div id="eleccion1">
+        <a href="/entradaSalida/entradas/Lista/{{user.idUsuarios}}">Registro de Entradas</a>
+    </div>
+    <div id="eleccion2">
+        <a href="/entradaSalida/Salidas/Lista/{{user.idUsuarios}}">Registro de Salidas</a>
+    </div>
+</form>

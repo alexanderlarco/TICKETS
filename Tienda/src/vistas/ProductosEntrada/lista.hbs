@@ -1,0 +1,56 @@
+<LINK REL=StyleSheet HREF="/css/productoEntrada/productoslista.css" TYPE="text/css" MEDIA=screen>
+<form action="/ProductoEntrada/lista/{{user.idUsuarios}}">
+    <nav id="nav1">
+        <div id="boton">
+            <a id="entradas" href="/entradaSalida/eleccion/{{user.idUsuarios}}"><button type="button">Entradas y
+                    Salidas</button></a>
+            <a id="bodega" href="/productos/lista/{{user.idUsuarios}}"><button type="button">Bodega</button></a>
+        </div>
+    </nav>
+    <div id="contenedor">
+        <div class="row">
+            {{#each DatosProducto}}
+            <div id="tarjeta">
+                <div id="CODIGO">
+                    <label>Código:</label>
+                    <input type="text" value="{{codigo}}" id="codigo" readonly></input>
+                </div>
+                <div id="PRODUCTO">
+                    <label>Producto:</label>
+                    <input type="text" value="{{NombreProducto}}" id="NombreProducto" readonly></input>
+                </div>
+                <div id="CANTIDAD">
+                    <label>Cantidad:</label>
+                    <input type="text" value="{{CantidadTotal}} {{unidadMedida}}" id="Cantidad" readonly></input>
+                </div>
+                <div id="PRECIO">
+                    <label>Precio:</label>
+                    <input type="text" value="{{precioTotal}}$" id="precioActual" readonly></input>
+                </div>
+                <div id="PRECIOUNIDAD">
+                    <label>Precio Unidad:</label>
+                    <input type="text" value="{{precioUnidad}}$" id="precioUnidad" readonly></input>
+                </div>
+                <div id="Editar">
+                    <a href="/ProductoEntrada/editar/{{idProductoEntradas}}">
+                        <img src="/img/iconos/edit.png">
+                    </a>
+                </div>
+                <div id="Eliminar">
+                    <a href="/ProductoEntrada/Eliminar/{{idProductoEntradas}}">
+                        <img src="/img/iconos/borrar.png"></a>
+                </div>
+            </div>
+            {{else}}
+            <div id="bienvenida">
+                <div>
+                    <p>¡No has registrado Productos.!</p>
+                    <div id="masTiendas">
+                        <a href="/ProductoEntrada/agregar/{{user.idUsuarios}}">¡Introducir uno!</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</form>

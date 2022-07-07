@@ -1,0 +1,47 @@
+<form action="/clientes/lista/{{user.idUsuarios}}"></form>
+<LINK REL=StyleSheet HREF="/css/clientes/clientesLista.css" TYPE="text/css" MEDIA=screen>
+<div id="contenedor">
+    <div class="row">
+        {{#each clientes}}
+        <div id="tarjeta">
+            <div id="CODIGO">
+                <label>Cédula:</label>
+                <input type="text" value="{{username}}" id="codigo" readonly></input>
+            </div>
+            <div id="NOMBRES">
+                <label>Nombres:</label>
+                <input type="text" value="{{Nombres}}" id="nombres" readonly></input>
+            </div>
+            <div id="DIRECCION">
+                <label>Dirección:</label>
+                <input type="text" value="{{Direccion}}" id="Direccion" readonly></input>
+            </div>
+            <div id="CELULAR">
+                <label>Celular:</label>
+                <input type="text" value="0{{Celular}}" id="celular" readonly></input>
+            </div>
+            <div id="BotonEditar">
+                <a href="/clientes/editar/{{idClientes}}">
+                <img src="/img/iconos/edit.png"><span id="tooltip">Editar</span>
+                </a>
+            </div>
+            <div id="botonX">
+                <a href="/clientes/Eliminar/{{idClientes}}" >
+                <img src="/img/iconos/borrar.png" id="delete"><span id="tooltips">Eliminar</span>
+                </a>
+            </div>
+            <div id="detalle">
+                <a href="/clientes/Perfil/{{idClientes}}"><button>Detalle</button></a>
+            </div>
+        </div>
+        {{else}}
+        <div id="masProveedor">
+            <a href="/clientes/agregar/{{user.idUsuarios}}"><img src="/img/iconos/mas.png" id="mas"></a>
+        </div>
+        {{/each}}
+    </div>
+    <div id="masProveedor">
+        <a href="/clientes/agregar/{{user.idUsuarios}}"><img src="/img/iconos/mas.png" id="mas"></a>
+    </div>
+</div>
+</form>

@@ -1,0 +1,35 @@
+<LINK REL=StyleSheet HREF="/css/proveedor/proveedoragregar.css" TYPE="text/css" MEDIA=screen>
+<form action="/proveedor/agregar/{{user.idUsuarios}}" method="POST" name="f1" id="f1">
+    <div id="contenido">
+        <p>Nuevo Proveedor</p>
+        <div id="NOMBRE">
+            <label>Nombres:</label>
+            <input type="text" name="NombreProveedor" id="NombreProveedor">
+        </div>
+        <div id="DIRECCION">
+            <label>Dirección:</label>
+            <input type="text" name="Direccion" id="Direccion">
+        </div>
+        <div id="CELULAR">
+            <label>Celular:</label>
+            <input type="text" name="Celular" id="Celular" maxlength="10">
+        </div>
+        <div id="TELEFONO">
+            <label>Teléfono:</label>
+            <input type="text" name="Telefono" id="Telefono" maxlength="10">
+        </div>
+        <div id="ESTADO">
+            <label>Estado:</label>
+            <input type="text" name="Estado" id="codigo" readonly>
+        </div>
+        <div id="boton">
+            <button type="submit">Guardar</button>
+        </div>
+    </div>
+</form>
+<script>
+    function inicio() {
+        document.f1.codigo.value = 1
+    };
+    window.onload = inicio;
+</script>
