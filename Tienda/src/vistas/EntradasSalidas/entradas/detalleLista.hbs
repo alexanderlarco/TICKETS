@@ -5,8 +5,7 @@
         {{#each lista}}
         <div id="tarjeta">
             <div id="id">
-                <label id="">N°</label>
-                <input type="text" name="idDetalleRegistroEntradas" id="idDetalleRegistroEntradas" value="{{idDetalleRegistroEntradas}}" readonly>
+                <label>N°{{idDetalleRegistroEntradas}}</label>
             </div>
             <div id="nombre">
                 <label id="">Producto:</label>
@@ -14,7 +13,11 @@
             </div>
             <div id="cantidadEntrada">
                 <label id="">Cantidad de Entrada:</label>
-                <input type="text" name="entraCantidad" id="entraCantidad" value="{{entraCantidad}}" readonly>
+                <input type="text" name="entraCantidad" id="entraCantidad" value="{{cantidadRestante}} Unidades" readonly>
+            </div>
+            <div id="precio unidad">
+                <label >Precio Unidad</label>
+                <input type="text" value="{{precioUnidad}}">
             </div>
             <div id="fecha">
                 <label id="">Fecha de Entrada:</label>

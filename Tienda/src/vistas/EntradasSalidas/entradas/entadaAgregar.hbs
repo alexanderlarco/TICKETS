@@ -1,41 +1,45 @@
 <link rel="stylesheet" href="/css/entradasSalidas/entradas.css">
 <form action="/entradaSalida/entradas/agregar/{{user.idUsuarios}}" method="POST">
-<div id="arriba">
-    <div id="Entradas">
-        <label>Entradas N° <input type="text" name="idRegistroEntradas" id="idregistro" readonly></label>
-    </div>
-    <div id="fecha">
-        <label>Fecha:</label>
-        <input type="text" value="" name="fecha" id="fechas" readonly>
-    </div>
-    <div id="CODIGO">
-        <label>Cód. Documento:</label>
-        {{#each entrasLista}}
-        <input type="text" value="{{'max(idRegistroEntradas)'}}" name="idsa" id="codigoDocumento" readonly>
-        {{/each}}
-    </div>
-    <div id="Dtienda">
-        <label>Tienda:</label>
-        {{#each listaTienda}}
-        <input type="text" value="{{nombreNegocio}}" name="Tienda" id="Tienda" readonly>
-        {{/each}}
-    </div>
-    <div id="cliente">
-        <label>Proveedor:</label>
-        <select name="provedoreIdProvedores" id="NombreProveedor">
-            {{#each listaProveedor}}
-            <option value="{{this.idProvedores}}" readonly>{{this.NombreProveedor}}</option>
+    <div id="contenedor">
+        <p>Entradas N° <input type="text" name="idRegistroEntradas" id="idregistro" readonly></p>
+        <div id="FECHA">
+            <label>Fecha:</label>
+            <input type="text" value="" name="fecha" id="fechas" readonly>
+        </div>
+        <div id="CODIGO">
+            <label>Cód. Documento:</label>
+            {{#each entrasLista}}
+            <input type="text" value="{{'max(idRegistroEntradas)'}}" name="idsa" id="codigoDocumento" readonly>
             {{/each}}
-        </select>
+        </div>
+        <div id="TIENDA">
+            <label>Tienda:</label>
+            {{#each listaTienda}}
+            <input type="text" value="{{nombreNegocio}}" name="Tienda" id="Tienda" readonly>
+            {{/each}}
+        </div>
+        <div id="CLIENTE">
+            <label>Proveedor:</label>
+            <select name="provedoreIdProvedores" id="NombreProveedor">
+                {{#each listaProveedor}}
+                <option value="{{this.idProvedores}}" readonly>{{this.NombreProveedor}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div id="RegistroGuardar">
+            <div id="boton">
+                <button type="submit">Guardar</button>
+            </div>
+        </div>
+        <div id="boton">
+            <button type="button" id="vermas" onclick="ver.cambio()">Ver Mas</button>
+        </div>
+        <div id="boton">
+            <button type="button" id="x" onclick="ver.devuelta()">X</button>
+        </div>
     </div>
-    <div id="boton">
-        <button type="submit" id="RegistroGuardar">Guardar</button>
-        <button type="button" id="vermas" onclick="ver.cambio()">Ver Mas</button>
-    </div>
-    <button type="button" id="x" onclick="ver.devuelta()">X</button>
-</div>
     <div id="tabla">
-        <table border="1">
+        <table>
             <tr id="columna">
                 <td>N°</td>
                 <td>Código</td>
