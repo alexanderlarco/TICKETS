@@ -5,12 +5,13 @@ const tienda = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         },
-        ruc: type.INTEGER(13),
+        tiendaImagen: type.STRING,
+        ruc: type.STRING,
         nombreNegocio: type.STRING,
         fechaCreacion: type.STRING,
         direccion: type.STRING,
-        celular: type.INTEGER(10),
-        telefono: type.INTEGER(10),
+        celular: type.STRING(10),
+        telefono: type.STRING(10),
         creacionTiendas: type.STRING,
         actualizacionTiendas:{
             type: 'TIMESTAMP',

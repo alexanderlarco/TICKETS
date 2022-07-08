@@ -1,15 +1,20 @@
 <link rel="stylesheet" href="/css/entradasSalidas/entradaSalidasEleccion.css">
-    <nav id="nav">
-        <div>
-            <a id="entradas" href="/entradaSalida/eleccion/{{user.idUsuarios}}">Entradas y Salidas</a>
-            <a id="bodega" href="/ProductoEntrada/lista/{{user.idUsuarios}}">Bodega</a>
-        </div>
-    </nav>
-<form action="/entradaSalida/eleccion/{{user.idUsuarios}}" method="get">
-    <div id="eleccion1">
-        <a href="/entradaSalida/entradas/Lista/{{user.idUsuarios}}">Registro de Entradas</a>
+<nav id="nav1">
+    <div id="boton">
+        <a id="entradas" href="/entradaSalida/eleccion/{{user.idUsuarios}}"><button type="button">Entradas y
+                Salidas</button></a>
+        <a id="bodega" href="/ProductoEntrada/lista/{{user.idUsuarios}}"><button type="button">Bodega</button></a>
     </div>
-    <div id="eleccion2">
-        <a href="/entradaSalida/Salidas/Lista/{{user.idUsuarios}}">Registro de Salidas</a>
+</nav>
+<form action="/entradaSalida/eleccion/{{user.idUsuarios}}" method="get">
+    <div id="eleciiones">
+        <div id="boton">
+            <a id="registro1" href="/entradaSalida/entradas/Lista/{{user.idUsuarios}}"><button type="button">Registro de
+                    Entradas</button></a>
+        </div>
+        <div id="boton">
+            <a id="registro2" href="/entradaSalida/Salidas/Lista/{{user.idUsuarios}}"><button type="button">Registro de
+                    Salidas</button></a>
+        </div>
     </div>
 </form>

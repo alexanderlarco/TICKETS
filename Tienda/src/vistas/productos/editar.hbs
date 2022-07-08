@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/productos/editarProductos.css">
+<link rel="stylesheet" href="/css/productos/editarProducto.css">
 <div id="contenedor">
     {{#each Productos}}
     <form action="/productos/editar/{{idProductos}}" method="POST" id="f1">
@@ -11,13 +11,25 @@
             <label id="producto">Producto :</label>
             <input type="text" name="NombreProducto" id="NombreProducto" value="{{NombreProducto}}" readonly>
         </div>
+        <div id="CantidadMedida">
+             <label>Cantidad:</label>
+            <input type="text" value="{{CantidadTotal}} {{unidadMedida}}" readonly>
+        </div>
         <div id="CANTIDAD">
-            <label id="cantidad">Cantidad:</label>
-            <input type="text" name="cantidadVenta" id="Cantidad" value="{{productoCantidad}}">
+            <label>Cantidad Total:</label>
+            <input type="text" id="Cantidad" value="{{productoCantidad}} Unidades" readonly>
         </div>
         <div id="PRECIO">
-            <label id="precios">Precio:</label>
-            <input type="text" name="precioVenta" id="precio" value="{{precioVenta}}">
+            <label id="precios">Precio Original:</label>
+            <input type="text" id="precio" value="{{precioUnidad}}" readonly>
+        </div>
+        <div id="CANTIDADVenta">
+            <label id="cantidad">Cantidad Venta:</label>
+            <input type="text" id="Cantidad" name="cantidadVenta" value="{{cantidadVenta}}" >
+        </div>
+        <div id="PRECIOVenta">
+            <label id="precios">Precio Venta:</label>
+            <input type="text" id="precio" name="precioVenta" value="{{precioVenta}}" >
         </div>
         <div id="CADUCIDAD">
             <label id="caducidad">Fecha Caducidad:</label>
@@ -29,4 +41,3 @@
     </form>
     {{/each}}
 </div>
-<script src="/js/productosVentaEditar.js"></script>

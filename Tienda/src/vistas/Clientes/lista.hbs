@@ -18,30 +18,37 @@
             </div>
             <div id="CELULAR">
                 <label>Celular:</label>
-                <input type="text" value="0{{Celular}}" id="celular" readonly></input>
+                <input type="text" value="{{Celular}}" id="celular" readonly></input>
             </div>
-            <div id="BotonEditar">
+            <div id="Editar">
                 <a href="/clientes/editar/{{idClientes}}">
-                <img src="/img/iconos/edit.png"><span id="tooltip">Editar</span>
+                    <img src="/img/iconos/edit.png">
                 </a>
             </div>
-            <div id="botonX">
-                <a href="/clientes/Eliminar/{{idClientes}}" >
-                <img src="/img/iconos/borrar.png" id="delete"><span id="tooltips">Eliminar</span>
-                </a>
+            <div id="Eliminar">
+                <a href="/clientes/Eliminar/{{idClientes}}">
+                    <img src="/img/iconos/borrar.png"></a>
             </div>
-            <div id="detalle">
-                <a href="/clientes/Perfil/{{idClientes}}"><button>Detalle</button></a>
+            <div id="Agregar">
+                <a href="/clientes/Perfil/{{idClientes}}"><img src="/img/iconos/iconUsuario.png"></a></a>
             </div>
         </div>
         {{else}}
-        <div id="masProveedor">
-            <a href="/clientes/agregar/{{user.idUsuarios}}"><img src="/img/iconos/mas.png" id="mas"></a>
-        </div>
+       <div id="masProveedor">
+        <a href="/clientes/agregar/{{user.idUsuarios}}">
+            <div id="boton">
+                <button type="button"><img src="/img/iconos/mas1.png" id="mas"></button>
+            </div>
+        </a>
+    </div>
         {{/each}}
     </div>
     <div id="masProveedor">
-        <a href="/clientes/agregar/{{user.idUsuarios}}"><img src="/img/iconos/mas.png" id="mas"></a>
+        <a href="/clientes/agregar/{{user.idUsuarios}}">
+            <div id="boton">
+                <button type="button"><img src="/img/iconos/mas1.png" id="mas"></button>
+            </div>
+        </a>
     </div>
 </div>
 </form>

@@ -1,4 +1,4 @@
-#contenido{
+#contenedor{
     position: absolute;
     top: 15%;
     left: 4%;
@@ -58,7 +58,7 @@ input{
 }
 
 @media (max-width: 1024px) {
-    #contenido{
+    #contenedor{
         top: 3%;
         left: 17%;
         max-width: 800px;
@@ -66,7 +66,7 @@ input{
 }
 
 @media (max-width: 600px) {
-    #contenido{
+    #contenedor{
         top: 3%;
         left: 24%;
         max-width: 400px;

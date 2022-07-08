@@ -22,7 +22,6 @@ ProductosCtrl.edit = async (req, res) => {
     const newProducto = {
         precioVenta
     }
-
     const nuevoDetalle = {
         cantidadVenta
     }

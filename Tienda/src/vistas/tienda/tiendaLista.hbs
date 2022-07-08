@@ -6,7 +6,7 @@
     </div>
 </div>
 <form action="/tienda/lista/{{user.idUsuarios}}">
-    <div id="contenido">
+    <div id="contenedor">
         {{#each tiendas}}
         <div id="nombreNegocio">
             <h1>{{nombreNegocio}}</h1>
@@ -21,7 +21,7 @@
         </div>
         <div id="CELULAR">
             <label id="Celular">Móvil:</label>
-            <input type="number" name="celular" min="0" id="celular" value="0{{celular}}" readonly>
+            <input type="number" name="celular" min="0" id="celular" value="{{celular}}" readonly>
         </div>
         <div id="botones">
             <div id="boton">

@@ -5,11 +5,11 @@ const detalleRegistroSalidas = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         },
-        Precio: type.FLOAT(6.2),
+        Precio: type.STRING,
         ventaCantidad: type.INTEGER,
         salidaCantidad: type.INTEGER,
         cantidadRestante: type.INTEGER,
-        creacionRegistroEntradas: type.STRING,
+        creacionDetalleRegistroSalidas: type.STRING,
         actualizacionRegistroSalidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),

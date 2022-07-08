@@ -1,4 +1,4 @@
-#contenido{
+#contenedor{
     position: absolute;
     top: 17%;
     left: 27%;
@@ -159,21 +159,21 @@ label{
 }
 
 @media (max-width: 1024px) {
-    #contenido{
+    #contenedor{
         top: 4%;
         left: 24%;
     }
 }
 
 @media (max-width: 800px) {
-    #contenido{
+    #contenedor{
         top: 4%;
         left: 20%;
     }
 }
 
 @media (max-width: 800px) {
-    #contenido{
+    #contenedor{
         top: 4%;
         left: 15%;
     }

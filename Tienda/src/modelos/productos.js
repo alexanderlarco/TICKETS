@@ -6,8 +6,8 @@ const productos = (sequelize, type)=>{
             autoIncrement: true
         },
         productoCantidad: type.INTEGER,
-        precioVenta: type.FLOAT(6.2),
-        precioTotalVenta: type.FLOAT(6.2),
+        precioVenta: type.STRING,
+        precioTotalVenta: type.STRING,
         creacionProductos:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

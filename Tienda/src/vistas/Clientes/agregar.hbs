@@ -1,27 +1,29 @@
 <link rel="stylesheet" href="/css/clientes/clientesAgregar.css">
-<form action="/clientes/agregar/{{user.idUsuarios}}" method="POST" id="f1">
-    <p id="p">Agregar Cliente</p>
-    <div id="contenedor_1">
-        <div id="lblncedula">
+<div id="contenedor">
+    <form action="/clientes/agregar/{{user.idUsuarios}}" method="POST" id="f1">
+        <p>Agregar Cliente</p>
+        <div id="USERNAME">
             <label id="">Cédula:</label>
-            <input type="text" name="username" id="username">
+            <input type="text" name="username" id="username" required>
         </div>
-        <div id="lblnprovedor">
+        <div id="NOMBRES">
             <label id="">Nombre y Apellido:</label>
-            <input type="text" name="Nombres" id="Nombres">
+            <input type="text" name="Nombres" id="Nombres" required>
         </div>
-        <div id="lbldireccion">
+        <div id="DIRECCION">
             <label id="">Dirección :</label>
-            <input type="text" name="Direccion" id="Direccion">
+            <input type="text" name="Direccion" id="Direccion" required>
         </div>
-        <div id="lblnumero">
+        <div id="CELULAR">
             <label id="">Celular:</label>
-            <input type="text" name="Celular" id="Numero">
+            <input type="text" name="Celular" id="Numero" required>
         </div>
-        <div id="lblcodigo">
+        <div id="TELEFONO">
             <label id="">Teléfono:</label>
             <input type="text" name="telefono" id="telefono">
         </div>
-        <button type="submit" id="guardar1">Guardar</button>
-    </div>
+        <div id="boton">
+            <button type="submit" id="guardar1">Guardar</button>
+        </div>
+</div>
 </form>

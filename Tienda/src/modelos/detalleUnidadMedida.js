@@ -5,8 +5,8 @@ const detalleUnidadMedida = (sequelize, type) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        cantidadMedida: type.FLOAT(6.2),
-        precioVentaUnidad: type.FLOAT(6.2),
+        cantidadMedida: type.STRING,
+        precioVentaUnidad: type.STRING,
         creacionDetalleUnidadMedidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

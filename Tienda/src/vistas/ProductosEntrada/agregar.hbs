@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/productoEntrada/productoEntrada.css">
 
 <form action="/ProductoEntrada/agregar/{{user.idUsuarios}}" method="POST">
-    <div id="contenido">
+    <div id="contenedor">
         {{#each idProductoEntrada}}
         <p>Nuevo Producto N°<input type="text" name="idproducto" id="idproducto" value="{{'MAX(idProductoEntradas)'}}"
                 readonly></p>

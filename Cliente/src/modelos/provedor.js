@@ -7,8 +7,9 @@ const provedor = (sequelize, type)=>{
         },
         NombreProveedor: type.STRING,
         Direccion: type.STRING,
-        Celular: type.INTEGER(10),
-        Telefono: type.INTEGER(10),
+        Celular: type.STRING(10),
+        Telefono: type.STRING(10),
+        //fechaVisita: type.STRING,
         Estado: type.BOOLEAN,
         creacionProvedores: type.STRING,
         actualizacionProvedores:{

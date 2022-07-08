@@ -1,4 +1,4 @@
-#contenido{
+#contenedor{
     position: absolute;
     top: 15%;
     left: 10%;
@@ -11,7 +11,7 @@
     border-radius: 20px;
 }
 
-#contenido p{
+#contenedor p{
     position: absolute;
     width: 100%;
     top: 1%;
@@ -86,7 +86,7 @@
     width: 100%;
 }
 
-#contenido #boton{
+#contenedor #boton{
     position: absolute;
     bottom: 0%;
     width: 80%;

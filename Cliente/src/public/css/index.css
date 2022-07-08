@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
-#contenido{
+#contenedor{
     position: absolute;
     top: 15%;
     left: 14%;
@@ -63,12 +63,12 @@
     outline: none;
     box-shadow: none;
 }
-#contenidodiv{
+#contenedordiv{
     margin-top:20px;
     height:70px;
     width:480px;
 }
-#contenidodiv h1{
+#contenedordiv h1{
     width: 100%;
     font-size:13px;
     margin-top:-12px;

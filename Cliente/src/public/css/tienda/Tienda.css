@@ -88,18 +88,18 @@
     outline: none;
 }
 
-#contenido{
+#contenedor{
     position: absolute;
     top: 5%;
     left: 2%;
     width: 90%;
 }
 
-#contenido .row{
+#contenedor .row{
     padding: 10px;
     gap: 20px;
 }
-#contenido .card{
+#contenedor .card{
     border-radius: 22px;
     border: 1px solid black;
     width: auto;

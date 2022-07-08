@@ -38,7 +38,7 @@ input{
 }
 
 @media(max-width: 840px){
-    #contenidos{
+    #contenedors{
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: initial;
         height: auto;
@@ -46,7 +46,7 @@ input{
 }
 
 @media(max-width: 600px){
-    #contenidos{
+    #contenedors{
         grid-template-columns: repeat(1, 1fr);
         height: auto;
     }

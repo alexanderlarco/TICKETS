@@ -1,4 +1,4 @@
-#contenido {
+#contenedor {
     position: absolute;
     top: 15%;
     left: 3.5%;
@@ -8,7 +8,7 @@
     max-height: 85%;
     font-size: 20px;
 }
-#contenido .row {
+#contenedor .row {
     gap: 3%;
     row-gap: 30px;
 }

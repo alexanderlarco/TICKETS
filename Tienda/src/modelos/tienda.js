@@ -10,8 +10,8 @@ const tienda = (sequelize, type)=>{
         nombreNegocio: type.STRING,
         fechaCreacion: type.STRING,
         direccion: type.STRING,
-        celular: type.INTEGER(10),
-        telefono: type.INTEGER(10),
+        celular: type.STRING(10),
+        telefono: type.STRING(10),
         creacionTiendas: type.STRING,
         actualizacionTiendas:{
             type: 'TIMESTAMP',

@@ -17,7 +17,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
     const id = req.params.id
     const IDS = req.user.idUsuarios
 
-    const {NombreProducto, codigo, CantidadTotal, unidadCantidad, precioUnidad, precioTotal, FechaCadusidad, categoriaIdCategorias, unidadMedidaIdUnidadMedidas, cantidadMedida,idproducto,provedoreIdProvedores} = req.body
+    const {NombreProducto, codigo, CantidadTotal, unidadCantidad, precioUnidad, precioTotal, FechaCadusidad, categoriaIdCategorias, unidadMedidaIdUnidadMedidas, cantidadMedida, idproducto, provedoreIdProvedores, idDetalleC} = req.body
 
     const NuevaEntrada = {
         codigo,
@@ -41,22 +41,19 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
     }
 
     const nuevoProductoVenta = {
-        productoCantidad: CantidadTotal,
+        productoCantidad: cantidadMedida,
         tiendaIdTiendas: IDS,
         usuarioIdUsuarios: IDS,
-        productoEntradaIdProductoEntradas: idproducto
+        productoEntradaIdProductoEntradas: idproducto,
     }
-
-    const detalle = {
-        unidadVeneta: unidadMedidaIdUnidadMedidas,
-        cantidadVenta: CantidadTotal,
-        categoriaIdCategorias: categoriaIdCategorias
+    const categoriaDetalle = {
+        categoriaIdCategorias:categoriaIdCategorias
     }
 
     await orm.entredaProductos.create(NuevaEntrada);
     await orm.detalleUnidadMedidas.create(nuevaCantidadUnidad)
     await orm.productos.create(nuevoProductoVenta)
-    await orm.detalleCategoria.create(detalle)
+    await orm.detalleCategoria.create(categoriaDetalle) 
     req.flash('success', "Se guardo correctamente")
     res.redirect("/ProductoEntrada/lista/1")
 }

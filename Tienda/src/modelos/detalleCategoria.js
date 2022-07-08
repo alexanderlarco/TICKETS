@@ -5,7 +5,7 @@ const detalleCategoria = ( sequelize, type) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        unidadVeneta: type.STRING,
+        unidadVenta: type.STRING,
         cantidadVenta: type.INTEGER,
         creacionDetalleCategorias:{
             type: 'TIMESTAMP',
