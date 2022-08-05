@@ -1,38 +1,60 @@
 <link rel="stylesheet" href="/css/compras/Factura.css">
 {{#each datos}}
 <form action="/formaPago/factura/{{id}}" method="post">
-{{/each}}
-<div id="contenedor">
-    <table>
-        <tr>
-            <td></td>
-            <td><input type="text" id="factura" value="Factura" readonly>
-            {{#each numero}}
-            <input type="text" name="numero" id="numero" value="{{'max(idFactura)'}}" readonly>
-            {{/each}}
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            {{#each datos}}
-            <td><input type="text" name="idTiendas" id="idTiendas" value="{{idTiendas}}"><input type="text" name="nombreNegocio" id="nombreNegocio" value="{{nombreNegocio}}" readonly></td>
-            <tr>
-                <td><input type="text" name="celular" id="celular" value="{{celular}}" readonly></td>
-            </tr>
-            <tr><td><input type="text" name="telefono" id="telefono" value="{{telefono}}" readonly></td></tr>
-            {{/each}}
-        </tr>
+    {{/each}}
+    <div id="contenedor">
+        <div id="facturaDatos">
+            <div id="TipoComprovante">
+                <select name="TipoComprovante" id="">
+                    <option value="01">Factura</option>
+                </select>
+            </div>
+            <div id="NumeroFactura">
+                {{#each numero}}
+                <input type="text" name="numero" id="numero" value="{{'max(idFactura)'}}" readonly>
+                {{/each}}
+            </div>
+            <div id="CableAcceso">
+                <input type="text" name="claveAceso" id="claveAceso" value="">
+            </div>
+            <div id="AMBIENTE">
+                <label>Ambiente</label>
+                <input type="text" name="ambiente" id="" value="1">
+            </div>
+            <div id="datosNegocio">
+                {{#each datos}}
+                <div id="RUC"> 
+                    <label>Ruc:</label>
+                    <input type="text" name="ruc" id="ruc" value="{{ruc}}">
+                </div>
+                <div id="Ntienda">
+                    <input type="text" name="idTiendas" id="idTiendas" value="{{idTiendas}}">
+                    <input type="text"name="nombreNegocio" id="nombreNegocio" value="{{nombreNegocio}}" readonly>
+                </div>
+                <div id="DIRECCION">
+                    <input type="text" name="direccion" id="direccion" value="{{direccion}}">
+                </div>
+                <div id="CELULAR">
+                    <input type="text" name="celular" id="celular" value="{{celular}}" readonly>
+                </div>
+                <div id="TELEFONO">
+                    <input type="text" name="telefono" id="telefono" value="{{telefono}}" readonly>
+                </div>
+                {{/each}}
+            </div>
+        </div>
         <tr>
             {{#each cliente}}
             <td><label>Sr(es):</label></td>
-            <td><input type="text" name="idclientes" id="idclientes" value="{{idClientes}}"><input type="text" name="nombres" id="nombres" value="{{Nombres}}" readonly></td>
+            <td><input type="text" name="idclientes" id="idclientes" value="{{idClientes}}"><input type="text"
+                    name="nombres" id="nombres" value="{{Nombres}}" readonly></td>
             <td><label>R.U.C/C.I: </label></td>
             <td><input type="text" name="RUC/CI" id="RUC/CI" value="{{username}}" readonly></td>
-            <tr>
-                <td><label>Fecha</label></td>
-                <td><input type="text" name="fecha" id="fecha" placeholder="Ingrese la fecha" checked></td>
-            </tr>
-            {{/each}}
+        <tr>
+            <td><label>Fecha</label></td>
+            <td><input type="text" name="fecha" id="fecha" placeholder="Ingrese la fecha" checked></td>
+        </tr>
+        {{/each}}
         </tr>
         <tr>
             <td>Cantidad</td>
@@ -48,19 +70,20 @@
             <td><input type="text" name="Precio" id="precio" value="{{Precio}}" readonly></td>
         </tr>
         {{/each}}
-          <tr>
+        <tr>
             <td></td>
-             {{#each unico}}
-            <td><input type="text" name="listaProductoIdListaProductos" id="listaProductoIdListaProductos" value="{{listaProductoIdListaProductos}}" readonly></td>
+            {{#each unico}}
+            <td><input type="text" name="listaProductoIdListaProductos" id="listaProductoIdListaProductos"
+                    value="{{listaProductoIdListaProductos}}" readonly></td>
             {{/each}}
             <td>VALOR TOTAL</td>
             <td><input type="text" name="valorTotal" id="total" readonly checked></td>
         </tr>
-    </table>
-    <div id="validar">
-        <button type="submit">Guardar</button>
+        </table>
+        <div id="validar">
+            <button type="submit">Guardar</button>
+        </div>
     </div>
-</div>
 </form>
 <script src="/js/fecha.js"></script>
 <script src="/js/calculoPrecio.js"></script>

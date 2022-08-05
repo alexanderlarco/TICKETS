@@ -62,6 +62,13 @@
     width: 3%;
     position: absolute;
     margin-top: -3%;
+    margin-left: 5%;
+}
+
+#Agregar{
+    width: 2%;
+    position: absolute;
+    margin-top: -3%;
     margin-left: 20%;
 }
 

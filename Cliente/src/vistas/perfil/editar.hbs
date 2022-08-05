@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/perfil/editar.css">
+<div id="contenedor">
+    <p>Editar Cliente</p>
+    {{#each cliente}}
+    <form action="/perfil/Editar/{{idClientes}}" method="post">
+        <div id="Nombres">
+            <label>Nombres:</label>
+            <input type="text" name="Nombres" value="{{Nombres}}">
+        </div>
+        <div id="Direccion">
+            <label>Direccion:</label>
+            <input type="text" name="Direccion" value="{{Direccion}}">
+        </div>
+        <div id="Username">
+            <label>Username:</label>
+            <input type="text" name="username" value="{{username}}">
+        </div>
+        <div id="telefono">
+            <label>Telefono:</label>
+            <input type="text" name="telefono" value="{{telefono}}">
+        </div>
+        <div id="Celular">
+            <label>Celular:</label>
+            <input type="text" name="Celular" value="{{Celular}}">
+        </div>
+        <div id="boton">
+            <button type="submit">Actualizar</button>
+        </div>
+        {{/each}}
+    </form>
+</div>

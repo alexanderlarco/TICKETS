@@ -43,23 +43,29 @@
 #numero{
     position: absolute;
     top: 0%;
-    width: 10%;
-    left: 67%;
+    width: 5%;
+    left: 60%;
     background-color: transparent;
     border-color: transparent;
 }
 
-#contenedor {
+#contenedor{
     position: absolute;
     top: 15%;
     left: 10%;
     width: 100%;
     height: 100%;
-    max-width: 70%;
+    max-width: 75%;
     max-height: 80%;
     background-color: rgb(255, 255, 255);
     text-align: center;
     border-radius: 20px;
+}
+
+#contenedor p{
+    position: absolute;
+    width: 100%;
+    top: 2%;
 }
 
 #Titulo {
@@ -115,10 +121,24 @@ label {
     width: 100%;
 }
 
-#guardar #boton {
+#contenedor #boton{
     position: absolute;
-    bottom: -1%;
-    width: 100%;
+    bottom: 0%;
+    width: 80%;
+    left: 10%;
+}
+
+label{
+    position: absolute;
+    left: 10%;
+}
+
+input{
+    position: absolute;
+    width: 55%;
+    left: 30%;
+    border-color: transparent;
+    border-bottom: 1px #5468ff solid;
 }
 
 @media only screen and (orientation: portrait) and (max-width: 1000px) and (min-width: 667px) {

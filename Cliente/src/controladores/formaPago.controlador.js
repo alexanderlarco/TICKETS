@@ -45,7 +45,7 @@ formaPago.MandarDatos = async(req, res)=>{
         valorTotal: valorTotal,
         tiendaIdTiendas: idTiendas,
         clienteIdClientes: idclientes,
-        listaProductoIdListaProductos: listaProductoIdListaProductos,
+        detalleListaProductoIdDetalleListaProductos: listaProductoIdListaProductos,
     }
     await orm.factura.create(ingreso)
      res.redirect('/perfil/Cliente/'+ idclientes);

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/productos/editarProducto.css">
 <div id="contenedor">
     {{#each Productos}}
-    <form action="/productos/editar/{{idProductos}}" method="POST" id="f1">
+    <form action="/productos/editar/{{idProductoEntradas}}" method="POST" id="f1">
         <p>Edita Producto </p>
         <div id="CODIGO">
             <label id="codigos">Código:</label>
@@ -13,11 +13,11 @@
         </div>
         <div id="CantidadMedida">
              <label>Cantidad:</label>
-            <input type="text" value="{{CantidadTotal}} {{unidadMedida}}" readonly>
+            <input type="text" value="{{CantidadTotal}} {{unidadmedida}}" readonly>
         </div>
         <div id="CANTIDAD">
             <label>Cantidad Total:</label>
-            <input type="text" id="Cantidad" value="{{productoCantidad}} Unidades" readonly>
+            <input type="text" id="Cantidad" value="{{cantidadMedida}} Unidades" readonly>
         </div>
         <div id="PRECIO">
             <label id="precios">Precio Original:</label>

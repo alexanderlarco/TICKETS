@@ -16,10 +16,10 @@ detalleProducto.MostrarDetalle = async(req, res) =>{
 detalleProducto.MandarDetalle = async(req, res) =>{
     const id = req.params.id
     const ids = req.user.idUsuarios
-    const {unidadVeneta, precioTotalVenta, productos, cantidadVenta, productoCantidad, precioVenta, categoria} = req.body
+    const {unidadVenta, precioTotalVenta, productos, cantidadVenta, productoCantidad, precioVenta, categoria} = req.body
 
     const nuevoSubcategoria = {
-        unidadVeneta,
+        unidadVenta,
         cantidadVenta 
     }
     const nuevoProducto = {

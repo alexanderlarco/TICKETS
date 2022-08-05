@@ -4,7 +4,6 @@ class formato {
         this.cantidad = document.getElementById('Cantidad')
         this.precio = document.getElementById('Precio')
         this.precioCambio = document.getElementById('precioCambio')
-        this.cantidadCambio = document.getElementById('cantidadCambio')
         this.productoCantidad = document.getElementById('productoCantidad')
         this.cantidadVenta = document.getElementById('cantidadVenta')
     }

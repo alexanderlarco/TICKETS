@@ -7,9 +7,10 @@ const passport = require('passport');
 const flash = require('connect-flash');
 const mysqlstore = require('express-mysql-session')(session);
 const bodyparser = require('body-parser');
+const xmlparser = require('express-xml-bodyparser');
+const xml = require('xml')
 
-const { database } = require('./keys'); 
-
+const { database } = require('./keys');
 
 const app = express(); 
 require('./lib/passport');
@@ -43,6 +44,7 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(xmlparser());
 //midlewars
 
 //varible globales 
@@ -58,6 +60,10 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname, 'public')));
 //public
 
+//xml
+  
+//xml
+
 //routers
 app.use(require('./rutas/index.rutas'))
 app.use(require('./rutas/registro.rutas'))
@@ -70,6 +76,5 @@ app.use('/Compra', require('./rutas/lista.rutas'));
 app.use('/Compras', require('./rutas/compras.rutas'));
 app.use('/formaPago', require('./rutas/formasPago.rutas'));
 app.use('/perfil', require('./rutas/perfil'))
-
 
 module.exports = app; 

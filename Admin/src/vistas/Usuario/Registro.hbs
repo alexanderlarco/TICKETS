@@ -1,0 +1,29 @@
+<LINK REL=StyleSheet HREF="/css/login/registro.css" TYPE="text/css" MEDIA=screen>
+<form action="/Registro" method="POST" enctype="multipart/form-data">
+  <div id="contenedor">
+    <div id="titulo">
+      <p>Registra tu Usuario y Contraseña</p>
+    </div>
+    <div id="idUsuarios">
+      {{#each usuario}}
+      <input type="text" name="idUsuarios" id="numero" value="{{'max(idUsuarios)'}}" readonly>
+      {{/each}}
+    </div>
+    <div id="imagenUsuario">
+      <input type="file" name="imagenUsuario" id="usuario" required>
+    </div>
+    <div id="datos">
+      <input type="text" id="Nombre" name="username" placeholder="Usuario:" required>
+    </div>
+    <div id="contraseñas">
+      <input type="password" id="Contraseña" name="password" placeholder="Contraseña:" required>
+    </div>
+    <div id="guardar">
+      <div id="boton">
+        <button type="submit">Guardar</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script src="/js/numero.js"></script>

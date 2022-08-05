@@ -5,7 +5,7 @@ class fecha {
     obtencion() {
         const tiempoTranscurrido = Date.now();
         const hoy = new Date(tiempoTranscurrido);
-        this.fecha.value = hoy.toLocaleDateString();
+        this.fecha.value = hoy.toLocaleDateString('en-GB');
     }
 }
 

@@ -1,18 +1,18 @@
-const detalleCategoria = ( sequelize, type) => {
-    return sequelize.define('detalleCategorias', {
-        idDetalleCategorias:{
+const caja = (sequelize, type) =>{
+    return sequelize.define ("Cajas", {
+        idCaja:{
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        unidadVeneta: type.STRING,
-        cantidadVenta: type.INTEGER,
-        creacionDetalleCategorias:{
+        valorTotalCaja: type.STRING,
+        fechaCaja: type.STRING,
+        creacionCaja:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionDetalleCategorias:{
+        actualizacionCaja:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -22,4 +22,4 @@ const detalleCategoria = ( sequelize, type) => {
     })
 }
 
-module.exports = detalleCategoria
+module.exports = caja

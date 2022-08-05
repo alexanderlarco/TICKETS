@@ -11,7 +11,7 @@ ProductosCtrl.renderProductos = async (req, res) => {
 
 ProductosCtrl.renderEdit = async (req, res) => {
     const id = req.params.id;
-    const Productos = await sql.query('SELECT * FROM productoscantidad WHERE idProductos = ?', [id]);
+    const Productos = await sql.query('SELECT * FROM detalle_productosentrada WHERE idProductoEntradas = ?', [id]);
     res.render('productos/editar', { Productos });
 };
 
@@ -20,7 +20,8 @@ ProductosCtrl.edit = async (req, res) => {
     const IDS = req.user.idUsuarios
     const { precioVenta, cantidadVenta } = req.body;
     const newProducto = {
-        precioVenta
+        precioVenta,
+        detalleCategoriaIdDetalleCategorias: id
     }
     const nuevoDetalle = {
         cantidadVenta
