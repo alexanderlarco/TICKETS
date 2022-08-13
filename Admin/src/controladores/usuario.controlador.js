@@ -1,6 +1,6 @@
-const usuairoCtrl = {};
+const tipoIdentificacionCtl = {};
 
-usuairoCtrl.mostrar = (req, res, next) => {
-  res.render('tienda/tiendaAgregar');
+tipoIdentificacionCtl.mostrar = (req, res, next) => {
+  res.render('tipoIdentificacion/lista');
 }
-module.exports = usuairoCtrl;
+module.exports = tipoIdentificacionCtl;

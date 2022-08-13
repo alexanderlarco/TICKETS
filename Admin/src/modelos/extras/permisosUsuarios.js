@@ -1,24 +1,24 @@
-const notaVenta = (sequelize, type)=>{
-    return sequelize.define('NotaVentas',{
-        idNotaVenta :{
+const permisosUsuairos = (sequelize, type) =>{
+    return sequelize.define('permisosUsuairos', {
+        idPermisosUsuairos: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        valorTotal: type.STRING,
-        creacionNotaVentas:{
+        nombrePermisosUsuairos: type.STRING,
+        creacionPermisosUsuairos: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionNotaVentass:{
+        actualizacionPermisosUsuairos: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    },{
+    }, {
         timestamps: false,
     })
 }
 
-module.exports = notaVenta
+module.exports = permisosUsuairos

@@ -1,0 +1,8 @@
+categoria crud admin
+unidadMeida crud admin
+datos del dueño admin de la tienda
+datos del subRoles tienda
+crud rol admin
+talba de permisos
+
+relacion tienda Factura

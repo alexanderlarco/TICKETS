@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="">
+{{#each lista}}
+<form action="/formaPago/editar/{{idFormaPagos}}" method="post">
+    <div id="contenido">
+        <div id="titulo">Editar Forma Pago</div>
+        <div id="Nombre">
+            <label>Nombre Forma Pago</label>
+            <input type="text" name="nombreFormaPago" value="{{nombreFormaPago}}" required>
+        </div>
+        <div id="Codigo">
+            <label>Codigo Fomra Pago</label>
+            <input type="text" name="codigoFormaPagos" value="{{codigoFormaPagos}}" required>
+        </div>
+        <div id="boton">
+            <button type="submit">Guardar</button>
+        </div>
+    </div>
+</form>
+{{/each}}

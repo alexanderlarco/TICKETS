@@ -1,24 +1,25 @@
-const Factura = (sequelize, type)=>{
-    return sequelize.define('Facturas',{
-        idFactura :{
+const subRolTienda = (sequelize, type) =>{
+    return sequelize.define('subRolTiendas', {
+        idSubRolTienda:{
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        valorTotal: type.STRING,
-        creacionFactura:{
+        nombreSubRolTienda: type.STRING,
+        estadoSubRolTienda: type.STRING,
+        creacionSubRolTienda: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionFactura:{
+        actualizacionSubRolTienda: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    },{
+    }, {
         timestamps: false,
     })
 }
 
-module.exports = Factura
+module.exports = subRolTienda
