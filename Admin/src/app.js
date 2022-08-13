@@ -14,16 +14,19 @@ const { database } = require('./keys');
 const app = express();
 require('./lib/passport');
 
-/// archivos compartidos
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'vistas'));
-app.engine('.hbs', exphbs({
+
+const handlebars = exphbs.create({
     defaultLayout: 'main',
     layoutsDir: path.join(app.get('views'), 'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
     extname: '.hbs',
     helpres: require('./lib/handlebars')
-}));
+})
+
+/// archivos compartidos
+app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname, 'vistas'));
+app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
 /// archivos compartidos
 
