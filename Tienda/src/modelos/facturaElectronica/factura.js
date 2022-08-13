@@ -6,7 +6,7 @@ const facturaElectronica = (sequelize, type) => {
             autoIncrement: true
         },
         fechaEmicion: type.STRING,
-        contabilidad: type.BOOLEAM,
+        contabilidad: type.STRING,
         guiaRemision: type.STRING,
         totalSinImpuesto: type.STRING,
         propina: type.STRING,

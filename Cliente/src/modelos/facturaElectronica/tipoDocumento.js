@@ -1,5 +1,5 @@
 const tipoDocumento = (sequelize, type) =>{
-    return sequelize.define('tipoAmbientes',{
+    return sequelize.define('tipoDocumentos',{
         idTipoDocumento:{
             type: type.INTEGER,
             primaryKey: true,

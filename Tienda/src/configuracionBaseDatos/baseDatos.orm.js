@@ -137,7 +137,6 @@ const pedidos = pedidosModelos(sequelize, Sequelize)
 const detallePedidos = detallePedidosModelos(sequelize, Sequelize)
 
 //factura
-const factura = facturaModelos(sequelize, Sequelize)
 const formaPago = formaPagoModelos(sequelize, Sequelize)
 const impuesto = impuestoModelo(sequelize, Sequelize)
 const impuestoRenta = impuestoRentaModelo(sequelize, Sequelize)
@@ -150,6 +149,7 @@ const tipoAmbiente = tipoAmbienteModelo(sequelize, Sequelize)
 const tipoIdentificacion = tipoIdentificacionModelo(sequelize, Sequelize)
 const tipoDocumento = tipoDocumentoModelo(sequelize, Sequelize)
 const totalImpuesto = totalImpuestoModelo(sequelize, Sequelize)
+const factura = facturaModelos(sequelize, Sequelize)
 
 //cliente
 const cliente = clienteModelos(sequelize, Sequelize)
@@ -369,6 +369,18 @@ factura.belongsTo(porcentajeIvaPresuntivo)
 totalImpuesto.hasMany(factura)
 factura.belongsTo(totalImpuesto)
 
+tienda.hasMany(factura)
+factura.belongsTo(tienda)
+
+cliente.hasMany(factura)
+factura.belongsTo(cliente)
+
+listaProductos.hasMany(factura)
+factura.belongsTo(listaProductos)
+
+detalleSubRolTienda.hasMany(factura)
+factura.belongsTo(detalleSubRolTienda)
+
 //pago
 formaPago.hasMany(pago)
 pago.belongsTo(formaPago)
@@ -388,15 +400,6 @@ impuestoRenta.hasMany(retencion)
 retencion.belongsTo(impuestoRenta)
 
 //tienda
-tienda.hasMany(factura)
-factura.belongsTo(tienda)
-
-cliente.hasMany(factura)
-factura.belongsTo(cliente)
-
-listaProductos.hasMany(factura)
-factura.belongsTo(listaProductos)
-
 detalleSubRolTienda.hasMany(gananciaSemanal)
 gananciaSemanal.belongsTo(detalleSubRolTienda)
 
@@ -451,8 +454,7 @@ module.exports = {
   detalleRegistroSalidas,
   registroSalidas,
   porcentajes,
-  notaVenta,
-  factura,
+  //notaVenta,
   caja,
   detalleCaja,
   diaPago,
@@ -460,7 +462,6 @@ module.exports = {
   gananciaSemanal,
   pedidos,
   detallePedidos,
-  factura,
   formaPago,
   impuesto,
   impuestoRenta,
@@ -472,5 +473,6 @@ module.exports = {
   tipoAmbiente,
   tipoDocumento,
   tipoIdentificacion,
-  totalImpuesto
+  totalImpuesto,
+  factura
 }
