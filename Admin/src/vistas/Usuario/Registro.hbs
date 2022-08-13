@@ -2,7 +2,7 @@
 <form action="/Registro" method="POST" enctype="multipart/form-data">
   <div id="contenedor">
     <div id="titulo">
-      <p>Registra tu Usuario y Contraseña</p>
+      <p>Registra tu Usuario</p>
     </div>
     <div id="idUsuarios">
       {{#each usuario}}
@@ -10,13 +10,29 @@
       {{/each}}
     </div>
     <div id="imagenUsuario">
-      <input type="file" name="imagenUsuario" id="usuario" required>
+      <label>Imagen</label>
+      <img id="imagenPrevisualizacion">
+      <input type="file" name="imagenUsuario" id="seleccionArchivos" accept="image/*" required>
     </div>
-    <div id="datos">
-      <input type="text" id="Nombre" name="username" placeholder="Usuario:" required>
+    <div id="NombresUsuarios">
+      <label>Nombres:</label>
+      <input type="text" name="NombresUsuarios" id="nombres" required>
+    </div>
+    <div id="ApellidosUsuarios">
+      <label>Apellidos:</label>
+      <input type="text" name="ApellidosUsuarios" id="apellidos" required>
+    </div>
+    <div id="EmailUsuarios">
+      <label>Email</label>
+      <input type="text" name="emailUsuarios" id="email" required>
+    </div>
+    <div id="NombreUsuario">
+      <label>Usuario:</label>
+      <input type="text" id="Nombre" name="username" required>
     </div>
     <div id="contraseñas">
-      <input type="password" id="Contraseña" name="password" placeholder="Contraseña:" required>
+      <label>Contraseña:</label>
+      <input type="password" id="Contraseña" name="password" required>
     </div>
     <div id="guardar">
       <div id="boton">
@@ -27,3 +43,4 @@
 </form>
 
 <script src="/js/numero.js"></script>
+<script src="/js/previsualizacion.js"></script>

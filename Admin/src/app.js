@@ -17,8 +17,8 @@ require('./lib/passport');
 
 const handlebars = exphbs.create({
     defaultLayout: 'main',
-    layoutsDir: path.join(app.get('views'), 'layouts'),
-    partialsDir: path.join(app.get('views'), 'partials'),
+    layoutsDir: path.join(__dirname, 'vistas', 'layouts'),
+    partialsDir: path.join(__dirname, 'vistas', 'partials'),
     extname: '.hbs',
     helpres: require('./lib/handlebars')
 })

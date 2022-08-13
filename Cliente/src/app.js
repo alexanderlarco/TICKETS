@@ -17,14 +17,14 @@ require('./lib/passport');
 
 const handlebars = exphbs.create({
   defaultLayout: 'main',
-  layoutsDir: path.join(app.get('views'), 'layouts'),
-  partialsDir: path.join(app.get('views'), 'partials'),
+  layoutsDir: path.join(__dirname, 'vistas', 'layouts'),
+  partialsDir: path.join(__dirname, 'vistas', 'partials'),
   extname: '.hbs',
   helpres: require('./lib/handlebars')
 })
 
 /// archivos compartidos
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 5000);
 app.set('views', path.join(__dirname, 'vistas'));
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');

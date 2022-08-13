@@ -474,5 +474,14 @@ module.exports = {
   tipoDocumento,
   tipoIdentificacion,
   totalImpuesto,
-  factura
+  factura,
+  permisosTineda,
+  permisosUsuarios,
+  detalleSubRolTienda,
+  dueñoTienda,
+  empleadoTienda,
+  subRolTienda,
+  detalleRolUsuario,
+  rolUsuario,
+  subRolUsuario
 }

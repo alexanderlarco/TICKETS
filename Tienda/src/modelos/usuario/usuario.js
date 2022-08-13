@@ -8,6 +8,7 @@ const usuarios = (sequelize, type) => {
         imagenUsuario: type.STRING,
         NombresUsuarios: type.STRING,
         ApellidosUsuarios: type.STRING,
+        CedulaUsuario: type.STRING,
         usernameUsuarios: type.STRING(99),
         passwordUsuarios: type.STRING,
         emailUsuarios: type.STRING,

@@ -18,13 +18,12 @@ indexCtrl.mandar = async (req, res) => {
     await pool.query("CREATE VIEW IF NOT EXISTS categoriaProductos AS SELECT c.categoria, p.* FROM categorias c JOIN productoscantidad p ON p.categoriaIdCategorias = c.idCategorias")
     await pool.query("CREATE VIEW IF NOT EXISTS salidaProductos AS SELECT l.NombreProducto, d.* FROM listasalidas l JOIN detalleregistrosalidas d ON d.productoIdProductos = l.idProductos")
     await pool.query("CREATE VIEW IF NOT EXISTS detalle_productosentrada as select u.unidadmedida, p.*, d.cantidadMedida from productoentradas p join unidadmedidas u on u.idunidadmedidas = p.unidadMedidaIdUnidadMedidas join detalleunidadmedidas d on u.idunidadmedidas = d.unidadMedidaIdUnidadMedidas")
-    await pool.query("CREATE VIEW IF NOT EXISTS detalle_pedidos AS SELECT ped.idPedidos, ped.nombre,ped.fechaPedido,pro.NombreProveedor,proe.NombreProducto,ped.cantidadPedido,ped.usuarioIdUsuarios FROM pedidos ped JOIN provedores pro on pro.idProvedores = ped.provedoreIdProvedores JOIN productoentradas proe on proe.idProductoEntradas = ped.productoEntradaIdProductoEntradas;")
 
     const { validar } = req.body
-    const validacion = await orm.usuarios.findOne({ where: { username: validar } })
+    const validacion = await orm.usuarios.findOne({ where: { usernameUsuarios: validar } })
     if (validacion) {
         const validaciones = validacion
-        if (validaciones.username !== null) {
+        if (validaciones.usernameUsuarios !== null) {
             res.redirect('/Login/' + validaciones.idUsuarios);
         } else {
             res.flash('success', 'no tiene un usuario con esa cuenta porfavor registrese')

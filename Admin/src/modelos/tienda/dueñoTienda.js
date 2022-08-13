@@ -8,6 +8,7 @@ const dueñoTienda = (sequelize, type) => {
         imagenDueñoTienda: type.STRING,
         NombresDueñoTienda: type.STRING,
         ApellidosDueñoTienda: type.STRING,
+        CedulaDueñoTienda: type.STRING,
         usernameDueñoTienda: type.STRING(99),
         passwordDueñoTienda: type.STRING,
         emailDueñoTienda: type.STRING,
