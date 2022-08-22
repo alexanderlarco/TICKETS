@@ -15,5 +15,6 @@ $seleccionArchivos.addEventListener("change", () => {
   // Lo convertimos a un objeto de tipo objectURL
   const objectURL = URL.createObjectURL(primerArchivo);
   // Y a la fuente de la imagen le ponemos el objectURL
+  
   $imagenPrevisualizacion.src = objectURL;
 });

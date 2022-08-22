@@ -1,6 +1,7 @@
 const indexCtrl = {};
 const pool = require('../configuracionBaseDatos/baseDatos.sql')
 const orm = require('../configuracionBaseDatos/baseDatos.orm')
+const CryptoJS = require('crypto-js')
 
 indexCtrl.mostrar = (req, res) => {
     res.render('index');

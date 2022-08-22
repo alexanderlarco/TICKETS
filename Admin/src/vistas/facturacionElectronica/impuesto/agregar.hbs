@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="">
+<div id="contenedor">
+    <form action="/impuesto/agregar/{{user.idUsuarios}}" method="post">
+    <div id="titulo">Agregar Impuesto</div>
+    <div id="NombreImpuesto">
+        <label>Nombre Impuesto:</label>
+        <input type="text" name="nombreImpuesto" id="nombreImpuesto" required>
+    </div>
+    <div id="CodigoImpuesto">
+        <label>Codigo Impuesto</label>
+        <input type="text" name="codigoImpuesto" id="codigoImpuesto" required>
+    </div>
+    <div id="boton">
+        <button type="submit">Guardar</button>
+    </div>
+    </form>
+</div>

@@ -42,7 +42,6 @@ const unidadMedidasModelos = require('../modelos/unidadMedida/unidadMedida')
 const detalleUnidadMedidaModelos = require('../modelos/unidadMedida/detalleUnidadMedida');
 const detalleRegistroEntradasModelos = require('../modelos/entradas/detalleRegistroEntradas');
 const detalleRegistroSalidasModelos = require('../modelos/salidas/detalleRegistroSalidas')
-const porcentajesModelos = require('../modelos/unidadMedida/porcentajes')
 const cajaModelo = require('../modelos/caja/caja')
 const detalleCajaModelo = require('../modelos/caja/detallecaja')
 const diaPagoModelo = require('../modelos/tienda/pago/diapago')
@@ -127,7 +126,6 @@ const unidadMedidas = unidadMedidasModelos(sequelize, Sequelize)
 const detalleUnidadMedidas = detalleUnidadMedidaModelos(sequelize, Sequelize)
 const detalleRegistroEntradas = detalleRegistroEntradasModelos(sequelize, Sequelize)
 const detalleRegistroSalidas = detalleRegistroSalidasModelos(sequelize, Sequelize)
-const porcentajes = porcentajesModelos(sequelize, Sequelize)
 const caja = cajaModelo(sequelize, Sequelize)
 const detalleCaja = detalleCajaModelo(sequelize, Sequelize)
 const diaPago = diaPagoModelo(sequelize, Sequelize)
@@ -168,6 +166,9 @@ detalleRolUsuario.belongsTo(subRolUsuario)
 
 permisosUsuarios.hasMany(detalleRolUsuario)
 detalleRolUsuario.belongsTo(permisosUsuarios)
+
+usuarios.hasMany(permisosUsuarios)
+permisosUsuarios.belongsTo(usuarios)
 
 detalleRolUsuario.hasMany(categoria)
 categoria.belongsTo(detalleRolUsuario)
@@ -223,6 +224,9 @@ detalleSubRolTienda.belongsTo(subRolTienda)
 
 permisosTineda.hasMany(detalleSubRolTienda)
 detalleSubRolTienda.belongsTo(permisosTineda)
+
+dueñoTienda.hasMany(permisosTineda)
+permisosTineda.belongsTo(dueñoTienda)
 
 detalleSubRolTienda.hasMany(tienda)
 tienda.belongsTo(detalleSubRolTienda)
@@ -453,7 +457,6 @@ module.exports = {
   detalleRegistroEntradas,
   detalleRegistroSalidas,
   registroSalidas,
-  porcentajes,
   //notaVenta,
   caja,
   detalleCaja,

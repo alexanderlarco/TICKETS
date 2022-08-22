@@ -1,17 +1,18 @@
-<LINK REL=StyleSheet HREF="/css/login/registro.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/usuario/registro.css" TYPE="text/css" MEDIA=screen>
 <form action="/Registro" method="POST" enctype="multipart/form-data">
   <div id="contenedor">
     <div id="titulo">
-      <p>Registra tu Usuario</p>
-    </div>
-    <div id="idUsuarios">
-      {{#each usuario}}
-      <input type="text" name="idUsuarios" id="numero" value="{{'max(idUsuarios)'}}" readonly>
-      {{/each}}
+      <p>Registro Unico
+        {{#each usuario}}
+        <input type="text" name="idUsuarios" id="numero" value="{{'max(idUsuarios)'}}" readonly>
+        {{/each}}
+      </p>
     </div>
     <div id="imagenUsuario">
-      <label>Imagen</label>
-      <img id="imagenPrevisualizacion">
+      <label>Imagen:</label>
+      <div id="cambioImagen">
+        <img src="/img/NoImagen.jpg" id="imagenPrevisualizacion">
+      </div>
       <input type="file" name="imagenUsuario" id="seleccionArchivos" accept="image/*" required>
     </div>
     <div id="NombresUsuarios">
@@ -22,8 +23,12 @@
       <label>Apellidos:</label>
       <input type="text" name="ApellidosUsuarios" id="apellidos" required>
     </div>
+    <div id="Cedula">
+      <label>Cedula:</label>
+      <input type="text" name="CedulaUsuario" id="cedula" required>
+    </div>
     <div id="EmailUsuarios">
-      <label>Email</label>
+      <label>Email:</label>
       <input type="text" name="emailUsuarios" id="email" required>
     </div>
     <div id="NombreUsuario">
@@ -41,6 +46,5 @@
     </div>
   </div>
 </form>
-
 <script src="/js/numero.js"></script>
 <script src="/js/previsualizacion.js"></script>

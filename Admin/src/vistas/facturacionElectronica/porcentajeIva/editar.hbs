@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="">
+<div id="contenedor">
+    {{#each lista}}
+    <form action="/porcentajeIvaPresuntivo/agregar/{{idUsuarios}}" method="post">
+        <div id="contenedor">
+            <div id="titulo">
+                <p>Editar Porcentaje Iva Presunto</p>
+            </div>
+            <div id="NombrePorcentajeIvaPresunto">
+                <label> Nombre Porcentaje Iva Presuntivo</label>
+                <input type="text" name="nombrePorcentajeIvaPresuntivo" value="{{nombrePorcentajeIvaPresuntivo}}"
+                    required>
+            </div>
+            <div id="CodijoPorcentajeIvaPresunto">
+                <label> Codijo Porcentaje Iva Presuntivo</label>
+                <input type="text" name="codigoPorcentajeIvaPresuntivo" value="{{codigoPorcentajeIvaPresuntivo}}"
+                    required>
+            </div>
+            <div id="TipoPorcentajeIvaPresuntivo">
+                <label>Tipo Porcentaje Iva Presuntivo</label>
+                <input type="text" name="tipoPorcentajeIvaPresuntivo" value="{{tipoPorcentajeIvaPresuntivo}}" required>
+            </div>
+            <div id="boton">
+                <button type="submit">Actualizar</button>
+            </div>
+        </div>
+    </form>
+    {{/each}}
+</div>

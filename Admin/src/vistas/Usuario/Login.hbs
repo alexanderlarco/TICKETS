@@ -1,24 +1,24 @@
-<LINK REL=StyleSheet HREF="/css/login/ingreso.css" TYPE="text/css" MEDIA=screen>
-{{#each Usuario}}
-<form action="/Login/{{idUsuarios}}" method="POST" id="ingresar">
-{{/each}}
-<div id="imagen">
-  <img src="/img/Newfond.png" >
-</div>
-  <div id="contenedor">
+<LINK REL=StyleSheet HREF="/css/usuario/login.css" TYPE="text/css" MEDIA=screen>
+<div id="contenedor">
+  {{#each Usuario}}
+  <form action="/Login/{{idUsuarios}}" method="POST" id="ingresar">
     <div id="titulo">
       Login
     </div>
-    {{#each Usuario}}
-    <div id="datos">
-      <input type="text" id="Nombre" name="username" placeholder="Usuario:" value="{{username}}" readonly>
+    <div id="imagen">
+      <img src="/img/usuario/{{imagenUsuario}}">
     </div>
     {{/each}}
-    <div id="contraseñas">
-      <input type="password" id="Contraseña" name="password" placeholder="Contraseña:">
+    {{#each Usuario}}
+    <div id="datos">
+      <input type="text" id="Nombre" name="username" placeholder="Usuario:" value="{{usernameUsuarios}}" readonly>
+    </div>
+    {{/each}}
+    <div id="Contraseña">
+      <input type="password" id="contraseña" name="password" placeholder="Contraseña:">
     </div>
     <div id="boton">
-      <button type="submit" >Ingresar</button>
+      <button type="submit">Ingresar</button>
     </div>
-  </div>
-</form>
+  </form>
+</div>

@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="">
+<form action="/porcentajeIvaPresuntivo/agregar/{{user.idUsuarios}}" method="post">
+    <div id="contenedor">
+        <div id="contenedor">
+            <div id="titulo">
+                <p>Agregar Porcentaje Iva Presunto</p>
+            </div>
+            <div id="NombrePorcentajeIvaPresunto">
+                <label> Nombre Porcentaje Iva Presuntivo</label>
+                <input type="text" name="nombrePorcentajeIvaPresuntivo" required>
+            </div>
+            <div id="CodijoPorcentajeIvaPresunto">
+                <label> Codijo Porcentaje Iva Presuntivo</label>
+                <input type="text" name="codigoPorcentajeIvaPresuntivo" required>
+            </div>
+            <div id="TipoPorcentajeIvaPresuntivo">
+                <label>Tipo Porcentaje Iva Presuntivo</label>
+                <input type="text" name="tipoPorcentajeIvaPresuntivo" required>
+            </div>
+            <div id="boton">
+                <button type="submit">Guardar</button>
+            </div>
+        </div>
+    </div>
+</form>
