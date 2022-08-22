@@ -16,7 +16,7 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const rows = await orm.usuarios.findOne({ where: { username: username } });
+      const rows = await orm.dueñoTienda.findOne({ where: { usernameDueñoTienda: username } });
       if (rows) {
         const user = rows;
         const contraseña = await CryptoJS.AES.decrypt(user.password, 'secret');
@@ -46,19 +46,19 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const usuarios = await orm.usuarios.findOne({ where: { username: username } });
+      const usuarios = await orm.dueñoTienda.findOne({ where: { usernameDueñoTienda: username } });
       if (usuarios === null) {
         const { idUsuarios } = req.body
         let nuevoUsuario = {
-          idUsuarios: idUsuarios,
-          username,
-          password
+          idDueñoTienda: idUsuarios,
+          usernameDueñoTienda: username,
+          passwordDueñoTienda: password
         };
-        nuevoUsuario.password = await helpers.encryptPassword(password);
-        const resultado = await orm.usuarios.create(nuevoUsuario);
+        nuevoUsuario.passwordDueñoTienda = await helpers.encryptPassword(password);
+        const resultado = await orm.dueñoTienda.create(nuevoUsuario);
         nuevoUsuario.id = resultado.insertId;
 
-        const imagenUsuario = req.files.imagenUsuario
+        const imagenUsuario = req.files.imagenDueñoTienda
         const validacion = path.extname(imagenUsuario.name)
 
         const extencion = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif"];
@@ -71,13 +71,13 @@ passport.use(
           req.flash("success", "Imagen no insertada.")
         }
 
-        const ubicacion = __dirname + "/../public/img/usuario/" + imagenUsuario.name;
+        const ubicacion = __dirname + "/../public/img/Tienda/usuario/" + imagenUsuario.name;
 
         imagenUsuario.mv(ubicacion, function (err) {
           if (err) {
             return res.status(500).send(err)
           }
-          sql.query("UPDATE usuarios SET imagenUsuario = ? WHERE idUsuarios = ?", [imagenUsuario.name, idUsuarios])
+          sql.query("UPDATE dueñoTiendas SET imagenDueñoTienda = ? WHERE idDueñoTienda = ?", [imagenUsuario.name, idUsuarios])
           console.log("Imagen de usuario ingresada")
         })
         return done(null, nuevoUsuario);
@@ -89,15 +89,15 @@ passport.use(
           } else {
             const { idUsuarios } = req.body
             let nuevoUsuario = {
-              idUsuarios: idUsuarios,
-              username,
-              password
+              idDueñoTienda: idUsuarios,
+              usernameDueñoTienda: username,
+              passwordDueñoTienda: password
             };
-            nuevoUsuario.password = await helpers.encryptPassword(password);
-            const resultado = await orm.usuarios.create(nuevoUsuario);
+            nuevoUsuario.passwordDueñoTienda = await helpers.encryptPassword(password);
+            const resultado = await orm.dueñoTienda.create(nuevoUsuario);
             nuevoUsuario.id = resultado.insertId;
 
-            const imagenUsuario = req.files.imagenUsuario
+            const imagenUsuario = req.files.imagenDueñoTienda
             const validacion = path.extname(imagenUsuario.name)
 
             const extencion = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif"];
@@ -110,14 +110,14 @@ passport.use(
               req.flash("success", "Imagen no insertada.")
             }
 
-            const ubicacion = __dirname + "/../public/img/usuario/" + imagenUsuario.name;
+            const ubicacion = __dirname + "/../public/img/Tienda/usuario/" + imagenUsuario.name;
 
             imagenUsuario.mv(ubicacion, function (err) {
               if (err) {
                 return res.status(500).send(err)
               }
-              sql.query("UPDATE usuarios SET imagenUsuario = ? WHERE idUsuarios = ?", [imagenUsuario.name, idUsuarios])
-              console.log("Imagen de tienda ingresada")
+              sql.query("UPDATE dueñoTiendas SET imagenDueñoTienda = ? WHERE idDueñoTienda = ?", [imagenUsuario.name, idUsuarios])
+              console.log("Imagen de usuario ingresada")
             })
             return done(null, nuevoUsuario);
           }
