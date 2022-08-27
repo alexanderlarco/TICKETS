@@ -69,5 +69,6 @@ app.use(require('./Rutas/usuario.rutas'))
 app.use('/formaPago',require('./Rutas/formaPago.rutas'))
 app.use('/impuesto', require('./Rutas/impuesto.rutas'))
 app.use('/impuestoRenta', require('./Rutas/impuestoRenta.rutas'))
+app.use('/tarifaIva', require('./Rutas/tarifaIva.rutas'))
 
 module.exports = app;

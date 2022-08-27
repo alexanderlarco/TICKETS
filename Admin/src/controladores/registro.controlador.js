@@ -18,7 +18,7 @@ registro.mostrarRegistro = async (req, res) => {
             res.render('Usuario/Registro', { usuario });
         } else {
             req.flash('message', 'No Puede Ingresar')
-            res.redirect('/')  
+            res.redirect('/') 
         }
     }
 };

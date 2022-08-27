@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/facturaElectronica/tarifaIva/agregar.css">
+<div id="foto">
+    <img src="">
+</div>
+<div id="contenedor">
+    <form action="/tarifaIva/agregar/{{user.idUsuarios}}" method="post">
+    <div id="titulo">
+        <p>Agregar Tarifa Iva</p>
+    </div>
+    <div id="NombreTarifaIva">
+        <label>Nombre Tarifa Iva:</label>
+        <input type="text" name="nombreTarifaIva" required>
+    </div>
+    <div id="CodigoTarifaIva">
+        <label>Codigo Tarifa Iva:</label>
+        <input type="text" name="codigoTarifaIva" required>
+    </div>
+    <div id="boton">
+        <button type="submit">GUARDAR</button>
+    </div>
+    </form>
+</div>
