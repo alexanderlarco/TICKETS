@@ -13,7 +13,7 @@ formaPagoCtl.mandar = async (req, res) => {
     const nuevoEnvio = {
         nombreFormaPago,
         codigoFormaPagos,
-        usuarioIdUsuarios: id
+        detalleRolUsuarioIdDetalleRolUsuario: id
     }
     await orm.formaPago.create(nuevoEnvio)
     req.flash('success', 'Se Guardo con exito')
@@ -46,13 +46,24 @@ formaPagoCtl.editar = async (req, res) => {
     const { nombreFormaPago, codigoFormaPagos } = req.body
     const nuevoEnvio = {
         nombreFormaPago,
-        codigoFormaPagos
+        codigoFormaPagos,
+        detalleRolUsuarioIdDetalleRolUsuario: ids
     }
     await orm.formaPago.findOne({ where: { idFormaPagos: id } })
         .then(actualizar => {
             actualizar.update(nuevoEnvio)
             req.flash('success', 'se actualizo con exito')
             res.redirect('/formaPago/lista/' + ids);
+        })
+}
+
+formaPagoCtl.eliminar = async (req, res) => {
+    const ids = req.params.id
+    const id = req.user.idUsuarios
+    await orm.formaPago.destroy({ where: { idFormaPagos: ids } })
+        .then(() => {
+            req.flash('success', 'Actuaizado con exito')
+            res.redirect('/formaPago/lista/' + id);
         })
 }
 

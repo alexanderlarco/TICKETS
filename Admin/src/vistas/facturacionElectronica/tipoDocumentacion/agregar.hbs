@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="">
+<form action="/tipoDocumentacion/agregar/{{user.idUsuarios}}" method="post">
+<div id="contenedor">
+    <div id="titulo">
+        <p>Agregar Tipo Documento</p>
+    </div>
+    <div id="NombreTipoDocumento">
+        <label>Nombre Tipo Documento:</label>
+        <input type="text" name="nombreTipoDocumento" id="nombreTipoDocumento" required>
+    </div>
+    <div id="CodigoTipoDocumento">
+        <label>Codigo Tipo Documento:</label>
+        <input type="text" name="codigoTipoDocumento" id="codigoTipoDocumento" required>
+    </div>
+    <div id="EstadoTipoDocumento">
+        <label>Estado Tipo Documento:</label>
+        <input type="text" name="estadoTipoDocumento" id="estadoTipoDocumento" required>
+    </div>
+    <div id="boton">
+        <button type="submit">Guardar</button>
+    </div>
+</div>
+</form>

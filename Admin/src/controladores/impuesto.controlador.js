@@ -49,10 +49,20 @@ impuestoCtl.editar = async (req, res) => {
         codigoImpuesto,
         detalleRolUsuarioIdDetalleRolUsuario: id
     }
-    await orm.impuesto.findOne({ where: { idImpuesto: id } })
+    await orm.impuesto.findOne({ where: { idImpuesto: ids } })
         .then(actualizar => {
             actualizar.update(nuevoImpuesto)
             req.flash('success', 'Exito al Guardar')
+            res.redirect('/impuesto/lista/' + id);
+        })
+}
+
+impuestoCtl.eliminar = async (req, res) => {
+    const ids = req.params.id
+    const id = req.user.idUsuarios
+    await orm.impuesto.destroy({ where: { idImpuesto: ids } })
+        .then(() => {
+            req.flash('success', 'Actuaizado con exito')
             res.redirect('/impuesto/lista/' + id);
         })
 }

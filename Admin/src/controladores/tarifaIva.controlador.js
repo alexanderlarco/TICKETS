@@ -12,7 +12,8 @@ tarifaIvaCtl.mandar = async (req, res) => {
     const { nombreTarifaIva, codigoTarifaIva } = req.body
     const nuevoEnvio = {
         nombreTarifaIva,
-        codigoTarifaIva
+        codigoTarifaIva,
+        detalleRolUsuarioIdDetalleRolUsuario: id
     }
     await orm.tarifaIva.create(nuevoEnvio)
     req.flash('success', 'Guardado con exito')
@@ -48,6 +49,7 @@ tarifaIvaCtl.actualizar = async (req, res) => {
 
 tarifaIvaCtl.eliminar = async (req, res) => {
     const ids = req.params.id
+    const id = req.user.idUsuarios
     await orm.tarifaIva.destroy({ where: { idTarifaIva: ids } })
         .then(() => {
             req.flash('success', 'Actuaizado con exito')

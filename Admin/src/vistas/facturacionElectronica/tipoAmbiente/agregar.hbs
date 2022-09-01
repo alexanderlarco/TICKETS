@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="">
+<div id="contenido">
+    <form action="/tipoAmbiente/agregar/{{user.idUsuarios}}" method="post">
+        <div id="titulo">
+            <p>Agregar Tipo Ambiente</p>
+        </div>
+        <div id="NombreTipoAmbiente">
+            <label>Nombre Tipo Ambiente:</label>
+            <input type="text" name="nombreTipoAmbiente" required>
+        </div>
+        <div id="EstadoTipoAmbiente">
+            <label>Estado Tipo Ambiente</label>
+            <input type="text" name="estadoTipoAmbiente" required>
+        </div>
+        <div id="boton">
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+</div>
