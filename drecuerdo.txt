@@ -1,8 +1,13 @@
 categoria crud admin
 unidadMeida crud admin
+crud rol admin
+crud permisos
+talba de permisos
+tabla rulUsuario
+traer todas las tiendas
+traer clientes
+
+
 datos del dueño admin de la tienda
 datos del subRoles tienda
-crud rol admin
-talba de permisos
-
 relacion tienda Factura

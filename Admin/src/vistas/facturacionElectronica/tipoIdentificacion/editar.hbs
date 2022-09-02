@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="">
+{{#each lista}}
+<form action="/tipoIdentificacion/editar/{{idTipoIdentificacion}}" method="post">
+<div id="contenedor">
+    <div id="titulo">
+        <p>Agregar Tipo Identificación</p>
+    </div>
+    <div id="NombreTipoIdentificacion">
+        <label>Nombre Tipo Identificación:</label>
+        <input type="text" name="nombreTipoIdentificacion" id="nombreTipoIdentificacion" value="{{nombreTipoIdentificacion}}" required>
+    </div>
+    <div id="CodigoTipoItentificacion">
+        <label>Codigo Tipo Identificación:</label>
+        <input type="text" name="codigoTipoItentificacion" id="codigoTipoItentificacion" value="{{codigoTipoItentificacion}}" required>
+    </div>
+    <div id="EstadoTipoIdentificacion">
+        <label>Estado Tipo Identificación:</label>
+        <input type="text" name="estadoTipoIdentificacion" id="estadoTipoIdentificacion" value="{{estadoTipoIdentificacion}}" required>
+    </div>
+    <div id="boton">
+        <button type="submit">Guardar</button>
+    </div>
+</div>
+</form>
+{{/each}}

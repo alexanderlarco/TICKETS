@@ -8,10 +8,10 @@ indexCtrl.mostrar = (req, res) => {
 
 indexCtrl.mandar = async (req, res) => {
     const {validar} = req.body
-    const validacion = await orm.usuarios.findOne({ where: {username: validar}})
+    const validacion = await orm.dueñoTienda.findOne({ where: {usernameDueñoTienda: validar}})
     if(validacion){
         const validaciones = validacion
-        if(validaciones.username !== null){
+        if(validaciones.usernameDueñoTienda !== null){
             res.redirect('/Login/'+ validaciones.idUsuarios);
         }else{
             res.flash('success', 'no tiene un usuario con esa cuenta porfavor registrese')
