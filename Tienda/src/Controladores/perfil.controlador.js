@@ -8,7 +8,7 @@ var CryptoJS = require("crypto-js");
 perfilCtl.mostrar = async (req, res) => {
 	const id = req.user.idDueñoTienda;
 	const usuarios = await sql.query(
-		"select * from usuarios where idDueñoTienda = ?",
+		"select * from dueñotiendas where idDueñoTienda = ?",
 		[id]
 	);
 	res.render("perfil/perfil", { usuarios });

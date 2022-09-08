@@ -79,15 +79,12 @@ clienteCtrl.Perfil = async (req, res) => {
 		"SELECT * FROM clientes where idClientes = ?",
 		[ids]
 	);
-	const nota = await sql.query(
-		"select * from notaventas where clienteIdClientes = ?",
-		[ids]
-	);
+
 	const Facturas = await sql.query(
-		"select * from facturas where clienteIdClientes = ?",
+		"select * from facturaelectronicas where clienteIdClientes = ?",
 		[ids]
 	);
-	res.render("Clientes/Perfil", { cliente, nota, Facturas });
+	res.render("Clientes/Perfil", { cliente, Facturas });
 };
 
 module.exports = clienteCtrl;
