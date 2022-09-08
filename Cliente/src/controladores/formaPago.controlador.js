@@ -34,7 +34,7 @@ formaPago.traerDatos = async(req,res)=>{
     const cliente = await sql.query("SELECT * FROM clientes where idClientes = ?", [ids])
     const lista = await sql.query("SELECT * FROM listacompras")
     const unico = await sql.query("SELECT DISTINCT(listaProductoIdListaProductos) FROM listacompras where clienteIdClientes =?", [ids])
-    const numero = await sql.query("select max(idFactura) from facturas")
+    const numero = await sql.query("select max(idFacturaElectronica) from facturaelectronicas")
     res.render("formasPago/factura", {datos, cliente, lista, numero, unico});
 }
 

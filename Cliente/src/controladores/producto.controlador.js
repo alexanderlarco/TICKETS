@@ -17,7 +17,7 @@ productos.Mandar = async (req,res)  => {
     const ids = req.user.idClientes
     const { nombreLista }= req.body
     const nuevaLista = {
-        nombreLista,
+        nombreLista, 
         tiendaIdTiendas: id,
         clienteIdClientes: ids
     }

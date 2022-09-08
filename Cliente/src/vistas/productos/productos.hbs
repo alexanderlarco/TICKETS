@@ -41,36 +41,38 @@
 </div>
 <div id="contenedor">
     <!--card--->
-    <form action="/producto/lista/{{user.idClientes}}" method="POST" id="tienda">
+    {{#each tienda}}
+    <form action="/producto/lista/{{idTiendas}}" method="POST" id="tienda">
+    {{/each}}
         <div id="nombreLista">
             <div id="GuardarLista">
                 <label id="listaNombre">Nombre de Lista:</label>
-                <input type="text" name="nombreLista" id="NombreLista" value="Lista" >
+                <input type="text" name="nombreLista" id="NombreLista" value="Lista">
                 <button type="submit" id="btones"><img src="/img/guardar.png" id="guardar"></button>
             </div>
         </div>
-          </form>
-        <div class="container p-4">
-            <div class="row">
-                {{#each listaProductos}}
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <input type="text" value="Producto #{{idProductos}}" readonly id="cantidad">
-                            <input type="text" value="{{NombreProducto}}" readonly id="cantidad">
-                            <input type="text" value="Stock: {{productoCantidad}}" readonly id="cantidad">
-                            <input type="text" value="Precio: {{precioVenta}}$" readonly id="cantidad">
-                            <button id="comprar"><a href="/Compras/eleccion/{{idProductos}}">COMPRAR</a></button>
-                        </div>
+    </form>
+    <div class="container p-4">
+        <div class="row">
+            {{#each listaProductos}}
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <input type="text" value="Producto #{{idProductos}}" readonly id="cantidad">
+                        <input type="text" value="{{NombreProducto}}" readonly id="cantidad">
+                        <input type="text" value="Stock: {{productoCantidad}}" readonly id="cantidad">
+                        <input type="text" value="Precio: {{precioVenta}}$" readonly id="cantidad">
+                        <button id="comprar"><a href="/Compras/eleccion/{{idProductos}}">COMPRAR</a></button>
                     </div>
                 </div>
-                {{/each}}
             </div>
-        </div>
-        <div id="mover">
-            {{#each tienda}}
-            <button id="ver"><a href="/Compra/listaCompleta/{{idTiendas}}" id="letras">Lista Completa</a></button>
             {{/each}}
         </div>
+    </div>
+    <div id="mover">
+        {{#each tienda}}
+        <button id="ver"><a href="/Compra/listaCompleta/{{idTiendas}}" id="letras">Lista Completa</a></button>
+        {{/each}}
+    </div>
 </div>
 <script src="/js/lista.js"></script>
