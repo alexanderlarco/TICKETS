@@ -24,7 +24,7 @@ perfilCtrl.enviar = async (req, res) => {
         ruc, 
         direccion, 
         fechaCreacion,
-        usuarioIdUsuarios: id
+        detalleSubRolTiendaIdDetalleSubRolTienda: id
     }
     await orm.tienda.create(newTienda) 
 
