@@ -4,7 +4,7 @@ _Levantamiento del proyecto FINTECH:_
 Apache - MySQL
 
 - _Comando para correr el proyecto: Funciona en Admin - Cliente - Tienda_
-npm run dev
+$ npm run dev
 
 - _Base de datos:_
 Hay vistas que deben ser creadas, ya que son creadas al pasar la primera vista de Admin.
