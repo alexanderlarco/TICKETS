@@ -8,22 +8,22 @@ entradaSalida.mostrarEntradasSalidas = (req, res) => {
 }
 
 entradaSalida.mostrarEntrada = async (req, res) => {
-    const ids = req.user.idUsuarios
+    const ids = req.user.idDueñoTienda
     const entrasLista = await sql.query('SELECT max(idRegistroEntradas) FROM registroentradas')
-    const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE usuarioIdUsuarios = ?', [ids])
-    const listaProveedor = await sql.query('SELECT * FROM provedores WHERE usuarioIdUsuarios = ?', [ids])
+    const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE detalleSubRolTiendaIdDetalleSubRolTienda = ?', [ids])
+    const listaProveedor = await sql.query('SELECT * FROM provedores WHERE detalleSubRolTiendaIdDetalleSubRolTienda = ?', [ids])
     const listaProductos = await sql.query('SELECT DISTINCT v.productoCantidad, p.*, u.unidadMedida FROM productoentradas p JOIN unidadmedidas u ON u.idUnidadMedidas = p.unidadMedidaIdUnidadMedidas JOIN productos v ON p.idProductoEntradas = v.productoEntradaIdProductoEntradas WHERE p.tiendaIdTiendas = ?', [ids])
     res.render('EntradasSalidas/entradas/entadaAgregar', { listaTienda, listaProveedor, listaProductos, entrasLista });
 }
 
 entradaSalida.mandarEntrada = async (req, res) => {
-    const ids = req.user.idUsuarios
+    const ids = req.user.idDueñoTienda
     const { fecha, entraCantidad, cantidadRestante, idRegistroEntradas, productoEntradaIdProductoEntradas, provedoreIdProvedores } = req.body
 
     const nuevaEntrada = {
         tiendaIdTiendas: ids,
         provedoreIdProvedores: provedoreIdProvedores,
-        usuarioIdUsuarios: ids,
+        detalleSubRolTiendaIdDetalleSubRolTienda: ids,
         creacionRegistroEntradas: fecha 
     }
     await orm.registroEntradas.create(nuevaEntrada)
@@ -35,8 +35,8 @@ entradaSalida.mandarEntrada = async (req, res) => {
 }
 
 entradaSalida.listaEntrada = async (req, res) => {
-    const id = req.user.idUsuarios
-    const lista = await sql.query('SELECT * FROM registroentradas WHERE usuarioIdUsuarios = ?', [id])
+    const id = req.user.idDueñoTienda
+    const lista = await sql.query('SELECT * FROM registroentradas WHERE detalleSubRolTiendaIdDetalleSubRolTienda = ?', [id])
     res.render('EntradasSalidas/entradas/lista', { lista });
 }
 
@@ -47,7 +47,7 @@ entradaSalida.detallelistaEntrada = async (req, res) => {
 }
  
 entradaSalida.mostrarSalida = async (req, res) => {
-    const ids = req.user.idUsuarios
+    const ids = req.user.idDueñoTienda
     const id = req.params.id
     const salidaLista = await sql.query('SELECT max(idRegistroSalidas) FROM registrosalidas')
     const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE IdTiendas = ?', [ids])
@@ -58,13 +58,13 @@ entradaSalida.mostrarSalida = async (req, res) => {
 
 entradaSalida.MandarSalida = async (req, res) => {
     const id = req.params.id
-    const ids = req.user.idUsuarios
+    const ids = req.user.idDueñoTienda
     const { fecha, salidaCantidad, ventaCantidad, cantidadRestante, Precio, productoIdProductos, idregistros, clienteIdClientes  } = req.body
     const nuevaSalida = {
         tiendaIdTiendas: id,
         creacionRegistroSalidas: fecha,
         clienteIdClientes: clienteIdClientes, 
-        usuarioIdUsuarios: ids
+        detalleSubRolTiendaIdDetalleSubRolTienda: ids
     }
     await orm.registroSalidas.create(nuevaSalida)
     for(let i = 0; i < productoIdProductos.length; i++){
@@ -75,8 +75,8 @@ entradaSalida.MandarSalida = async (req, res) => {
 }
 
 entradaSalida.ListaSalidas = async (req, res) => {
-    const id = req.user.idUsuarios
-    const lista = await sql.query('SELECT * FROM registrosalidas WHERE usuarioIdUsuarios = ?', [id])
+    const id = req.user.idDueñoTienda
+    const lista = await sql.query('SELECT * FROM registrosalidas WHERE detalleSubRolTiendaIdDetalleSubRolTienda = ?', [id])
     res.render('EntradasSalidas/salidas/lista', { lista });
 }
 

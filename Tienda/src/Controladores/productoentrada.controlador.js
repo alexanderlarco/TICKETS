@@ -15,7 +15,7 @@ ProductoEntradaCtrl.renderEntrada = async (req, res) => {
 ProductoEntradaCtrl.addEntrada = async (req, res) => {
 
     const id = req.params.id
-    const IDS = req.user.idUsuarios
+    const IDS = req.user.idDueñoTienda
 
     const {NombreProducto, codigo, CantidadTotal, unidadCantidad, precioUnidad, precioTotal, FechaCadusidad, categoriaIdCategorias, unidadMedidaIdUnidadMedidas, cantidadMedida, idproducto, provedoreIdProvedores, idDetalleC} = req.body
 
@@ -29,7 +29,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
         FechaCadusidad,        
         provedoreIdProvedores:provedoreIdProvedores,
         tiendaIdTiendas: IDS,
-        usuarioIdUsuarios: IDS,
+        detalleSubRolTiendaIdDetalleSubRolTienda: IDS,
         categoriaIdCategorias: categoriaIdCategorias,
         unidadMedidaIdUnidadMedidas: unidadMedidaIdUnidadMedidas
     }
@@ -43,7 +43,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
     const nuevoProductoVenta = {
         productoCantidad: cantidadMedida,
         tiendaIdTiendas: IDS,
-        usuarioIdUsuarios: IDS,
+        detalleSubRolTiendaIdDetalleSubRolTienda: IDS,
         productoEntradaIdProductoEntradas: idproducto,
     }
     const categoriaDetalle = {
@@ -80,7 +80,7 @@ ProductoEntradaCtrl.renderEditarEntrada = async (req, res) => {
     res.render("ProductosEntrada/editar", { Productos })
 }
 ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
-    const IDS = req.user.idUsuarios
+    const IDS = req.user.idDueñoTienda
     const id = req.params.id
     const { NombreProducto, CantidadTotal, precioTotal, FechaCadusidad } = req.body
     const EntradaEditad = {
@@ -94,7 +94,7 @@ ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
         .then(productoEntrada => {
             productoEntrada.update(EntradaEditad)
             req.flash('success', 'Se Actualizo Correctamente');
-            res.redirect('/ProductoEntrada/lista/1');
+            res.redirect('/ProductoEntrada/lista/', IDS);
         })
 }
 module.exports = ProductoEntradaCtrl
