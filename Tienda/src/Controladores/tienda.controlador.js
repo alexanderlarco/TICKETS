@@ -1,10 +1,9 @@
-const perfilCtrl = {}
+const perfilCtrl = {};
 
-const path = require('path')
+const path = require("path");
 
-const orm = require('../configuracionBaseDatos/baseDatos.orm')
-const sql = require('../configuracionBaseDatos/baseDatos.sql')
-
+const orm = require("../configuracionBaseDatos/baseDatos.orm");
+const sql = require("../configuracionBaseDatos/baseDatos.sql");
 
 perfilCtrl.mostrar = async (req, res) => {
     const id = req.user.idDueñoTienda
@@ -28,31 +27,46 @@ perfilCtrl.enviar = async (req, res) => {
     }
     await orm.tienda.create(newTienda) 
 
-    const imagenTienda =  req.files.tiendaImagen;
-    const validacion = path.extname(imagenTienda.name)
-    const extencion = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif"];
+	const imagenTienda = req.files.tiendaImagen;
+	const validacion = path.extname(imagenTienda.name);
+	const extencion = [
+		".PNG",
+		".JPG",
+		".JPEG",
+		".GIF",
+		".TIF",
+		".png",
+		".jpg",
+		".jpeg",
+		".gif",
+		".tif",
+	];
 
-    if (!extencion.includes(validacion)) {
-        req.flash("success", "Imagen no compatible.")
-    }
+	if (!extencion.includes(validacion)) {
+		req.flash("success", "Imagen no compatible.");
+	}
 
-    if (!req.files) {
-        req.flash("success", "Imagen no insertada.")
-    }
+	if (!req.files) {
+		req.flash("success", "Imagen no insertada.");
+	}
 
-    const ubicacion = __dirname + "/../public/img/Tienda/imagenTienda/" + imagenTienda.name;
+	const ubicacion =
+		__dirname + "/../public/img/Tienda/imagenTienda/" + imagenTienda.name;
 
-    imagenTienda.mv(ubicacion, function (err) {
-        if (err) {
-            return res.status(500).send(err)
-        }
-        sql.query("UPDATE tiendas SET tiendaImagen = ? WHERE idTiendas = ?", [imagenTienda.name, idTiendas])
-        console.log("Imagen de tienda ingresada")
-    })
+	imagenTienda.mv(ubicacion, function (err) {
+		if (err) {
+			return res.status(500).send(err);
+		}
+		sql.query("UPDATE tiendas SET tiendaImagen = ? WHERE idTiendas = ?", [
+			imagenTienda.name,
+			idTiendas,
+		]);
+		console.log("Imagen de tienda ingresada");
+	});
 
-    req.flash('success', 'Se guaardo con exito')
-    res.redirect('/tienda/lista/'+ id);
-}
+	req.flash("success", "Se guaardo con exito");
+	res.redirect("/tienda/lista/" + id);
+};
 
 perfilCtrl.lista = async (req, res) => {
     const id = req.params.id
@@ -63,10 +77,13 @@ perfilCtrl.lista = async (req, res) => {
 }
 
 perfilCtrl.traer = async (req, res) => {
-    const id = req.params.id
-    const tienda = await sql.query("SELECT * FROM tiendas WHERE idTiendas = ?", [id])
-    res.render('tienda/tiendaEditar', { tienda: tienda });
-}
+	const id = req.params.id;
+	const tienda = await sql.query(
+		"SELECT * FROM tiendas WHERE idTiendas = ?",
+		[id]
+	);
+	res.render("tienda/tiendaEditar", { tienda: tienda });
+};
 
 perfilCtrl.editar = async (req, res) => {
     const ids = req.params.id
@@ -88,4 +105,4 @@ perfilCtrl.editar = async (req, res) => {
         })
 }
 
-module.exports = perfilCtrl
+module.exports = perfilCtrl;

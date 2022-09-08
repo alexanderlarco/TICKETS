@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/entradasSalidas/lista.css">
-<form action="/entradaSalida/entradas/Lista/{{user.idUsuarios}}" method="get"></form>
+<form action="/entradaSalida/entradas/Lista/{{user.idDueñoTienda}}" method="get"></form>
 <div id="contenedor">
     <div class="row">
         {{#each lista}}
@@ -19,10 +19,10 @@
         {{/each}}
     </div>
     <div id="masProveedor">
-    <a href="/entradaSalida/entradas/agregar/{{user.idUsuarios}}">
-        <div id="boton">
-            <button type="button"><img src="/img/iconos/mas1.png" id="mas"></button>
-        </div>
-    </a>
-</div>
+        <a href="/entradaSalida/entradas/agregar/{{user.idDueñoTienda}}">
+            <div id="boton">
+                <button type="button"><img src="/img/iconos/mas1.png" id="mas"></button>
+            </div>
+        </a>
+    </div>
 </div>

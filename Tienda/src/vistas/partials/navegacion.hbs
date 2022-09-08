@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/navegacion.css">
 {{#if user}}
 <div id="menu">
- <button type="button" onclick="menus.aparicion()"><img src="/img/iconos/abajo.png" alt=""></button> 
+  <button type="button" onclick="menus.aparicion()"><img src="/img/iconos/abajo.png" alt=""></button>
 </div>
 <div id="abajo">
   <button type="button" onclick="menus.botonMenu()"><img src="/img/iconos/menu.png" alt=""></button>
@@ -19,7 +19,7 @@
   </div>
   <div id="boton">
     <div id="nav3">
-      <a href="/proveedor/lista/{{user.idUsuarios}}"> <button type="button">Proveedores</button> </a>
+      <a href="/proveedor/lista/{{user.idDueñoTienda}}"> <button type="button">Proveedores</button> </a>
     </div>
   </div>
   <div id="boton">

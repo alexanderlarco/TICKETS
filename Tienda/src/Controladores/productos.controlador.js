@@ -1,18 +1,24 @@
 const ProductosCtrl = {};
 
-const orm = require('../configuracionBaseDatos/baseDatos.orm')
-const sql = require('../configuracionBaseDatos/baseDatos.sql')
+const orm = require("../configuracionBaseDatos/baseDatos.orm");
+const sql = require("../configuracionBaseDatos/baseDatos.sql");
 
 ProductosCtrl.renderProductos = async (req, res) => {
-    const id = req.params.id
-    const productos = await sql.query('SELECT * FROM productoscantidad WHERE tiendaIdTiendas = ?', [id])
-    res.render('productos/productosVenta', { productos });
-}
+	const id = req.params.id; 
+	const productos = await sql.query(
+		"SELECT * FROM productoscantidad WHERE tiendaIdTiendas = ?",
+		[id]
+	);
+	res.render("productos/productosVenta", { productos });
+};
 
 ProductosCtrl.renderEdit = async (req, res) => {
-    const id = req.params.id;
-    const Productos = await sql.query('SELECT * FROM detalle_productosentrada WHERE idProductoEntradas = ?', [id]);
-    res.render('productos/editar', { Productos });
+	const id = req.params.id;
+	const Productos = await sql.query(
+		"SELECT * FROM detalle_productosentrada WHERE idProductoEntradas = ?",
+		[id]
+	);
+	res.render("productos/editar", { Productos });
 };
 
 ProductosCtrl.edit = async (req, res) => {
