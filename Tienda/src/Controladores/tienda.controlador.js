@@ -8,7 +8,7 @@ const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 perfilCtrl.mostrar = async (req, res) => {
     const id = req.user.idUsuarios
-    const tienda = await sql.query('Select * from tiendas where usuarioIdUsuarios = ?', [id])
+    const tienda = await sql.query('Select * from tiendas where detalleSubRolTiendaIdDetalleSubRolTienda = ?', [id])
     const max = await sql.query('select max(idTiendas) from tiendas')
     res.render('tienda/tiendaAgregar', { tienda, max });
 }

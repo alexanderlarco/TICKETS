@@ -12,7 +12,7 @@ indexCtrl.mandar = async (req, res) => {
     if(validacion){
         const validaciones = validacion
         if(validaciones.usernameDueñoTienda !== null){
-            res.redirect('/Login/'+ validaciones.idUsuarios);
+            res.redirect('/Login/'+ validaciones.idDueñoTienda);
         }else{
             res.flash('success', 'no tiene un usuario con esa cuenta porfavor registrese')
             res.redirect('/Registro')

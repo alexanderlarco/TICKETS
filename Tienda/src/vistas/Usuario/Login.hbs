@@ -1,6 +1,6 @@
 <LINK REL=StyleSheet HREF="/css/login/ingreso.css" TYPE="text/css" MEDIA=screen>
 {{#each Usuario}}
-<form action="/Login/{{idUsuarios}}" method="POST" id="ingresar">
+<form action="/Login/{{idDueñoTienda}}" method="POST" id="ingresar">
 {{/each}}
 <div id="imagen">
   <img src="/img/Newfond.png" >
@@ -11,7 +11,7 @@
     </div>
     {{#each Usuario}}
     <div id="datos">
-      <input type="text" id="Nombre" name="username" placeholder="Usuario:" value="{{username}}" readonly>
+      <input type="text" id="Nombre" name="username" placeholder="Usuario:" value="{{usernameDueñoTienda}}" readonly>
     </div>
     {{/each}}
     <div id="contraseñas">

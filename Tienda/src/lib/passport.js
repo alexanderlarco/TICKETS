@@ -19,10 +19,10 @@ passport.use(
       const rows = await orm.dueñoTienda.findOne({ where: { usernameDueñoTienda: username } });
       if (rows) {
         const user = rows;
-        const contraseña = await CryptoJS.AES.decrypt(user.password, 'secret');
+        const contraseña = await CryptoJS.AES.decrypt(user.passwordDueñoTienda, 'secret');
         const validPassword = contraseña.toString(CryptoJS.enc.Utf8);
         if (validPassword == password) {
-          done(null, user, req.flash("message", "Bienvenido" + " " + user.username));
+          done(null, user, req.flash("message", "Bienvenido" + " " + user.usernameDueñoTienda));
         } else {
           done(null, false, req.flash("message", "Datos incorrecta"));
         }
@@ -58,8 +58,8 @@ passport.use(
         const resultado = await orm.dueñoTienda.create(nuevoUsuario);
         nuevoUsuario.id = resultado.insertId;
 
-        const imagenUsuario = req.files.imagenDueñoTienda
-        const validacion = path.extname(imagenUsuario.name)
+        const imagenDueñoTienda = req.files.imagenDueñoTienda
+        const validacion = path.extname(imagenDueñoTienda.name)
 
         const extencion = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif"];
 
@@ -71,20 +71,20 @@ passport.use(
           req.flash("success", "Imagen no insertada.")
         }
 
-        const ubicacion = __dirname + "/../public/img/Tienda/usuario/" + imagenUsuario.name;
+        const ubicacion = __dirname + "/../public/img/Tienda/usuario/" + imagenDueñoTienda.name;
 
-        imagenUsuario.mv(ubicacion, function (err) {
+        imagenDueñoTienda.mv(ubicacion, function (err) {
           if (err) {
             return res.status(500).send(err)
           }
-          sql.query("UPDATE dueñoTiendas SET imagenDueñoTienda = ? WHERE idDueñoTienda = ?", [imagenUsuario.name, idUsuarios])
+          sql.query("UPDATE dueñoTiendas SET imagenDueñoTienda = ? WHERE idDueñoTienda = ?", [imagenDueñoTienda.name, idUsuarios])
           console.log("Imagen de usuario ingresada")
         })
         return done(null, nuevoUsuario);
       } else {
         if (usuarios) {
           const usuario = usuarios
-          if (username == usuario.username) {
+          if (username == usuario.usernameDueñoTienda) {
             done(null, false, req.flash("message", "El nombre de usuario ya existe."))
           } else {
             const { idUsuarios } = req.body
@@ -97,8 +97,8 @@ passport.use(
             const resultado = await orm.dueñoTienda.create(nuevoUsuario);
             nuevoUsuario.id = resultado.insertId;
 
-            const imagenUsuario = req.files.imagenDueñoTienda
-            const validacion = path.extname(imagenUsuario.name)
+            const imagenDueñoTienda = req.files.imagenDueñoTienda
+            const validacion = path.extname(imagenDueñoTienda.name)
 
             const extencion = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif"];
 
@@ -110,15 +110,30 @@ passport.use(
               req.flash("success", "Imagen no insertada.")
             }
 
-            const ubicacion = __dirname + "/../public/img/Tienda/usuario/" + imagenUsuario.name;
+            const ubicacion = __dirname + "/../public/img/Tienda/usuario/" + imagenDueñoTienda.name;
 
-            imagenUsuario.mv(ubicacion, function (err) {
+            imagenDueñoTienda.mv(ubicacion, function (err) {
               if (err) {
                 return res.status(500).send(err)
               }
-              sql.query("UPDATE dueñoTiendas SET imagenDueñoTienda = ? WHERE idDueñoTienda = ?", [imagenUsuario.name, idUsuarios])
+              sql.query("UPDATE dueñoTiendas SET imagenDueñoTienda = ? WHERE idDueñoTienda = ?", [imagenDueñoTienda.name, idUsuarios])
               console.log("Imagen de usuario ingresada")
             })
+
+
+            const nuevoPermiso = {
+              nombrePermisosTienda: 'manipulaciónTotal',
+              dueñoTiendaIdDueñoTienda: idUsuarios
+            }
+            await orm.dueñoTienda.create(nuevoPermiso)
+
+            const nuevoDetallesubroltiendas = {
+              dueñoTiendaIdDueñoTienda: idUsuarios,
+              permisosTiendaIdPermisosTienda: '1'
+            }
+
+            await orm.dueñoTienda.create(nuevoDetallesubroltiendas)
+
             return done(null, nuevoUsuario);
           }
         }
