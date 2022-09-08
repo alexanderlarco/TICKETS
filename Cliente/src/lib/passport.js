@@ -18,10 +18,10 @@ passport.use(
         const user = rows
         const validPassword = await helpers.matchPassword(
           password,
-          user.password
+          user.passwordCliente
         );
         if (validPassword) {
-          done(null, user, req.flash("success", "Bienvenido " + "" + user.username));
+          done(null, user, req.flash("success", "Bienvenido " + "" + user.usernameCliente));
         } else {
           done(null, false, req.flash("message", "Contraseña incorrecta"));
         }
@@ -47,11 +47,11 @@ passport.use(
     async (req, username, password, done) => {
       const { Nombres } = req.body;
       let newcliente = {
-        Nombres,
-        username,
-        password
+        NombresCliente: Nombres,
+        usernameCliente: username,
+        passwordCliente: password
       }
-      newcliente.password = await helpers.encryptPassword(password);
+      newcliente.passwordCliente = await helpers.encryptPassword(password);
       // Saving in the Database
       const result = await orm.cliente.create(newcliente);
       newcliente.id = result.insertId;

@@ -11,6 +11,6 @@ router.post('/Registro', signUp);
 router.get('/Login', renderSignIn);
 router.post('/Login', signIn);
 
-router.get('/cerrarSecion', cierreSeccion);
+router.get('/CerrarSecion', cierreSeccion);
 
 module.exports = router;
