@@ -7,14 +7,14 @@ const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 
 perfilCtrl.mostrar = async (req, res) => {
-    const id = req.user.idUsuarios
+    const id = req.user.idDueñoTienda
     const tienda = await sql.query('Select * from tiendas where detalleSubRolTiendaIdDetalleSubRolTienda = ?', [id])
     const max = await sql.query('select max(idTiendas) from tiendas')
     res.render('tienda/tiendaAgregar', { tienda, max });
 }
 
 perfilCtrl.enviar = async (req, res) => {
-    const id = req.user.idUsuarios
+    const id = req.user.idDueñoTienda
     const { nombreNegocio, celular, telefono, ruc, direccion, idTiendas, fechaCreacion } = req.body
     const newTienda = {
         idTiendas: idTiendas,
@@ -56,9 +56,9 @@ perfilCtrl.enviar = async (req, res) => {
 
 perfilCtrl.lista = async (req, res) => {
     const id = req.params.id
-    const ids = req.user.idUsuarios
-    const usuarios = sql.query("SELECT * FROM usuarios where idUsuarios = ?", [ids])
-    const tiendas = await sql.query("SELECT * FROM tiendas WHERE usuarioIdUsuarios = ?", [id])
+    const ids = req.user.idDueñoTienda
+    const usuarios = sql.query("SELECT * FROM dueñoTiendas where idDueñoTienda = ?", [ids])
+    const tiendas = await sql.query("SELECT * FROM tiendas WHERE detalleSubRolTiendaIdDetalleSubRolTienda = ?", [id])
     res.render('tienda/tiendaLista', { tiendas, usuarios })
 }
 
@@ -70,7 +70,7 @@ perfilCtrl.traer = async (req, res) => {
 
 perfilCtrl.editar = async (req, res) => {
     const ids = req.params.id
-    const id = req.user.idUsuarios
+    const id = req.user.idDueñoTienda
     const { nombreNegocio, celular, direccion, telefono, fechaCreacion } = req.body
     const newTienda = {
         nombreNegocio,
@@ -84,7 +84,7 @@ perfilCtrl.editar = async (req, res) => {
         .then(tiendas => {
             tiendas.update(newTienda)
             req.flash('success', "Se guardo correctamente")
-            res.redirect("/tienda/lista/1")
+            res.redirect("/tienda/lista/"+ id)
         })
 }
 

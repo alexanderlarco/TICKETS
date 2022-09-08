@@ -62,13 +62,13 @@ passport.use(
           nombrePermisosTienda: 'manipulaciónTotal',
           dueñoTiendaIdDueñoTienda: idUsuarios
         }
-        await orm.dueñoTienda.create(nuevoPermiso)
+        await orm.permisosTineda.create(nuevoPermiso)
 
         const nuevoDetallesubroltiendas = {
           dueñoTiendaIdDueñoTienda: idUsuarios,
           permisosTiendaIdPermisosTienda: '1'
         }
-        await orm.dueñoTienda.create(nuevoDetallesubroltiendas)
+        await orm.detalleSubRolTienda.create(nuevoDetallesubroltiendas)
 
         //imagen
         const imagenDueñoTienda = req.files.imagenDuenoTienda
