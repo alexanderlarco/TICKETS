@@ -1,4 +1,4 @@
-_Levantamiento del proyecto FINTECH:_
+# Levantamiento del proyecto FINTECH:
 
 - _Activar XAMPP:_
 Apache - MySQL
@@ -14,7 +14,8 @@ Hay vistas que deben ser creadas, ya que son creadas al pasar la primera vista d
 Crear los datos del proyecto de tienda 
 
 - _Si el programa no requiere conectarse a la base de datos instalar lo siguiente:_
-mpm i mysql2-promise
-
+```bash
+npm i mysql2-promise
+```
 
 
