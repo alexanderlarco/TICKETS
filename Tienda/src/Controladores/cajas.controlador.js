@@ -13,7 +13,7 @@ CajasCtrl.mostrar = async (req, res) => {
 };
 
 CajasCtrl.guardar = async (req, res) => {
-	const id = req.user.idUsuarios;
+	const id = req.user.idDueñoTienda;
 	const ids = req.params.id;
 	const { idCaja, valorTotalCaja, fechaCaja } = req.body;
 	const cajaEditar = {
@@ -38,7 +38,7 @@ CajasCtrl.lista = async (req, res) => {
 	res.render("cajas/cajaLista", { cajalista });
 };
 CajasCtrl.actualizar = async (req, res) => {
-	const id = req.user.idUsuarios;
+	const id = req.user.idDueñoTienda;
 	const ids = req.params.id;
 	const { valorTotalCaja, fechaCaja } = req.body;
 	const cajaEditar = {

@@ -26,7 +26,7 @@ PedidosCtrl.mostrar = async (req, res) => {
 };
 
 PedidosCtrl.mandar = async (req, res) => {
-	const id = req.user.idUsuarios;
+	const id = req.user.idDueñoTienda;
 	const ids = req.params.id;
 	const {
 		nombre,
@@ -70,7 +70,7 @@ PedidosCtrl.lista = async (req, res) => {
 	res.render("pedidos/pedidosLista", { traer, pedidoslista });
 };
 PedidosCtrl.actualizar = async (req, res) => {
-	const id = req.user.idUsuarios;
+	const id = req.user.idDueñoTienda;
 	const ids = req.params.id;
 	const { nombre, fechaPedido, precioPedido, cantidadPedido } = req.body;
 	const pedidoEditar = {

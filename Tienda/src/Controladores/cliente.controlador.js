@@ -9,7 +9,7 @@ clienteCtrl.renderAddClientes = (req, res) => {
 
 clienteCtrl.addCliete = async (req, res) => {
 	const id = req.params.id;
-	const ids = req.user.idUsuarios;
+	const ids = req.user.idDueñoTienda;
 	const { username, Nombres, Direccion, Celular, telefono } = req.body;
 	const nuevocliente = {
 		username,
@@ -37,7 +37,7 @@ clienteCtrl.renderClientes = async (req, res) => {
 
 clienteCtrl.deleteClientes = async (req, res) => {
 	const id = req.params.id;
-	const IDS = req.user.idUsuarios;
+	const IDS = req.user.idDueñoTienda;
 	await orm.detalleCliente.destroy({ where: { clienteIdClientes: id } });
 	await orm.cliente.destroy({ where: { idClientes: id } });
 	req.flash("success", "Se Elimino Correctamente");
@@ -55,7 +55,7 @@ clienteCtrl.renderEditCliente = async (req, res) => {
 
 clienteCtrl.editCliente = async (req, res) => {
 	const id = req.params.id;
-	const IDS = req.user.idUsuarios;
+	const IDS = req.user.idDueñoTienda;
 	const { username, Nombres, Telefono, Direccion, Celular } = req.body;
 	const actulizarCliente = {
 		username,
@@ -74,7 +74,7 @@ clienteCtrl.editCliente = async (req, res) => {
 };
 
 clienteCtrl.Perfil = async (req, res) => {
-	const ids = req.user.idUsuarios;
+	const ids = req.user.idDueñoTienda;
 	const cliente = await sql.query(
 		"SELECT * FROM clientes where idClientes = ?",
 		[ids]

@@ -1,4 +1,4 @@
-<form action="/clientes/lista/{{user.idUsuarios}}"></form>
+<form action="/clientes/lista/{{user.idDueñoTienda}}"></form>
 <LINK REL=StyleSheet HREF="/css/clientes/clientesLista.css" TYPE="text/css" MEDIA=screen>
 <div id="contenedor">
     <div class="row">
@@ -35,7 +35,7 @@
         </div>
         {{else}}
         <div id="masProveedor">
-            <a href="/clientes/agregar/{{user.idUsuarios}}">
+            <a href="/clientes/agregar/{{user.idDueñoTienda}}">
                 <div id="boton">
                     <button type="button"><img src="/img/iconos/mas1.png" id="mas"></button>
                 </div>
@@ -44,7 +44,7 @@
         {{/each}}
     </div>
     <div id="masProveedor">
-        <a href="/clientes/agregar/{{user.idUsuarios}}">
+        <a href="/clientes/agregar/{{user.idDueñoTienda}}">
             <div id="boton">
                 <button type="button"><img src="/img/iconos/mas1.png" id="mas"></button>
             </div>

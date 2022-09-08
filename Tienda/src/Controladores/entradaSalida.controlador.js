@@ -8,7 +8,7 @@ entradaSalida.mostrarEntradasSalidas = (req, res) => {
 };
 
 entradaSalida.mostrarEntrada = async (req, res) => {
-	const ids = req.user.idUsuarios;
+	const ids = req.user.idDueñoTienda;
 	const entrasLista = await sql.query(
 		"SELECT max(idRegistroEntradas) FROM registroentradas"
 	);
@@ -33,7 +33,7 @@ entradaSalida.mostrarEntrada = async (req, res) => {
 };
 
 entradaSalida.mandarEntrada = async (req, res) => {
-	const ids = req.user.idUsuarios;
+	const ids = req.user.idDueñoTienda;
 	const {
 		fecha,
 		entraCantidad,
@@ -67,7 +67,7 @@ entradaSalida.mandarEntrada = async (req, res) => {
 };
 
 entradaSalida.listaEntrada = async (req, res) => {
-	const id = req.user.idUsuarios;
+	const id = req.user.idDueñoTienda;
 	const lista = await sql.query(
 		"SELECT * FROM registroentradas WHERE detalleSubRolTiendaIdDetalleSubRolTienda = ?",
 		[id]
@@ -85,7 +85,7 @@ entradaSalida.detallelistaEntrada = async (req, res) => {
 };
 
 entradaSalida.mostrarSalida = async (req, res) => {
-	const ids = req.user.idUsuarios;
+	const ids = req.user.idDueñoTienda;
 	const id = req.params.id;
 	const salidaLista = await sql.query(
 		"SELECT max(idRegistroSalidas) FROM registrosalidas"
@@ -112,7 +112,7 @@ entradaSalida.mostrarSalida = async (req, res) => {
 
 entradaSalida.MandarSalida = async (req, res) => {
 	const id = req.params.id;
-	const ids = req.user.idUsuarios;
+	const ids = req.user.idDueñoTienda;
 	const {
 		fecha,
 		salidaCantidad,
@@ -149,7 +149,7 @@ entradaSalida.MandarSalida = async (req, res) => {
 };
 
 entradaSalida.ListaSalidas = async (req, res) => {
-	const id = req.user.idUsuarios;
+	const id = req.user.idDueñoTienda;
 	const lista = await sql.query(
 		"SELECT * FROM registrosalidas WHERE detalleSubRolTiendaIdDetalleSubRolTienda = ?",
 		[id]

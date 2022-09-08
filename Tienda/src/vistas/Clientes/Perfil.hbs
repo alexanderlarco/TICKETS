@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/clientes/perfil.css">
-<form action="/clientes/Perfil/{{user.idUsuarios}}" method="get"></form>
+<form action="/clientes/Perfil/{{user.idDueñoTienda}}" method="get"></form>
 <div id="cliente">
     <div id="Foto">
         <img src="/img/avatar.png" id="foto">
@@ -38,7 +38,7 @@
         {{#each nota}}
         <div id="Ntarjeta">
             <div id="Numero">
-                <label >N° Nota de Venta:</label>
+                <label>N° Nota de Venta:</label>
                 <input type="text" name="id" id="id" value="{{idNotaVenta}}" readonly>
             </div>
             <div id="Fecha">
@@ -65,7 +65,7 @@
         {{#each Facturas}}
         <div id="Ntarjetas">
             <div id="Numero">
-                <label >N° Factura:</label>
+                <label>N° Factura:</label>
                 <input type="text" name="id" id="id" value="{{idFactura}}" readonly>
             </div>
             <div id="Fecha">

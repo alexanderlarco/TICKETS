@@ -1,6 +1,6 @@
 <LINK REL=StyleSheet HREF="/css/pedidos/agregar.css" TYPE="text/css" MEDIA=screen>
 <div id="contenedor">
-    <form action="/pedidos/agregar/{{user.idUsuarios}}" method="post">
+    <form action="/pedidos/agregar/{{user.idDueñoTienda}}" method="post">
         {{#each idPedidos}}
         <p id="TITULO">Nuevo pedido N°<input type="text" name="NumeroPedido" id="NumeroPedido"
                 value="{{'MAX(idPedidos)'}}" readonly></p>
@@ -23,7 +23,7 @@
         </div>
         <div id="PRODUCTO">
             <label>Producto:</label>
-            <select name="productoEntradaIdProductoEntradas" id="producto"  >
+            <select name="productoEntradaIdProductoEntradas" id="producto">
                 {{#each listaProductos}}
                 <option value="{{this.idProductoEntradas}}">{{this.NombreProducto}}</option>
                 {{/each}}

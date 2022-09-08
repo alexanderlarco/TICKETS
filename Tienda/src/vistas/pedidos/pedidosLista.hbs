@@ -1,17 +1,17 @@
 <LINK REL=StyleSheet HREF="/css/pedidos/lista.css" TYPE="text/css" MEDIA=screen>
-<form action="/pedidos/lista/{{user.idUsuarios}}">
+<form action="/pedidos/lista/{{user.idDueñoTienda}}">
     <div id="contenedor">
-        <div class="row">   
-            {{#each pedidoslista}}       
+        <div class="row">
+            {{#each pedidoslista}}
             <div id="tarjeta">
                 <div>
                     <p id="datosPerosnales">Datos Pedido {{idPedidos}}</p>
                 </div>
-                <div>                    
-                    <div id="NOMBRE">                        
+                <div>
+                    <div id="NOMBRE">
                         <label>Nombre Pedido:</label>
-                        <input type="text" id="nombre" value="{{nombre}}" readonly>                        
-                    </div>  
+                        <input type="text" id="nombre" value="{{nombre}}" readonly>
+                    </div>
                     <div id="FECHA">
                         <label>Fecha Pedido:</label>
                         <input type="date" id="fechaPedido" value="{{fechaPedido}}" readonly>
@@ -47,7 +47,7 @@
             <div id="bienvenida">
                 <div>
                     <div id="masPedidos">
-                    <a href="/proveedor/lista/{{user.idUsuarios}}">¡Introducir un Pedido!</a>
+                        <a href="/proveedor/lista/{{user.idDueñoTienda}}">¡Introducir un Pedido!</a>
                     </div>
                 </div>
             </div>

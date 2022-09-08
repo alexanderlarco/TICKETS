@@ -1,10 +1,10 @@
 <LINK REL=StyleSheet HREF="/css/productoEntrada/productoslista.css" TYPE="text/css" MEDIA=screen>
-<form action="/ProductoEntrada/lista/{{user.idUsuarios}}">
+<form action="/ProductoEntrada/lista/{{user.idDueñoTienda}}">
     <nav id="nav1">
         <div id="boton">
-            <a id="entradas" href="/entradaSalida/eleccion/{{user.idUsuarios}}"><button type="button">Entradas y
+            <a id="entradas" href="/entradaSalida/eleccion/{{user.idDueñoTienda}}"><button type="button">Entradas y
                     Salidas</button></a>
-            <a id="bodega" href="/productos/lista/{{user.idUsuarios}}"><button type="button">Bodega</button></a>
+            <a id="bodega" href="/productos/lista/{{user.idDueñoTienda}}"><button type="button">Bodega</button></a>
         </div>
     </nav>
     <div id="contenedor">
@@ -49,7 +49,7 @@
                 <div>
                     <p>¡No has registrado Productos.!</p>
                     <div id="masTiendas">
-                        <a href="/ProductoEntrada/agregar/{{user.idUsuarios}}">¡Introducir uno!</a>
+                        <a href="/ProductoEntrada/agregar/{{user.idDueñoTienda}}">¡Introducir uno!</a>
                     </div>
                 </div>
             </div>

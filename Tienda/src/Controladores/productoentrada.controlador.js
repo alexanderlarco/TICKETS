@@ -26,7 +26,7 @@ ProductoEntradaCtrl.renderEntrada = async (req, res) => {
 
 ProductoEntradaCtrl.addEntrada = async (req, res) => {
 	const id = req.params.id;
-	const IDS = req.user.idUsuarios;
+	const IDS = req.user.idDueñoTienda;
 
 	const {
 		NombreProducto,
@@ -109,7 +109,7 @@ ProductoEntradaCtrl.renderEditarEntrada = async (req, res) => {
 	res.render("ProductosEntrada/editar", { Productos });
 };
 ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
-	const IDS = req.user.idUsuarios;
+	const IDS = req.user.idDueñoTienda;
 	const id = req.params.id;
 	const { NombreProducto, CantidadTotal, precioTotal, FechaCadusidad } =
 		req.body;
