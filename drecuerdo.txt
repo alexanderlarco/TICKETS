@@ -7,7 +7,6 @@ tabla rulUsuario
 traer todas las tiendas
 traer clientes
 
-
 datos del dueño admin de la tienda
 datos del subRoles tienda
 relacion tienda Factura

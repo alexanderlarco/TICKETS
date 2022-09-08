@@ -8,11 +8,11 @@ index.mostrar = (req, res) => {
 };
 
 index.madar = async(req,res) => {
-     const { username } = req.body
-     const verificacion = await orm.cliente.findOne({ where: { username: username }})
+     const { usernameCliente } = req.body
+     const verificacion = await orm.cliente.findOne({ where: { usernameCliente: usernameCliente }})
      if(verificacion){
          const clientes = verificacion
-         if(clientes.username === null || clientes.password === null){
+         if(clientes.usernameCliente === null || clientes.usernameCliente === null){
               res.redirect('/actualizacion/Datos/' + clientes.idClientes);
          }else{
               res.redirect('/Login');

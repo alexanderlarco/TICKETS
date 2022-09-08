@@ -13,7 +13,7 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const rows = await await orm.cliente.findOne({ where: { username: username } });
+      const rows = await await orm.cliente.findOne({ where: { usernameCliente: username } });
       if (rows) {
         const user = rows
         const validPassword = await helpers.matchPassword(
