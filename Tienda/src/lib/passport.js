@@ -58,7 +58,20 @@ passport.use(
         const resultado = await orm.dueñoTienda.create(nuevoUsuario);
         nuevoUsuario.id = resultado.insertId;
 
-        const imagenDueñoTienda = req.files.imagenDueñoTienda
+        const nuevoPermiso = {
+          nombrePermisosTienda: 'manipulaciónTotal',
+          dueñoTiendaIdDueñoTienda: idUsuarios
+        }
+        await orm.dueñoTienda.create(nuevoPermiso)
+
+        const nuevoDetallesubroltiendas = {
+          dueñoTiendaIdDueñoTienda: idUsuarios,
+          permisosTiendaIdPermisosTienda: '1'
+        }
+        await orm.dueñoTienda.create(nuevoDetallesubroltiendas)
+
+        //imagen
+        const imagenDueñoTienda = req.files.imagenDuenoTienda
         const validacion = path.extname(imagenDueñoTienda.name)
 
         const extencion = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif"];
@@ -80,6 +93,7 @@ passport.use(
           sql.query("UPDATE dueñoTiendas SET imagenDueñoTienda = ? WHERE idDueñoTienda = ?", [imagenDueñoTienda.name, idUsuarios])
           console.log("Imagen de usuario ingresada")
         })
+
         return done(null, nuevoUsuario);
       } else {
         if (usuarios) {
@@ -97,7 +111,7 @@ passport.use(
             const resultado = await orm.dueñoTienda.create(nuevoUsuario);
             nuevoUsuario.id = resultado.insertId;
 
-            const imagenDueñoTienda = req.files.imagenDueñoTienda
+            const imagenDueñoTienda = req.files.imagenDuenoTienda
             const validacion = path.extname(imagenDueñoTienda.name)
 
             const extencion = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif"];
@@ -119,21 +133,6 @@ passport.use(
               sql.query("UPDATE dueñoTiendas SET imagenDueñoTienda = ? WHERE idDueñoTienda = ?", [imagenDueñoTienda.name, idUsuarios])
               console.log("Imagen de usuario ingresada")
             })
-
-
-            const nuevoPermiso = {
-              nombrePermisosTienda: 'manipulaciónTotal',
-              dueñoTiendaIdDueñoTienda: idUsuarios
-            }
-            await orm.dueñoTienda.create(nuevoPermiso)
-
-            const nuevoDetallesubroltiendas = {
-              dueñoTiendaIdDueñoTienda: idUsuarios,
-              permisosTiendaIdPermisosTienda: '1'
-            }
-
-            await orm.dueñoTienda.create(nuevoDetallesubroltiendas)
-
             return done(null, nuevoUsuario);
           }
         }

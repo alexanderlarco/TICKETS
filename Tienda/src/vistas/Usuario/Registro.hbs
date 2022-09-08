@@ -1,5 +1,5 @@
 <LINK REL=StyleSheet HREF="/css/login/registro.css" TYPE="text/css" MEDIA=screen>
-<form action="/Registro" method="POST" encType="multipart/form-data">
+<form action="/Registro" ref='uploadForm' method='post' encType="multipart/form-data">
   <div id="contenedor">
     <div id="titulo">
       <p>Registra tu Usuario y Contraseña</p>
@@ -10,7 +10,7 @@
       {{/each}}
     </div>
     <div id="imagenUsuario">
-      <input type="file" name="imagenDueñoTienda" id="imagenDueñoTienda" required>
+      <input type="file" name="imagenDuenoTienda" id="imagenDueñoTienda" required>
     </div>
     <div id="datos">
       <input type="text" id="Nombre" name="username" placeholder="Usuario:" required>
