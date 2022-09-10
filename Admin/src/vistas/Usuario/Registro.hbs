@@ -4,7 +4,7 @@
     <div id="titulo">
       <p>Registro Unico
         {{#each usuario}}
-        <input type="text" name="idUsuarios" id="numero" value="{{'max(idUsuarios)'}}" readonly>
+        <input type="text" name="idUsuarios" id="numero" value="{{maximo}}" readonly>
         {{/each}}
       </p>
     </div>

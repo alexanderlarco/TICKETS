@@ -7,12 +7,10 @@ const sql = require('../configuracionBaseDatos/baseDatos.sql')
 const orm = require('../configuracionBaseDatos/baseDatos.orm')
 
 registro.mostrarRegistro = async (req, res) => {
-    const usuario = await sql.query('select max(idUsuarios) from usuarios')
-    const id = await sql.query('select * from maxusuario')
-    const ids = id
-    if (ids.maximo !== undefined) {
+    const usuario = await sql.query('select max(idUsuarios) AS maximo from usuarios')
+    if (usuario === undefined) {
         res.render('Usuario/Registro', { usuario });
-    } else {
+    }else{
         res.redirect('/')
     }
 };
