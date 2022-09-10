@@ -8,18 +8,12 @@ const orm = require('../configuracionBaseDatos/baseDatos.orm')
 
 registro.mostrarRegistro = async (req, res) => {
     const usuario = await sql.query('select max(idUsuarios) from usuarios')
-    const id = await orm.usuarios.findAll({
-        attributes: [[sequelize.fn('max', sequelize.col('idUsuarios')), 'maxPrice']],
-        raw: true,
-    })
-    if (id) {
-        const ids = id
-        if (ids.maxPrice === undefined) {
-            res.render('Usuario/Registro', { usuario });
-        } else {
-            req.flash('message', 'No Puede Ingresar')
-            res.redirect('/') 
-        }
+    const id = await sql.query('select * from maxusuario')
+    const ids = id
+    if (ids.maximo !== undefined) {
+        res.render('Usuario/Registro', { usuario });
+    } else {
+        res.redirect('/')
     }
 };
 
