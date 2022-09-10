@@ -72,5 +72,7 @@ app.use('/impuestoRenta', require('./Rutas/impuestoRenta.rutas'))
 app.use('/porcentajeIvaPresuntivo', require('./Rutas/porcentajeIvaPresuntivo.rutas'))
 app.use('/tarifaIva', require('./Rutas/tarifaIva.rutas'))
 app.use('/tipoAmbiente', require('./Rutas/tipoAmbiente.rutas'))
+app.use('/tipoDocumento', require('./Rutas/tipoDocumentacion.rutas'))
+app.use('/tipoIdentificacion', require('./Rutas/tipoIdentificacion.rutas'))
 
 module.exports = app;
