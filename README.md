@@ -1,12 +1,16 @@
-# TICKETS
-NUEVO REPOSITORIO PARA EL PROYECTO TICKETS
+# Nuevo repositorio PROYECTO TICKETS
 
-#INSTALACIONES NESECARIAS
-Node
-NPM
+## Instalaciones nesecarias .
 
-#PASOS A SEGUIR PARA EJECUTAR LA APLICACCION
-Abra la app desde la linea de comandos.
-Installe los modulos -> npm install
-Ejecuta la app -> npm run dev
-Desde el navegador dirijase a esta ruta -> http://localhost:3000
+- Node
+- NPM
+- PostgreSQL
+
+## PASOS A SEGUIR PARA EJECUTAR LA APLICACION.
+
+- Abra la app desde la linea de comandos.
+- Installe los modulos -> npm install
+- Ejecuta la app -> npm run dev
+- Desde el navegador dirijase a esta ruta -> http://localhost:3000
+
+
