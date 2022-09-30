@@ -1,0 +1,13 @@
+.container-child {
+	background-color: #fff;
+	padding: 40px;
+}
+
+.btn-centrar {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.txt-information h4 {
+	margin: 0;
+}
