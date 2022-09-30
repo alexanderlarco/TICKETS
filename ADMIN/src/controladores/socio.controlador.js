@@ -12,4 +12,4 @@ socio.mostrar=async(req,res)=>{
     const phone =await sql.query("SELECT*FROM socios where id=?",[ids])
     const id_cooperative =await sql.query("SELECT*FROM socios where id=?",[ids])
     const status =await sql.query("SELECT*FROM socios where id=?",[ids])
-    
+}

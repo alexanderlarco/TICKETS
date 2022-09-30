@@ -58,9 +58,6 @@ const horario=horarioModel(sequelize,Sequelize);
 const miembro= miembroModel(sequelize,Sequelize);
 const socio= socioModel(sequelize,Sequelize);
 
-
-
-
 //cliente
 // const cliente = clienteModelos(sequelize, Sequelize)
 // const detalleCliente = detalleClientesModelos(sequelize, Sequelize)
@@ -75,3 +72,14 @@ module.exports = {
 	miembro,
 	socio,
 };
+// RELACIONES 
+//ADMIN
+bus.hasMany(horario)
+horario.belongsTo(bus)
+
+socio.hasMany(bus)
+bus.belongsTo(miembro)
+
+miembro.hasOne(cooperativa)
+cooperativa.belongsTo(miembro)
+
