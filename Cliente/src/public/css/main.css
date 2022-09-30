@@ -1,53 +1,48 @@
-body{
-    color: black;
-    background-color: #eaeded;
-    background-image: url(/img/fondo.jpg);
-    font-size: 25px;
-    font-family: 'Montserrat', sans-serif;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    max-width: 100%;
-    max-height: 100%;    
+body {
+  color: #06283d;
+  background-color: #f5f6f5;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap");
 
-#logo{
-    position: absolute;
-    top: 50px;
-    left: 20px;
+#logo {
+  position: absolute;
+  top: 50px;
+  left: 20px;
 }
 
-#LogoFintech{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 130px;
+#LogoFintech {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 130px;
 }
 
-button{
-    border-radius: 30px;
-    cursor: pointer;
-    display: block;
-    margin: auto;
+button {
+  border-radius: 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
 }
 
-input{
-    text-align: center;   
+input {
+  text-align: center;
 }
 
-@media(max-width: 840px){
-    #contenedors{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: initial;
-        height: auto;
-    }
+@media (max-width: 840px) {
+  #contenedors {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: initial;
+    height: auto;
+  }
 }
 
-@media(max-width: 600px){
-    #contenedors{
-        grid-template-columns: repeat(1, 1fr);
-        height: auto;
-    }
+@media (max-width: 600px) {
+  #contenedors {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+  }
 }

@@ -70,8 +70,7 @@ const tipoIdentificacionModelo = require('../modelos/facturaElectronica/tipoIden
 const totalImpuestoModelo = require('../modelos/facturaElectronica/totalImpuesto')
 
 //cliente
-const clienteModelos = require('../modelos/cliente/cliente')
-const detalleClientesModelos = require('../modelos/cliente/detalleCliente')
+const clientModel = require('../modelos/cliente/cliente')
 
 //coneccion
 const sequelize = new Sequelize(
@@ -154,8 +153,7 @@ const totalImpuesto = totalImpuestoModelo(sequelize, Sequelize)
 const factura = facturaModelos(sequelize, Sequelize)
 
 //cliente
-const cliente = clienteModelos(sequelize, Sequelize)
-const detalleCliente = detalleClientesModelos(sequelize, Sequelize)
+const client = clientModel(sequelize, Sequelize)
 
 //Relaciones 
 //usuaruio
@@ -279,13 +277,6 @@ detalleCategoria.belongsTo(categoria)
 detalleCategoria.hasMany(productos)
 productos.belongsTo(detalleCategoria)
 
-//DETALLE CLIENTE
-cliente.hasMany(detalleCliente)
-detalleCliente.belongsTo(cliente)
-
-detalleSubRolTienda.hasMany(detalleCliente)
-detalleCliente.belongsTo(detalleSubRolTienda)
-
 //Detalle unidad Medida
 unidadMedidas.hasMany(detalleUnidadMedidas)
 detalleUnidadMedidas.belongsTo(unidadMedidas)
@@ -296,9 +287,9 @@ detalleUnidadMedidas.belongsTo(entredaProductos)
 //lista prodcutos
 tienda.hasMany(listaProductos)
 listaProductos.belongsTo(tienda)
-
+/* 
 cliente.hasMany(listaProductos)
-listaProductos.belongsTo(cliente)
+listaProductos.belongsTo(cliente) */
 
 //detalleLista
 listaProductos.hasMany(detalleListaProductos)
@@ -327,9 +318,9 @@ detalleRegistroEntradas.belongsTo(registroEntradas)
 //registro Salidas
 tienda.hasMany(registroSalidas)
 registroSalidas.belongsTo(tienda)
-
+/* 
 cliente.hasMany(registroSalidas)
-registroSalidas.belongsTo(cliente)
+registroSalidas.belongsTo(cliente) */
 
 detalleSubRolTienda.hasMany(registroSalidas)
 registroSalidas.belongsTo(detalleSubRolTienda)
@@ -380,8 +371,8 @@ factura.belongsTo(totalImpuesto)
 tienda.hasMany(factura)
 factura.belongsTo(tienda)
 
-cliente.hasMany(factura)
-factura.belongsTo(cliente)
+/* cliente.hasMany(factura)
+factura.belongsTo(cliente) */
 
 listaProductos.hasMany(factura)
 factura.belongsTo(listaProductos)
@@ -451,12 +442,11 @@ module.exports = {
   provedor,
   entredaProductos,
   productos,
-  cliente,
+  client,
   listaProductos,
   registroEntradas,
   detalleCategoria,
   unidadMedidas,
-  detalleCliente,
   detalleUnidadMedidas,
   detalleRegistroEntradas,
   detalleRegistroSalidas,

@@ -1,31 +1,23 @@
-const cliente = (sequelize, type) => {
-    return sequelize.define('clientes', {
-        idClientes: {
+const client = (sequelize, type) => {
+    return sequelize.define('client', {
+        id: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        NombresCliente: type.STRING,
-        DireccionCliente: type.STRING,
-        emailCliente: type.STRING,
-        cedulaCliente: type.STRING,
-        usernameCliente: type.STRING(99),
-        passwordCliente: type.STRING,
-        telefonoCliente: type.STRING(7),
-        CelularCliente: type.STRING(10),
-        creacionClientes: {
-            type: 'TIMESTAMP',
-            defaultValue: type.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        },
-        actualizacionClientes: {
-            type: 'TIMESTAMP',
-            defaultValue: type.literal('CURRENT_TIMESTAMP '),
-            allowNull: false
-        }
-    }, {
-        timestamps: false,
+        typeDni: {
+            type: type.ENUM(),
+            values: ["Cedula", "Pasaporte", "RUC"],
+          },
+        dni: type.STRING,
+        name: type.STRING,
+        lastName: type.STRING,
+        userName: type.STRING,
+        email: type.STRING,
+        password: type.STRING,
+        phone: type.STRING(10),
+        status: type.BOOLEAN(true)
     })
 }
 
-module.exports = cliente
+module.exports = client

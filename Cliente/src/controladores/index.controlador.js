@@ -8,8 +8,9 @@ index.mostrar = (req, res) => {
 };
 
 index.madar = async(req,res) => {
+     console.log('estoy aqui ------------' , req.body);
      const { usernameCliente } = req.body
-     const verificacion = await orm.cliente.findOne({ where: { usernameCliente: usernameCliente }})
+     const verificacion = await orm.client.findOne({ where: { userName: usernameCliente }})
      if(verificacion){
          const clientes = verificacion
          if(clientes.usernameCliente === null || clientes.usernameCliente === null){

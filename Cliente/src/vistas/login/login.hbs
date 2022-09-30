@@ -1,22 +1,16 @@
-<LINK REL=StyleSheet HREF="/css/login/login.css" TYPE="text/css" MEDIA=screen>
-<div id="imegen">
+<link rel=StyleSheet href="/css/login/login.css" type="text/css" media=screen>
+{{>navigation}}
+<div id="contenedor">
+  <form action="/Login" method="POST" id="form-login">
+      <img src="/img/logo_fondo_negro.jpg" id="logo-login" alt="logo" />
+      <span id="title-login">Tickets Bus</span>
+      <span id="subtitle-login">Reservar nunca fué tan fácil</span>
+      <hr id="separate">
+        <div id="form-group">
+          <input type="text" id="input-group-user" name="input-group-user" placeholder="Email">
+          <input type="password" id="input-group-pass" name="input-group-pass" placeholder="Contraseña">
+          <button type="submit" id="boton">Ingresar</button>
+              <a href="./registro" id="redirec-register">Crear una cuenta</a>
+        </div>
+  </form>
 </div>
-<form action="/Login" method="POST" id="ingresar">
-  <div id="contenedor">
-    <div>
-      <p>Login</p>
-    </div>
-    <div id="usuarios">
-      <label id="Usuario">Cedula:</label>
-      <input type="text" id="Nombre" name="username">
-    </div>
-    <div id="contraseñas">
-      <label id="contraseña">Contraseña: </label>
-      <input type="password" id="Contraseña" name="password">
-    </div>
-    <div>
-      <button type="submit" id="boton"><img src="/img/flechaIzquierda.png" id="flecha"></button>
-    </div>
-  </div>
-</form>
-<button id="sesion"><a href="/Registro">Registro</a></button>
