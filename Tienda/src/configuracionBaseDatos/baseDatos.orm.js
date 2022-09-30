@@ -1,13 +1,13 @@
 const Sequelize = require('sequelize')
 const mysql = require('mysql2/promise')
 
-const dbName = process.env.DB_SCHEMAS || "fintech";
+const dbName = process.env.DB_SCHEMAS || "tickets";
 
 mysql.createConnection({
-  host: process.env.DB_HOST || "127.0.0.1",
+  host: process.env.DB_HOST || "localhost",
   port: process.env.DB_PORT || "3306",
   user: process.env.DB_USER || "root",
-  password: process.env.DB_PASSWORD || "",
+  password: process.env.DB_PASSWORD || "ricky0812",
 }).then(connection => {
   connection.query(`CREATE DATABASE IF NOT EXISTS ${dbName};`).then((res) => {
     console.info("Base de datos creada o comprobada correctamente");
@@ -71,9 +71,9 @@ const detalleClientesModelos = require('../modelos/cliente/detalleCliente')
 
 //coneccion
 const sequelize = new Sequelize(
-  'fintech',
+  'tickets',
   'root',
-  '',
+  'ricky0812',
   {
     host: 'localhost',
     dialect: 'mysql',
