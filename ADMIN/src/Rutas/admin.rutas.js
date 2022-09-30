@@ -4,15 +4,15 @@ const rutas = express.Router();
 const {
 	view,
 	signin,
-	lista,
-	eliminar,
-	tarer,
-	editar,
+	cierreSesion,
+	login,
 } = require('../controladores/admin.controlador');
 
-// const { isLoggedIn } = require('../lib/auth');
+const { isLoggedIn, isNotLoggedIn } = require('../lib/auth');
 
-rutas.get('/login', view);
+rutas.get('/', isLoggedIn, login);
+rutas.get('/login', isNotLoggedIn, view);
 rutas.post('/login', signin);
+rutas.get('/logout', cierreSesion);
 
 module.exports = rutas;
