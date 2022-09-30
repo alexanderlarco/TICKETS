@@ -1,6 +1,6 @@
 
 const miembros=(sequelize,type)=>{
-    return sequelize.define("public.miembros",{
+    return sequelize.define("miembros",{
     id:{
         type: type.INTEGER,
         primaryKey: true,

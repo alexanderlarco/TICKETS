@@ -1,5 +1,5 @@
 const admin=(sequelize,type)=>{
-    return sequelize.define("public.admin",{
+    return sequelize.define("admin",{
     id:{
         type: type.INTEGER,
         primaryKey: true,

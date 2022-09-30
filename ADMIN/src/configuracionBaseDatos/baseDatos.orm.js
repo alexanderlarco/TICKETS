@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const mysql = require('mysql2/promise');
-const adminModel = require('../modelos/admin/admin');
+
 
 const dbName = process.env.DB_SCHEMAS || 'tickets';
 
@@ -16,6 +16,14 @@ mysql
 			console.info('Base de datos creada o comprobada correctamente');
 		});
 	});
+
+const adminModel = require('../modelos/admin/admin');
+const socioModel = require('../modelos/socio/socio');
+const busModel =   require('../modelos/bus/bus');
+const horarioModel = require('../modelos/horario/horario');
+const coopperativaModel = require('../modelos/cooperativa/cooperativas');
+const miembroModel=require('../modelos/miembro/miembros');
+
 
 //Conexion
 const sequelize = new Sequelize('tickets', 'root', '', {
@@ -44,6 +52,14 @@ sequelize.sync({ force: false }).then(() => {
 
 //ADMIN
 const admin = adminModel(sequelize, Sequelize);
+const bus= busModel(sequelize,Sequelize);
+const cooperativa= coopperativaModel(sequelize,Sequelize);
+const horario=horarioModel(sequelize,Sequelize);
+const miembro= miembroModel(sequelize,Sequelize);
+const socio= socioModel(sequelize,Sequelize);
+
+
+
 
 //cliente
 // const cliente = clienteModelos(sequelize, Sequelize)
@@ -53,4 +69,9 @@ const admin = adminModel(sequelize, Sequelize);
 
 module.exports = {
 	admin,
+	bus,
+	cooperativa,
+	horario,
+	miembro,
+	socio,
 };

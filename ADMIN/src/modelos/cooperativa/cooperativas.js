@@ -1,5 +1,5 @@
 const cooperativa=(sequelize,type)=>{
-    return sequelize.define("public.cooperatives",{
+    return sequelize.define("cooperativas",{
     id:{
         type: type.INTEGER,
         primaryKey: true,
@@ -7,7 +7,8 @@ const cooperativa=(sequelize,type)=>{
     },
     name:type.STRING,
      state:{
-        defaultValue:true,
+        type:type.BOOLEAN,
+        defaultValue:true
      },
 created_at:{
     type:'TIMESTAMP',

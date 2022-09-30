@@ -23,7 +23,7 @@ const handlebars = exphbs.create({
 });
 
 /// archivos compartidos
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3002);
 app.set('views', path.join(__dirname, 'vistas'));
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
@@ -46,7 +46,7 @@ app.use(
 		saveUninitialized: false,
 		store: new mysqlstore(database),
 	})
-);
+); 
 
 app.use(flash());
 app.use(passport.initialize());
