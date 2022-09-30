@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="">
+<div id="contenedor">
+    <form action="/impuestoRenta/lista/{{user.idUsuario}}" method="get">
+        <div class="row">
+            <div id="tarjeta">
+                <div id="idImpuestoRenta">
+                    <p>{{idImpuestoRenta}}</p>
+                </div>
+                <div id="codigoImpuestoRenta">
+                    <p>{{codigoImpuestoRenta}}</p>
+                </div>
+                <div id="nombreImpuestoRenta">
+                    <p>{{nombreImpuestoRenta}}</p>
+                </div>
+                <div id="boton">
+                    <div id="editar">
+                        <a href=""><button type="submit">Editar</button></a>
+                    </div>
+                    <div id="eliminar">
+                        <a href=""><button type="submit">Eliminar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
