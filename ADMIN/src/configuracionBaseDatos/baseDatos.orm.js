@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const mysql = require('mysql2/promise');
 const adminModel = require('../modelos/admin/admin');
+const cooperativaModel = require('../modelos/cooperativa/cooperativas');
+const miembroModel = require('../modelos/miembro/miembros');
 
 const dbName = process.env.DB_SCHEMAS || 'tickets';
 
@@ -44,13 +46,11 @@ sequelize.sync({ force: false }).then(() => {
 
 //ADMIN
 const admin = adminModel(sequelize, Sequelize);
-
-//cliente
-// const cliente = clienteModelos(sequelize, Sequelize)
-// const detalleCliente = detalleClientesModelos(sequelize, Sequelize)
-
-//Relaciones
+const cooperativa = cooperativaModel(sequelize, Sequelize);
+const miembro = miembroModel(sequelize, Sequelize);
 
 module.exports = {
 	admin,
+	cooperativa,
+	miembro,
 };
