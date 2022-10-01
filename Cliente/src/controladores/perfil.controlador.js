@@ -3,11 +3,9 @@ const sql = require("../configuracionBaseDatos/baseDatos.sql")
 const orm = require("../configuracionBaseDatos/baseDatos.orm")
 
 perfil.mostrar = async(req, res)=>{
-    const ids = req.user.idClientes
-    const cliente = await sql.query("SELECT * FROM clientes where idClientes = ?", [ids])
-    const nota = await sql.query("select * from notaventas where clienteIdClientes = ?", [ids])
-    const Facturas = await sql.query("select * from facturas where clienteIdClientes = ?", [ids])
-    res.render('perfil/perfil', {cliente, nota, Facturas});
+    console.log('req');
+    const client = req.user
+    res.render('perfil/perfil', {client});
 }
 
 perfil.Editar = async(req, res)=>{

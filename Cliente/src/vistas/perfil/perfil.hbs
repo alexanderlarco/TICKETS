@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/css/perfil/cliente.css">
-<form action="/perfil/Cliente/{{user.idClientes}}" method="get"></form>
+{{>navigationUser parameter=client.userName}}
+{{!-- <form action="/perfil/Cliente/{{user.idClientes}}" method="get"></form>
 <div id="cerrar">
     <a href="/cerrarSecion"><button type="button" id="Cerrar">Cerrar Sesión</button></a>
 </div>
@@ -91,4 +92,4 @@
         </div>
         {{/each}}
     </div>
-</div>
+</div> --}}

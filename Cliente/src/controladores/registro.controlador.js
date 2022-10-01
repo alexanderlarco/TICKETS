@@ -6,9 +6,9 @@ authCtrl.renderSignUp = (req, res) => {
     res.render('login/registro');
 };
 
-authCtrl.signUp = passport.authenticate('local.signup', {
-    successRedirect: '/CerrarSecion',
-    failureRedirect: '/registro',
+authCtrl.signUp = passport.authenticate('signUp', {
+    successRedirect: '/',
+    failureRedirect: '/register',
     failureFlash: true
 });
 
@@ -16,13 +16,13 @@ authCtrl.renderSignIn = (req, res, next) => {
     res.render('login/login');
 };
 
-authCtrl.signIn = passport.authenticate('local.signin', {
-    successRedirect: '/tienda/lista',
+authCtrl.signIn = passport.authenticate('signIn', {
+    successRedirect: '/dashboard',
     failureRedirect: '/login',
     failureFlash: true
 });
 
-authCtrl.cierreSeccion = (req, res, next) => {
+authCtrl.logOut = (req, res, next) => {
     req.logout(function (err) {
         if (err) {
             return next(err);

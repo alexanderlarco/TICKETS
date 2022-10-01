@@ -94,7 +94,7 @@ sequelize.authenticate()
     console.log('No se conecto')
   })
 
-sequelize.sync({ force: false })
+sequelize.sync({ force: true })
   .then(() => {
     console.log("Tablas sincronizadas")
   })
