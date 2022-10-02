@@ -3,8 +3,8 @@
   display: flex;
   width: 100vw;
   justify-content: space-around;
-  background-color: #fff7f7;
-  margin-bottom: 0.5rem 0;
+  background-color: #cecece;
+  margin-bottom: 0;
 }
 
 #child-nav-container > div {

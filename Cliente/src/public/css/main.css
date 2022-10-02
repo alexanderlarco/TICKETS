@@ -9,28 +9,7 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap");
 
-#logo {
-  position: absolute;
-  top: 50px;
-  left: 20px;
-}
 
-#LogoFintech {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 130px;
-}
-
-button {
-  border-radius: 30px;
-  cursor: pointer;
-  display: block;
-  margin: auto;
-}
-
-input {
-  text-align: center;
-}
 
 @media (max-width: 840px) {
   #contenedors {
@@ -45,4 +24,15 @@ input {
     grid-template-columns: repeat(1, 1fr);
     height: auto;
   }
+}
+
+#containerMenu{
+  padding: 1.5rem;
+  border: 1px solid black;
+  border-radius: 5px; 
+  width: 100% !important;
+}
+#titleMenu{
+  font-weight: bold;
+  font-size: 1.2rem;
 }

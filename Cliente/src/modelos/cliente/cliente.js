@@ -8,8 +8,7 @@ const client = (sequelize, type) => {
     typeDni: {
       type: type.ENUM(),
       values: ["Cedula", "Pasaporte", "RUC"],
-      unique: true,
-      default: "Cedula",
+      defaultValue: "Cedula",
     },
     dni: {
       type: type.STRING,
@@ -24,7 +23,7 @@ const client = (sequelize, type) => {
     },
     password: type.STRING,
     phone: type.STRING(10),
-    status: { type: type.BOOLEAN(), default: true },
+    status: { type: type.BOOLEAN, defaultValue: true },
   });
 };
 

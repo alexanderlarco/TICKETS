@@ -1,3 +1,70 @@
+#container {
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+}
+
+#form-data{
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(241, 238, 236);
+    width: 50vw;
+    margin: 15px auto;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form-group{
+    display: flex;
+    flex-direction: column;
+align-content: center;
+
+}
+
+#form-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+#typeDni{
+    padding:0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+#boton {
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin: .5rem 0;
+    background-color: white;
+    color: black;
+}
+
+#boton:focus {
+    outline: none;
+}
+#boton:hover {
+    background-color: black;
+    color: white;
+}
+
 #cerrar{
     width: 100%;
     max-width: 200px;
@@ -37,6 +104,9 @@
     will-change: box-shadow,transform;
     font-size: 18px;
 }
+
+
+
 #cerrar a{
     text-decoration: none;
     color: #ffff;

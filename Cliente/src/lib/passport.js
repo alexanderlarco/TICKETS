@@ -16,7 +16,7 @@ passport.use(
       const clientDB = await orm.client
         .findOne({ where: { email: username } })
         .then((res) => {
-          return res.dataValues;
+          return !res ? null: res.dataValues;
         })
         .catch((err) => {
           console.log(err);
@@ -92,8 +92,7 @@ passport.use(
         req.flash("message", "Error en el registro");
         return done(null, null);
       }
-      newcliente.id = result.insertId;
-      return done(null, newcliente);
+      return done(null, result);
     }
   )
 );

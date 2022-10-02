@@ -7,7 +7,7 @@ authCtrl.renderSignUp = (req, res) => {
 };
 
 authCtrl.signUp = passport.authenticate('signUp', {
-    successRedirect: '/',
+    successRedirect: '/perfil',
     failureRedirect: '/register',
     failureFlash: true
 });

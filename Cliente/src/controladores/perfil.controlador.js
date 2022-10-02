@@ -2,33 +2,29 @@ const perfil = {}
 const sql = require("../configuracionBaseDatos/baseDatos.sql")
 const orm = require("../configuracionBaseDatos/baseDatos.orm")
 
-perfil.mostrar = async(req, res)=>{
-    console.log('req');
-    const client = req.user
+perfil.getClient = async(req, res)=>{
+    const client = await orm.client.findOne({where:{
+        email: req.user.email
+    }}).then(res =>{
+        return res.dataValues
+    });
     res.render('perfil/perfil', {client});
 }
 
-perfil.Editar = async(req, res)=>{
-    const ids = req.user.idClientes
-    const cliente = await sql.query("SELECT * FROM clientes where idClientes = ?", [ids])
-    res.render('perfil/editar', {cliente});
-}
-
-perfil.Actualizar = async(req, res)=>{
-    const ids = req.user.idClientes
-    const {Nombres, Direccion, username, telefono, Celular} = req.body
-    const actulizacion={
-        Nombres, 
-        Direccion, 
-        username, 
-        telefono, 
-        Celular  
+perfil.update = async(req, res)=>{
+    const id = req.params.id
+    const {typeDni, dni, name, lastName, phone} = req.body
+    const data={
+        typeDni, 
+        dni, 
+        name, 
+        lastName, 
+        phone  
     }
-    await orm.cliente.findOne({ where: { idClientes: ids } })
-    .then(clienteActualizacion => {
-        clienteActualizacion.update(actulizacion)
+    await orm.client.update(data,{ where: { id: id } })
+    .then(() => {
         req.flash('success', 'Se añadio Correctamente');
-        res.redirect('/perfil/Cliente/' + ids);
+        res.redirect('/dashboard');
     })
 }
 
