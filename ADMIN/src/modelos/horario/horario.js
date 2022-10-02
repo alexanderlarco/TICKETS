@@ -6,11 +6,7 @@ const horario=(sequelize,type)=>{
         autoIncrement: true
     },
     hour_start:type.DATE,
-    hour_finalize:type.DATE,
-    capacity:type.INTEGER,
-    id_driver:type.INTEGER,
-    id_bus:type.INTEGER,
-    id_root:type.INTEGER,
+    hour_finalize:type.DATE
     
 },
     {

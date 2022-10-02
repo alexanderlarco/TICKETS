@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/actualizacion.css">
+{{#each lista}}
+<form action="/Horario/Actualizacion/{{id}}" method="post">
+<div id="contenedor">
+ 
+<div id="ID">
+    <p>{{id}}</p>
+<!--</div>
+    <input type="text" name="id" id="id" value="{{id}}" readonly>
+</div>-->
+<div id="NOMBRES">
+    <label id="name">FECHA Y HORA SALIDA </label>
+    <input type="text" name="hour_start_old" id="nombre" value="{{hour_start}}">
+     <input type="datetime-local" name="hour_start" id="nombre" value="{{hour_start}}">
+</div>
+<div id="usuario">
+    <label id="ci">FECHA Y HORA LLEGADA </label>
+    <input type="text" name="hour_finalize_old" id="cedula" maxlength="10" value="{{hour_finalize}}" >
+     <input type="datetime-local" name="hour_finalize" id="cedula" maxlength="10" value="{{hour_finalize}}" >
+</div>
+<div id="estado">
+    <label id="estadoSocio">BUS </label>
+    <input type="text" name="busId" id="contraseñas" checked value="{{busId}}">
+</div>
+{{/each}}
+<div id="boton">
+<button type="submit" id="guardar">Guardar</button>
+</div>
+</form>
+</div>

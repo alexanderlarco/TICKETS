@@ -13,7 +13,7 @@ const miembros=(sequelize,type)=>{
    fk_cooperative:type.INTEGER,
    pass:type.INTEGER,
    rol:type.STRING,
-   permissions: type.JSON,
+   permissions: type.STRING,
    url_img:type.STRING,
    state:{
     type:type.BOOLEAN,

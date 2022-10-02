@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/actualizacion.css">
+{{#each buses}}
+<form action="/Bus/editar/{{id}}" method="post">
+<div id="contenedor">
+ 
+<div id="ID">
+    <p>{{id}}</p>
+</div>
+<div id="NOMBRES">
+   <label id="name">Numero de Unidad</label>
+    <input type="text" name="unit_number" id="nombre" value="{{unit_number}}" required>
+</div>
+<div id="usuario">
+    <label id="ci">Capacidad:</label>
+    <input type="text" name="capacity" id="cedula"  value="{{capacity}}" required>
+</div>
+<div id="estado">
+       <label id="estadoSocio">estado</label>
+    <input type="text" name="state" id="contraseñas" checked value="{{state}}"required>
+</div>
+<div id="boton">
+<a href="/Bus/Actualizacion/{{id}}"><button type="button" id="guardar">editar</button></a>
+</div>
+{{/each}}
+</form>
+</div>

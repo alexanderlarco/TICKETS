@@ -69,4 +69,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //routers
 app.use('/admin', require('./Rutas/admin.rutas'));
 
+app.use('/Socio',require('./Rutas/actualizarSocio.rutas'))
+app.use('/Bus',require('./Rutas/actualizarBuses.rutas'))
+app.use('/Horario',require('./Rutas/actualizarHorario.rutas'))
+
 module.exports = app;

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/actualizacion.css">
+{{#each lista}}
+<form action="/Socio/Actualizacion/{{id}}" method="post">
+<div id="contenedor">
+ 
+<div id="ID">
+    <p>{{id}}</p>
+<!--</div>
+    <input type="text" name="id" id="id" value="{{id}}" readonly>
+</div>-->
+<div id="NOMBRES">
+    <label id="name">Nombres:</label>
+    <input type="text" name="name" id="nombre" value="{{name}}">
+</div>
+<div id="usuario">
+    <label id="ci">Cédula:</label>
+    <input type="text" name="dni" id="cedula" maxlength="10" value="{{dni}}" checked>
+</div>
+<div id="estado">
+    <label id="estadoSocio">estado</label>
+    <input type="text" name="status" id="contraseñas" checked value="{{status}}">
+</div>
+{{/each}}
+<div id="boton">
+<button type="submit" id="guardar">Guardar</button>
+</div>
+</form>
+</div>
