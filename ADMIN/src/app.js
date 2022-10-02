@@ -19,7 +19,7 @@ const handlebars = exphbs.create({
 	layoutsDir: path.join(__dirname, 'vistas', 'layouts'),
 	partialsDir: path.join(__dirname, 'vistas', 'partials'),
 	extname: '.hbs',
-	helpres: require('./lib/handlebars'),
+	helpers: require('./lib/handlebars'),
 });
 
 /// archivos compartidos
@@ -67,6 +67,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //public
 
 //routers
-app.use('/admin', require('./Rutas/admin.rutas'));
+app.use(require('./Rutas/admin.rutas'));
+app.use(require('./Rutas/adminMiembros.rutas'));
+app.use(require('./Rutas/adminCooperativas.rutas'));
 
 module.exports = app;

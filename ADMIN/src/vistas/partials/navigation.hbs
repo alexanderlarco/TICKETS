@@ -8,7 +8,7 @@
 				<div>
 					<div>
 						<img width='40' src='/img/logo_fondo_negro.jpg' alt='' />
-						<a href='#'>
+						<a href='/'>
 							Ticket Bus | Admin
 						</a>
 					</div>
@@ -17,17 +17,59 @@
 			</div>
 		</div>
 
+		{{#if user}}
+			<div class='container-3'>
+
+				<div>
+					<a href='/miembros'>
+						Miembros
+					</a>
+				</div>
+				<div>
+					<a href='/Cooperativas'>
+						Cooperativas
+					</a>
+				</div>
+				<div>
+					<a href='/Socios'>
+						Socios
+					</a>
+				</div>
+				<div>
+					<a href='/Horarios'>
+						Horarios
+					</a>
+				</div>
+
+			</div>
+
+		{{/if}}
+
 		<div class='container-3'>
-			<div>
-				<a href='#'>
-					Ayuda
-				</a>
-			</div>
-			<div>
-				{{! <a href="/cerrar-sesion">
-          Cerrar Sesion
-        </a> }}
-			</div>
+			{{#if user}}
+				<div class='container-3'>
+					<div>
+						<a href='/logout'>
+							<b>
+								Cerrar sesión
+							</b>
+						</a>
+					</div>
+				</div>
+			{{else}}
+				<div>
+					<a href='#'>
+						Ayuda
+					</a>
+				</div>
+				<div>
+					<a href='#'>
+						<b>
+							Iniciar sesión
+						</b>
+					</a>
+				</div>
+			{{/if}}
 		</div>
 	</div>
 </div>

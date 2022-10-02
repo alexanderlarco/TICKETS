@@ -1,0 +1,78 @@
+<link rel='stylesheet' href='/css/miembros/main.css' />
+
+<div class='container mt-5'>
+	<div class='container-miembros'>
+		<div class='box-1'>
+			<div>
+				<b>
+					MIEMBROS Y SUS ROLES.
+				</b>
+
+				<br />
+
+				<div class='muted' style='font-size: 13px;'>
+					<p>
+						Selecciona un miembro y edita su información.
+					</p>
+				</div>
+			</div>
+
+			<a href='/miembros/nuevo' class='align-btn'>
+				<b>
+					AGREGAR MIEMBRO
+				</b>
+				<span class='material-symbols-outlined'>
+					add_circle
+				</span>
+			</a>
+
+		</div>
+		<div class='box-2'>
+			{{#each miembros}}
+				<div>
+					<a href='/miembros/edit/{{dataValues.id}}'>
+						<div>
+							<span class='material-symbols-outlined'>
+								person
+							</span>
+
+							<h5>
+								{{dataValues.name}}
+								{{dataValues.lastname}}
+							</h5>
+						</div>
+						<div>
+							<p class='muted'>
+								{{dataValues.CI}}
+								-
+								{{dataValues.rol}}
+							</p>
+						</div>
+						<div>
+							<p class='muted'>
+								<i>
+									{{timeReturn dataValues.created_at}}
+								</i>
+							</p>
+						</div>
+
+						{{#state this.dataValues.state}}
+							<div class='stateTrue'>
+								<p class=''>
+									ACTIVO
+								</p>
+							</div>
+						{{else}}
+							<div class='stateFalse'>
+								<p class=''>
+									INACTIVO
+								</p>
+							</div>
+						{{/state}}
+					</a>
+				</div>
+			{{/each}}
+
+		</div>
+	</div>
+</div>

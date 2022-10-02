@@ -3,7 +3,7 @@ module.exports = {
 		if (req.isAuthenticated()) {
 			return next();
 		} else {
-			res.redirect('/admin/login');
+			res.redirect('/login');
 		}
 	},
 
@@ -11,6 +11,6 @@ module.exports = {
 		if (!req.isAuthenticated()) {
 			return next();
 		}
-		return res.redirect('/admin');
+		return res.redirect('/');
 	},
 };

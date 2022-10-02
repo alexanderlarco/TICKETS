@@ -13,8 +13,8 @@ admin.login = (req, res) => {
 };
 
 admin.signin = passport.authenticate('local.signin', {
-	successRedirect: '/admin',
-	failureRedirect: '/admin/login',
+	successRedirect: '/',
+	failureRedirect: '/login',
 	failureFlash: true,
 });
 
@@ -24,7 +24,7 @@ admin.cierreSesion = (req, res, next) => {
 			return next(err);
 		}
 		req.flash('success', 'Sección terminada');
-		res.redirect('/admin');
+		res.redirect('/');
 	});
 };
 
