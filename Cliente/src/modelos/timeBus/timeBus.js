@@ -6,11 +6,19 @@ const timeBus = (sequelize, type) => {
             autoIncrement: true,
         },
         hourStart: {
-            type: type.DATE,
+            type: type.TIME,
             allowNull: false,
         },
         hourFinalize: {
-            type: type.DATE,
+            type: type.TIME,
+            allowNull: false,
+        },
+        dateStart: {
+            type: type.DATEONLY,
+            allowNull: false
+        },
+        dateFinalize: {
+            type: type.DATEONLY,
             allowNull: false,
         },
         state: { type: type.BOOLEAN, defaultValue: true },

@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="/css/ticket/ticket.css">
+{{#if  user}}
+    {{>navigationUser  }}
+{{else}}
+    {{>navigation }}
+{{/if}}
+<div id="container">
+    <div id="content">
+        <h4 id="title">Ticket N°00{{ticket.id}}</h4>
+        <hr>
+        <div id="detail">
+            <div id="detail-content">
+                <strong>Fecha salida</strong>
+                <strong>Hora de salida</strong>
+                <strong>Nombre del ticket</strong>
+                <strong>{{client.typeDni}}</strong>
+            </div>
+            <div id="detail-content">
+                <span>{{ticket.timeBus.dateStart}}</span>
+                <span>{{ticket.timeBus.hourStart}}</span>
+                <span>{{client.name}} {{client.lastName}}</span>
+                <span>{{client.dni}}</span>
+            </div>
+        </div>
+        <hr>
+        <div id="detail">
+            <div id="detail-content">
+                <strong>Número  de adultos</strong>
+                <strong>Números de niños</strong>
+                <strong>Número de la unidad</strong>
+                <strong>Su conductor</strong>
+                <strong>Plataforma de salida</strong>
+            </div>
+            <div id="detail-content">
+                <span>{{ticket.reserve.numAdult}}</span>
+                <span>{{ticket.reserve.numChild}}</span>
+                <span>{{ticket.bus.unitNumber}} - ( {{ticket.bus.plate}})</span>
+                <span>{{ticket.driver.name}} {{ticket.driver.lastName}}</span>
+                <span>{{ticket.exitPlataform}}</span>
+            </div>
+        </div>
+        <hr>
+        <div id="detail">
+            <div id="detail-content" >
+                <strong>SubTotal</strong>
+                <strong>Adicional</strong>
+                <strong>Total</strong>
+            </div>
+            <div id="detail-content">
+                <span>{{ticket.subTotal}}</span>
+                <span>0,25</span>
+                <span>{{ticket.total}}</span>
+            </div>
+        </div>
+        <button id="btn-reserve">
+            Aceptar
+        </button>
+    </div>
+</div>
+
+<script >
+    document.getElementById('btn-reserve').addEventListener('click',()=>{
+        window.location.replace('/reserve')
+    })
+</script>

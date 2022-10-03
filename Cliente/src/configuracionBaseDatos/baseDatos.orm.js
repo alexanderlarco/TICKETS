@@ -127,12 +127,14 @@ ecommend.belongsTo(bus, {
     targetKey: 'id'
 });
 
-timeBus.hasOne(bus, {
+
+
+bus.hasMany(timeBus, {
     foreignKey: 'idBus',
     sourceKey: 'id'
 })
 
-bus.belongsTo(timeBus, {
+timeBus.belongsTo(bus, {
     foreignKey: 'idBus',
     targetKey: 'id'
 })

@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="/css/reserve/reserve.css">
+{{#if  user}}
+    {{>navigationUser  }}
+{{else}}
+    {{>navigation }}
+{{/if}}
+<div id="container">
+    <h3 id="title">Nueva Reserva</h3>
+    <form method="post" action="/reserve/availableTime" id="form-unable">
+        <div>
+            <label for="origin">Origen: </label>
+            <select name="origin" id="form-input">
+                <option value="{{indo.origin}}">{{info.origin}}</option>
+
+                {{#each cities}}
+                    <option value="{{city}}">{{city}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div>
+            <label for="destiny">Destino: </label>
+            <select name="destiny" id="form-input">
+                <option value="{{indo.destiny}}">{{info.destiny}}</option>
+                {{#each cities}}
+                    <option value="{{city}}">{{city}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div>
+            <label for="date">Fecha: </label>
+            <input type="date" name="date" value="{{info.date}}" id="form-input">
+        </div>
+
+        <div>
+            <label for="passenger">Pasajeros(>12 años)</label>
+            <input type="number" name="passenger" value="{{info.passenger}}" id="form-input">
+        </div>
+        <div>
+            <label for="child">Número de niños (>2 años)</label>
+            <input type="number" name="child" value="{{info.child}}" id="form-input">
+        </div>
+        <button type="submit" id="btn-unable">
+            Buscar Disponibilidad
+        </button>
+    </form>
+    <hr>
+    <form action="/reserve/create" method="post">
+        <input type="hidden" name="origin" value="{{info.origin}}">
+        <input type="hidden" name="destiny" value="{{info.destiny}}">
+        <input type="hidden" name="date" value="{{info.date}}">
+        <input type="hidden" name="adult" value="{{info.passenger}}">
+        <input type="hidden" name="child" value="{{info.child}}">
+
+        <ul id="catalog-list">
+            <li id="catalog-list-title">
+                <p id="title">Fecha y hora</p>
+                <p id="title">N° Unidad</p>
+                <p id="title">Conductor</p>
+                <p id="title">Boleto Completo</p>
+                <p id="title">Boleto Medio</p>
+                <p id="title">SubTotal</p>
+                <p id="title">Seleccionar</p>
+            </li>
+
+            {{#each availableTime}}
+                <li id="catalog-list-item">
+                    <p>{{dateStart}} {{hourStart}}</p>
+                    <p>{{bus.unitNumber}}</p>
+                    <p>{{bus.driver.name}} {{bus.driver.lastName}}</p>
+                    <p>{{root.priceComplete}}
+                    <p>{{root.priceMiddle}}
+                    <p>{{root.subTotal}}
+                    <input type="hidden" name="subTotal" value="{{root.subTotal}}">
+
+                    <p>
+                        <input type="checkbox" name="idTime" value="{{id}}" id="idTime">
+                    </p>
+                </li>
+            {{else}}
+
+                <li id="catalog-list-item-not">
+                    Fecha nos disponible
+                </li>
+            {{/each}}
+
+        </ul>
+        <div id="displayBtn">
+            <a href="/reserve" id="btnRetry">
+                Regresar
+            </a>
+            <button type="submit" id="btnReserve">
+                Reservar
+            </button>
+        </div>
+    </form>
+
+
+</div>
+
+

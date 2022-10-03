@@ -1,0 +1,111 @@
+#container{
+    padding: 2rem;
+
+}
+
+#title{
+    font-weight: bold;
+    text-align: center;
+}
+
+#detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#searchBar{
+    display: flex;
+}
+#searchCoop{
+    margin: 0  0 0 15px;
+    border: 1px solid black;
+    border-right: none;
+    padding: 0.5rem;
+    width: 15vw;
+}
+#search-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid black;
+    border-left: none;
+    margin-left: -5px;
+}
+
+#btn-reserve{
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 15vw;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#btn-reserve:hover{
+    border: 1px solid white;
+    background-color: grey;
+    color: white;
+}
+
+#btn-reserve:focus{
+    outline: none;
+}
+
+#catalog {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 25px;
+    padding: 1.5rem;
+ }
+
+
+#card {
+    width: 240px;
+    text-align: center;
+    margin: auto;
+}
+
+#logo-coop {
+    height: 115px;
+    width: 125px;
+    border-radius: 20px 20px 20px 20px;
+    margin: 15px;
+}
+
+#text-container {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    padding: 120px 20px 20px 20px;
+    border-radius: 20px;
+    background: #fff;
+    margin: -120px 0px 0px 0px;
+    line-height: 19px;
+    font-size: 14px;
+    text-align: start;
+}
+
+#text-container h3 {
+    margin: 20px 0px 10px 0px;
+    color: silver;
+    font-size: 18px;
+    text-align: center;
+}
+
+#card-not-found{
+    border: 1px solid black;
+    padding: 2rem;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#detail-coop{
+    display: flex;
+    flex-direction: column;
+}
+#dtl{
+    margin: 5px 0 ;
+}

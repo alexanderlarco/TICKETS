@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="/css/reserve/reserve.css">
+{{#if  user}}
+    {{>navigationUser  }}
+{{else}}
+    {{>navigation }}
+{{/if}}
+
+<div id="container">
+    <div id="detail">
+        <h4><strong>Bienvenido: </strong>{{user.name}} {{user.lastName}}</h4>
+        <a href="reserve/new" id="btn-reserve">Nueva Reserva</a>
+    </div>
+    <h5>Reservas Activas</h5>
+
+<div id="catalog">
+
+    {{#each reserves}}
+        <form method="get" action="/ticket/create/{{id}}" id="card">
+            <div id="card-container">
+                <h3>Reserva Numero 000{{id}}</h3>
+                <div id="detail-coop">
+                    <span id="dtl"><strong>Fecha:</strong> {{dateStart}}</span>
+                    <span id="dtl"><strong>Adultos:</strong> {{numAdult}}</span>
+                    <span id="dtl"><strong>Niños:</strong> {{numChild}}</span>
+                    <span id="dtl"><strong>SubTotal:</strong> {{subTotal}}</span>
+                    <button type="submit" id="btn-reserve">Confirmar</button>
+                </div>
+            </div>
+        </form>
+    {{else}}
+
+    </div>
+        <div id="card-not-found">
+            No se encontraron Reservas
+        </div>
+    {{/each}}
+
+
+
+</div>
+
+<div id="container">
+    <h5>Historial de Reservas</h5>
+
+<ul id="catalog-list">
+    <li id="catalog-list-title">
+        <span id="title" >N° Reserva</span>
+        <span id="title" >Fecha</span>
+        <span id="title" >Numero de Pasajeros</span>
+        <span id="title" >Total</span>
+        <span id="title" >Estado</span>
+    </li>
+
+    {{#each history}}
+        <li id="catalog-list-item">
+            <span  >{{id}}</span>
+            <p  >{{dateStart}}</p>
+            <span >Niños: {{numChild}} - Adulto: {{numAdult}}</span>
+            <span  >{{subTotal}}</span>
+            <span  >{{status}}</span>
+        </li>
+    {{else}}
+
+        <li id="catalog-list-item-not">
+            No se encontraron mas reservas
+        </li>
+    </ul>
+    {{/each}}
+</div>
+
+
+

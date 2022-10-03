@@ -1,6 +1,6 @@
 body {
   color: #06283d;
-  background-color: #f5f6f5;
+  background: #f1f1f1;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   width: 100vw;
@@ -24,6 +24,14 @@ body {
     grid-template-columns: repeat(1, 1fr);
     height: auto;
   }
+}
+
+body, input {
+  color: #171717;
+}
+
+input:focus{
+  outline: none;
 }
 
 #containerMenu{

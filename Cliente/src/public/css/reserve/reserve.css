@@ -1,7 +1,6 @@
 #container{
     padding: 2rem;
-    display: grid;
-    place-content: center;
+
 }
 
 
@@ -10,32 +9,29 @@
     text-align: center;
 }
 
-
-#content{
-    border: 1px solid black;
-    padding: 2rem;
-    border-radius: 20px;
-    margin: 20px;
-    width: 40vw;
-}
-
 #detail{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-#detail-content{
+#form-unable{
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
+
+#form-unable>div{
+    width: 20%;
+}
+
 
 #btn-reserve{
     border: 1px solid grey;
     border-radius: 5px;
     padding: 0.5rem;
-    margin: 10px 0;
-    width: 100%;
+    width: 15vw;
     background-color: white;
     text-align: center;
     text-decoration: none;
@@ -103,6 +99,15 @@
     text-align: center;
 }
 
+#card-not-found{
+    border: 1px solid black;
+    padding: 2rem;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
 
 #detail-coop{
     display: flex;
@@ -132,6 +137,10 @@
     width: 20%;
     margin-bottom: 0;
 }
+#catalog-list-title > span {
+    width: 25%;
+    margin-bottom: 0;
+}
 
 #catalog-list-item{
     display: flex;
@@ -145,7 +154,10 @@
     width: 20%;
     margin-bottom: 0;
 }
-
+#catalog-list-item > span {
+    width: 25%;
+    margin-bottom: 0;
+}
 #catalog-list-item-not{
     display: flex;
     flex-direction: row;
