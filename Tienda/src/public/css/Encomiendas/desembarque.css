@@ -1,0 +1,52 @@
+body{
+    background-color: aliceblue;
+    font-family: Arial;
+  }
+  
+  #desem{
+    text-align: center;
+    margin: 50px auto;
+  }
+
+  #dese1-container{
+    margin:  auto;
+  }
+  
+  table{
+    background-color: beige;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td{
+  padding: 5px;
+  }
+
+thead{
+    background-color: aqua;
+    border-bottom: solid 5px #246355;
+    color: white;
+  }
+  
+  tr:nth-child(even){
+    background-color: chocolate;
+  }
+  
+  tr:hover td{
+    background-color: #369681;
+    color: white;
+  }
+
+  #contenedor{
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      padding: 2rem;
+  }
+  #contenedor-btn{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding: 2rem;
+}

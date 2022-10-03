@@ -1,0 +1,39 @@
+body{
+    background-color: aliceblue;
+    font-family: Arial;
+  }
+  
+  #trega{
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  #entre-container{
+    margin:  auto;
+    width: 80%;
+  }
+  
+  table{
+    background-color: beige;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td{
+  padding: 5px;
+  }
+  thead{
+    background-color: aqua;
+    border-bottom: solid 5px #246355;
+    color: white;
+  }
+  
+  tr:nth-child(even){
+    background-color: chocolate;
+  }
+  
+  tr:hover td{
+    background-color: #369681;
+    color: white;
+  }

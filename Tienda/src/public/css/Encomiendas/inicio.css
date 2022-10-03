@@ -1,0 +1,88 @@
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    padding: 8rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#title{
+    text-align: center;
+    margin: 50px auto;
+}
+
+
+#detalle-contenedor-1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 2.5rem;
+    color: rgb(11, 11, 12);
+}
+
+#detalle-contenedor-2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 2.5rem;
+    color: rgb(11, 11, 12);
+}
+
+#detalle-contenedor-3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 2.5rem;
+    color: rgb(11, 11, 12);
+}
+
+#detalle-contenedor-4{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 2.5rem;
+    color: rgb(11, 11, 12);
+}
+
+#detalle-contenedor-5{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 2.5rem;
+    color: rgb(11, 11, 12);
+}
+
+#img-inicio{
+    width: 150px;
+}
+
+#img-listado{
+    width: 150px;
+}
+
+#img-despacho{
+    width: 150px;
+}
+
+#img-desembarque{
+    width: 150px;
+}
+
+#img-entrega{
+    width: 150px;
+}

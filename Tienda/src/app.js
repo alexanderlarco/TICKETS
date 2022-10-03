@@ -74,5 +74,6 @@ app.use('/detalleProducto', require('./Rutas/detalleProducto.rutas'))
 app.use('/pedidos', require('./Rutas/pedidos.rutas'))
 app.use('/cajas', require('./Rutas/caja.rutas'))
 app.use('/perfil', require('./Rutas/perfil.rutas'))
+app.use('/encomiendas', require('./Rutas/encomiendas.rutas'))
 
 module.exports = app;
